@@ -6,10 +6,10 @@
 <head>
 <title>CGI</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -128,11 +128,11 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <h1>Example</h1>
 <ul>
 <li>Is a Perl script</li>
-<li>Located at <small><a href="cgi-bin/cgiexample.pl" target="cgiexample">http://wdd0506.bbkweb.org/cgi-bin/cgiexample.pl</a></small></li>
+<li>Located at <small><a href="cgi-bin/cgiexample.pl" target="cgiexample">http://wdd0607.bbkweb.org/cgi-bin/cgiexample.pl</a></small></li>
 <li>Takes a parameter called &quot;username&quot; and displays the value of that parameter after &quot;Hello&quot;</li>
 <li>Can pass parameter as part of URL</li>
-<li><small><a href="cgi-bin/cgiexample.pl?username=Ian" target="cgiexampleian">http://wdd0506.bbkweb.org/cgi-bin/cgiexample.pl?username=Ian</a></small></li>
-<li><small><a href="cgi-bin/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://wdd0506.bbkweb.org/cgi-bin/cgiexample.pl?username=Kieren</a></small></li>
+<li><small><a href="cgi-bin/cgiexample.pl?username=Ian" target="cgiexampleian">http://wdd0607.bbkweb.org/cgi-bin/cgiexample.pl?username=Ian</a></small></li>
+<li><small><a href="cgi-bin/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://wdd0607.bbkweb.org/cgi-bin/cgiexample.pl?username=Kieren</a></small></li>
 </ul>
 <div class="handout">
 </div>
@@ -230,6 +230,23 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 </tt></p>
 <form action="cgi-bin/cgiexample.pl" target="cgiexampletextarea">
 <textarea rows="10" cols="40" name="username"></textarea>
+<input type="submit" value="Go" />
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>hidden input element</h1>
+<p><tt>
+&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&gt;<br />
+&lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;<br />
+&lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+&lt;/form&gt;
+</tt></p>
+<form action="cgi-bin/cgiexample.pl" target="cgiexampleinput">
+<input type="hidden" name="username" value="Ian" />
 <input type="submit" value="Go" />
 </form>
 <div class="handout">

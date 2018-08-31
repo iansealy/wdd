@@ -6,10 +6,10 @@
 <head>
 <title>Server Log Analysis</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,10 +40,10 @@
 <li>Example:</li>
 </ul>
 <tt><small>
-62.255.32.17 - - [12/May/2006:13:29:34 -0700] "GET / HTTP/1.1" 200 1604 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"<br /><br />
-62.255.32.17 - - [12/May/2006:13:29:35 -0700] "GET /style.css HTTP/1.1" 304 - "http://wdd0506.bbkweb.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"<br /><br />
-62.255.32.17 - - [12/May/2006:13:29:35 -0700] "GET /birkbeck.gif HTTP/1.1" 304 - "http://wdd0506.bbkweb.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"<br /><br />
-62.255.32.17 - - [12/May/2006:13:29:43 -0700] "GET /module.html HTTP/1.1" 200 1771 "http://wdd0506.bbkweb.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"
+82.12.247.237 - - [22/Jun/2007:12:57:04 -0700] &quot;GET / HTTP/1.1&quot; 200 1585 &quot;-&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;<br /><br />
+82.12.247.237 - - [22/Jun/2007:12:57:05 -0700] &quot;GET /style.css HTTP/1.1&quot; 200 574 &quot;http://wdd0607.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;<br /><br />
+82.12.247.237 - - [22/Jun/2007:12:57:03 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 200 2811 &quot;http://wdd0607.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;<br /><br />
+82.12.247.237 - - [22/Jun/2007:12:57:10 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1884 &quot;http://wdd0607.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;
 </small></tt>
 <div class="handout">
 </div>
@@ -52,8 +52,8 @@
 <div class="slide">
 <h1>Example Logs</h1>
 <ul>
-<li>wdd0506.bbkweb.org log</li>
-<li>Biz/ed log</li>
+<li>wdd0607.bbkweb.org log</li>
+<li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li>
 <li>Too much information, so must use a log analysis tool</li>
 </ul>
 <div class="handout">
@@ -63,8 +63,8 @@
 <div class="slide">
 <h1>Example Reports</h1>
 <ul>
-<li><a href="uploads/wdd4/wdd41/ucisa/" target="ucisa">UCISA report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> - free software)</li>
-<li><a href="uploads/wdd4/wdd41/port/" target="port">PORT report</a> (compiled using <a href="http://www.webtrends.com/" target="webtrends">WebTrends</a> - commercial software)</li>
+<li><a href="uploads/wdd4/wdd44/ucisa/" target="ucisa">UCISA report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> - free software)</li>
+<li><a href="uploads/wdd4/wdd44/port/" target="port">PORT report</a> (compiled using <a href="http://www.webtrends.com/" target="webtrends">WebTrends</a> - commercial software)</li>
 <li><a href="http://maths.sci.shu.ac.uk/reports/" target="shumaths">SHUMaths report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> and <a href="http://www.reportmagic.com/" target="reportmagic">Report Magic</a>)</li>
 </ul>
 <div class="handout">
@@ -169,6 +169,16 @@
 <li>Relies on use of graphical browser</li>
 <li>Ensure image is outside table structure of page or might delay rendering</li>
 <li><a href="http://www.scriptsearch.com/Remotely_Hosted/Web_Traffic_Analysis/" target="scriptsearch">ScriptSearch.com</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Google Analytics</h1>
+<ul>
+<li>Most commonly used remote logging is now <a href="http://www.google.com/analytics/" target="analytics">Google Analytics</a></li>
+<li>Relies on JavaScript</li>
 </ul>
 <div class="handout">
 </div>

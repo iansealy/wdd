@@ -6,10 +6,10 @@
 <head>
 <title>JavaScript</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 <script language="JavaScript" type="text/javascript">
 <!--
 function MM_swapImgRestore() { //v2.0
@@ -182,7 +182,7 @@ to prevent it being displayed by older browsers</li>
 <div class="slide">
 <h1>Problems With JavaScript</h1>
 <ul>
-<li>Like CSS, JavaScript does not work the same in all browsers</li>
+<li>Like CSS, JavaScript does not always work the same in all browsers</li>
 <li>Because of all the different versions, it is sometimes still necessary to <a href="http://www.webreference.com/tools/browser/javascript.html" target="sniff">detect browser type</a></li>
 </ul>
 <div class="handout">
@@ -195,8 +195,8 @@ to prevent it being displayed by older browsers</li>
 <ul>
 <li>JavaScript was developed by Netscape for Navigator, but was then called LiveScript</li>
 <li>Was renamed JavaScript for marketing reasons (even though very different to Java)</li>
-<li>Navigator 2.0 supports JavaScript 1.0</li>
-<li>Navigator 3.0 supports JavaScript 1.1</li>
+<li>Navigator 2.0 (1996) supports JavaScript 1.0</li>
+<li>Navigator 3.0 (1996) supports JavaScript 1.1</li>
 </ul>
 <div class="handout">
 </div>
@@ -206,10 +206,11 @@ to prevent it being displayed by older browsers</li>
 <div class="slide">
 <h1>Netscape History</h1>
 <ul>
-<li>Navigator 4.0-4.05 support JavaScript 1.2</li>
-<li>Navigator 4.06+ support JavaScript 1.3</li>
-<li>Netscape 6.0+ support JavaScript 1.5</li>
-<li>Mozilla supports JavaScript 1.5</li>
+<li>Navigator 4.0-4.05 (1997) support JavaScript 1.2</li>
+<li>Navigator 4.06+ (1998) support JavaScript 1.3</li>
+<li>Netscape 6.0+ (2000) and Mozilla support JavaScript 1.5</li>
+<li>Firefox 1.5 (2005) supports JavaScript 1.6</li>
+<li>Firefox 2 (2006) supports JavaScript 1.7</li>
 <li>(JavaScript 1.4 was used in a Netscape server product)</li>
 </ul>
 <div class="handout">
@@ -221,8 +222,8 @@ to prevent it being displayed by older browsers</li>
 <h1>Microsoft History</h1>
 <ul>
 <li>Microsoft created its own version of JavaScript called JScript (Netscape owns the name)</li>
-<li>IE 3.0 supports JScript 1.0, but is very different to JavaScript</li>
-<li>IE 4.0 supports JScript 3.0</li>
+<li>IE 3.0 supports JScript 1.0 (1996) and JScript 2.0 (1997), but is very different to JavaScript</li>
+<li>IE 4.0 (1997) supports JScript 3.0</li>
 </ul>
 <div class="handout">
 </div>
@@ -232,11 +233,12 @@ to prevent it being displayed by older browsers</li>
 <div class="slide">
 <h1>Microsoft History</h1>
 <ul>
-<li>IE 5.0 supports JScript 5.0</li>
-<li>IE 5.5 supports JScript 5.5</li>
-<li>IE 6.0 supports JScript 6.0</li>
-<li>Confusingly IE3.0+ also support a scripting language called VBScript, which is not supported by Navigator</li>
-<li>(JScript 2.0 and 4.0 were used in other Microsoft products)</li>
+<li>IE 5.0 (1999) supports JScript 5.0</li>
+<li>IE 5.5 (2000) supports JScript 5.5</li>
+<li>IE 6.0 (2001) supports JScript 5.6</li>
+<li>IE 7.0 (2006) supports JScript 5.7</li>
+<li>Confusingly IE3.0+ also support a scripting language called VBScript, which is not supported by other browsers</li>
+<li>(JScript 4.0 was used in another Microsoft product)</li>
 </ul>
 <div class="handout">
 </div>
@@ -262,6 +264,7 @@ to prevent it being displayed by older browsers</li>
 <li>But the Web's &quot;official&quot; <a href="http://www.w3.org/DOM/" target="dom">Document Object Model</a> is based on Microsoft's</li>
 <li>ECMAScript v2 was only released for maintenance purposes</li>
 <li>ECMAScript v3 is like JavaScript 1.5 or JScript 5.5</li>
+<li>ECMAScript v4 is a work in progress and will be (exactly) like JavaScript 2.0</li>
 </ul>
 <div class="handout">
 </div>
@@ -283,11 +286,10 @@ to prevent it being displayed by older browsers</li>
 </li>
 <li>JavaScript scripts:
 <ul>
-<li><a href="http://www.js-examples.com/" target="jseg">JavaScript Examples</a></li>
+<li><a href="http://developer.yahoo.com/yui/" target="yui">Yahoo! User Interface Library</a></li>
 <li><a href="http://www.scriptsearch.com/JavaScript/Scripts/" target="scriptsearch">ScriptSearch.com</a></li>
 <li><a href="http://wsabstract.com/cutpastejava.shtml" target="kit">JavaScript Kit</a></li>
 <li><a href="http://www.dynamicdrive.com/" target="dynamic">Dynamic Drive</a></li>
-<li><a href="http://www.walterzorn.com/" target="zorn">www.walterzorn.com</a></li>
 </ul>
 </li>
 </ul>

@@ -17,7 +17,7 @@ h1 {
 #header {
 	height : 63px;
 	width : 100%;
-	background-color: #cccccc;
+	background-color: #ffcc99;
 	margin : 0px;
 	padding : 0px;
 }
@@ -95,7 +95,7 @@ h1 {
 #footer {
 	border-top : 1px solid #ff9900;
 	border-bottom : 1px solid #ff9900;
-	background-color : #dddddd;
+	background-color : #ffcc99;
 	
 }
 

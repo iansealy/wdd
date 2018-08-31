@@ -6,10 +6,10 @@
 <head>
 <title>Sound and Video</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -42,7 +42,7 @@
 <li>Accessibility</li>
 <li>Bandwidth/filesize vs Quality</li>
 </ul>
-<p>There is no single solution that will be accessible by all.</p>
+<p>There is no single solution that will suit all.</p>
 <div class="handout">
 </div>
 </div>
@@ -108,6 +108,7 @@ However video or sound files are captured on to your computer one of the key thi
 <li>Midi - uses built in &quot;voices&quot; from your sound card</li>
 <li>MP3 - CD quality. Filesize roughly 1Mb per minute</li>
 <li>WMA - Windows Media Audio</li>
+<li>Ogg Vorbis - free, open, and unpatented</li>
 </ul>
 <div class="handout">
 </div>
@@ -154,7 +155,7 @@ The visitor will need relevant software or a plug-in to be able to view the file
 </ul>
 <p>HTML code for including a sound file as a downloadable link:</p>
 <p>
-&lt;a href=&quot;example.wav&quot;&gt;30 seconds of Ian singing, 50K Wav file&lt;/a&gt;
+&lt;a href=&quot;example.mp3&quot;&gt;30 seconds of Ian singing, 500K MP3 file&lt;/a&gt;
 </p>
 <div class="handout">
 </div>
@@ -256,6 +257,17 @@ You have two choices for making video available on the web:
 </div>
 </div>
 
+<div class="slide">
+<h1>Flash Video</h1>
+<p>Popular user generated video resources (such as <a href="http://www.youtube.com/" target="yt">YouTube</a> and <a href="http://video.google.co.uk/" target="gv">Google Video</a>) use Flash Video that is progressively streamed.</p>
+
+<p>In the last year the amount of Flash Video (FLV) available online has almost doubled to <a href="http://www.researchandmarkets.com/reports/c47246" target="research">22%</a>. The report also stated that 97% of User Generated Video (UGV) is in Flash Video format, suggesting that the growth in FLV is likely to continue.</p>
+
+<div class="handout">
+</div>
+</div>
+
+
 
 <div class="slide">
 <h1>Embedded Video</h1>
@@ -263,14 +275,14 @@ You have two choices for making video available on the web:
 &lt;embed src="/video/example.mov" height="100" width="50" controller="false" autoplay="true" pluginspage="http://www.apple.com/" loop="true"&gt;
 </p>
 <p>
-<b>Height/width</b> - set the size of your movie (pixels or percent)<br />
-<b>Controller</b> - adds controls for the movie (true/false)
+<strong>Height/width</strong> - set the size of your movie (pixels or percent)<br />
+<strong>Controller</strong> - adds controls for the movie (true/false)
 <br />
-<b>Autoplay</b> - If &quot;true&quot; your movie will play as soon as it starts to download, if &quot;false&quot; the user must click to play it.
+<strong>Autoplay</strong> - If &quot;true&quot; your movie will play as soon as it starts to download, if &quot;false&quot; the user must click to play it.
 <br />
-<b>Pluginspage</b> - location of the required plug-in.
+<strong>Pluginspage</strong> - location of the required plug-in.
 <br />
-<b>Loop</b> - If &quot;true&quot; movie loops, if &quot;false&quot; movie plays once and stops, if &quot;palindrome&quot; movie plays to the end, plays back in reverse, plays to end again etc.
+<strong>Loop</strong> - If &quot;true&quot; movie loops, if &quot;false&quot; movie plays once and stops, if &quot;palindrome&quot; movie plays to the end, plays back in reverse, plays to end again etc.
 </p>
 <div class="handout">
 </div>
@@ -278,7 +290,7 @@ You have two choices for making video available on the web:
 
 <div class="slide">
 <h1>Embedded Video 2</h1>
-<p><a href="http://www.htmlgoodies.com/tutors/videoembed_example.html" target="embedvid">Example</a></p>
+<p><a href="http://www.public.iastate.edu/~rdalhoff/embedvideo.html" target="embedvid">Example</a></p>
 <p>
 Issues:</p>
 <ul>
@@ -294,7 +306,7 @@ Issues:</p>
 <div class="slide">
 <h1>Downloadable Video</h1>
 <p>&lt;a href="example.avi"&gt;Ian dancing - 50K QuickTime file&lt;/a&gt;</p>
-<p>What happens depends on the browser configuration <a href="http://animatedtv.about.com/od/futuramadownload/v/dvdhellrobot.htm" target="futurama">Example</a></p>
+<p>What happens depends on the browser configuration</p>
 <p>
 You should provide the following information:
 </p>
@@ -346,9 +358,10 @@ Common formats are:-</p>
 <li>Apple MOV</li>
 <li>Microsoft WMV (was ASF)</li>
 <li>RealNetwork's RM</li>
+<li>Ogg Theora - free, open, and unpatented</li>
 </ul>
 
-<p>Video streaming using the Flash player is becoming increasingly common. This does require video to be correctly encoded and access to a Flash Media Server</p>
+<p>Video streaming using the Flash player is becoming increasingly common. This does require video to be correctly encoded and access to a Flash Media Server or equivalent (e.g. <a href="http://osflash.org/red5" target="red5">Red5</a>).</p>
 <div class="handout">
 </div>
 </div>
@@ -367,7 +380,7 @@ This causes an external player to open and connect to the streaming server, the 
 <li>QuickTime Player</li>
 <li>RealPlayer</li>
 </ul>
-<p>Can also embed streamed video, e.g <a href="http://www.bized.ac.uk/learn/tourism/attractions/surfing/visitor_main_stream.htm" target="bizstream">Biz/ed</a></p>
+<p>Can also embed streamed video, e.g. <a href="http://www.bized.co.uk/learn/tourism/attractions/surfing/visitor_main_stream.htm" target="bizstream">Biz/ed</a></p>
 <div class="handout">
 </div>
 </div>
