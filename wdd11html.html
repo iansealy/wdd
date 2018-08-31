@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Simple HTML</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Simple HTML</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Simple HTML</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+<div class="slide">
+<h1>HTML</h1>
+<ul>
+<li>HTML (HyperText Markup Language) is the language of the Web</li>
+<li>Allows authors to publish information on the Web and, importantly, to link to other Web documents</li>
+<li>Is a simple markup language</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Markup</h1>
+<ul>
+<li>Sections of text are marked up with special tags that indicate what that section of text is</li>
+<li>For example, there are special tags to indicate that a bit of text is a paragraph or a heading or an address or a hyperlink</li>
+<li>Tags act as instructions to the Web browser and tell the browser what to do with the bit of text</li>
+<li>For example, a heading tag will tell the browser that that bit of text should be displayed larger than the rest of the text</li>
+<li>Basically, HTML tags define the structure of a Web page</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>HTML Tags</h1>
+<ul>
+<li>Tags look like this: <tt>&lt;em&gt;</tt></li>
+<li>Tags are often paired: <tt>&lt;em&gt;football&lt;/em&gt;</tt></li>
+<li><tt>&lt;em&gt;</tt> is a start tag</li>
+<li><tt>&lt;/em&gt;</tt> is an end tag</li>
+<li>The <tt>&lt;em&gt;</tt> tag will <b>em</b>phasise text (often <i>italics</i>)</li>
+<li>Technically, the <tt>em</tt> bit of <tt>&lt;em&gt;</tt> is called an element</li>
+<li><tt>em</tt> is a container tag - it contains text</li>
+<li>Can also have empty tags, for example, <tt>&lt;hr&gt;</tt></li>
+<li>Empty tags don't have an end tag and don't contain text</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Creating a Simple HTML Page</h1>
+<ul>
+<li>Run Windows Notepad</li>
+<li>Type in some text</li>
+<li>Save as &quot;example.html&quot; (including quotes, otherwise file will be called example.html.txt) in your N: drive</li>
+<li>Start a Web browser and open example.html</li>
+<li>Extra whitespace is ignored and is collapsed to a single space</li>
+<li>Add <tt>&lt;em&gt;</tt> tags, save and refresh browser</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Simple HTML tags</h1>
+<ul>
+<li>Tags are usually English words or abbreviations</li>
+<li><tt>&lt;p&gt;</tt> - paragraph</li>
+<li><tt>&lt;br&gt;</tt> - new line (an empty tag)</li>
+<li><tt>&lt;h1&gt;</tt> - level 1 heading</li>
+<li><tt>&lt;h2&gt;</tt> - level 2 heading</li>
+<li><tt>&lt;h3&gt;</tt> - level 3 heading</li>
+<li><tt>&lt;h4&gt;</tt> - level 4 heading</li>
+<li><tt>&lt;h5&gt;</tt> - level 5 heading</li>
+<li><tt>&lt;h6&gt;</tt> - level 6 heading</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Simple HTML tags</h1>
+<ul>
+<li>Every page should contain:</li>
+<li><tt>&lt;html&gt;&lt;/html&gt;</tt> - indicating that document contains HTML</li>
+<li><tt>&lt;head&gt;&lt;/head&gt;</tt> - container for information about the page (e.g. title)</li>
+<li><tt>&lt;title&gt;&lt;/title&gt;</tt> - container for title of page</li>
+<li><tt>&lt;body&gt;&lt;/body&gt;</tt> - container for text and other media that make up page</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Overall Structure</h1>
+<p>Overall page structure will be:</p>
+<p><tt>
+&lt;html&gt;<br />
+&nbsp;&nbsp;&lt;head&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Example Page&lt;/title&gt;<br />
+&nbsp;&nbsp;&lt;/head&gt;<br />
+&nbsp;&nbsp;&lt;body&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Page content<br />
+&nbsp;&nbsp;&lt;/body&gt;<br />
+&lt;/html&gt;
+</tt></p>
+</div>
+
+<div class="slide">
+<h1>Attributes</h1>
+<ul>
+<li>Attributes extend elements by giving them properties</li>
+<li>Attributes are located after the element in a tag</li>
+<li>Attributes are often assigned values</li>
+<li>Values should be surrounded by quotes</li>
+<li>For example, <tt>&lt;p align=&quot;center&quot;&gt;text&lt;/p&gt;</tt> (which controls horizontal alignment)</li>
+<li>Value can also be &quot;left&quot;, &quot;right&quot; and &quot;justify&quot;</li>
+<li>Closing tags don't have attributes</li>
+<li>So never do <tt>&lt;p align=&quot;left&quot;&gt;text&lt;/p align=&quot;left&quot;&gt;</tt></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Possible Attributes</h1>
+<ul>
+<li>HTML-Kit contains details of possible attributes for an element</li>
+<li>Definitive reference is on W3C site at <a href="http://www.w3.org/TR/html4/index/attributes.html" target="w3c">http://www.w3.org/TR/html4/index/attributes.html</a></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Case</h1>
+<ul>
+<li>Elements and attributes are both case-insensitive (but recommend using lower case)</li>
+<li>Values are case sensitive (<tt>align=&quot;center&quot;</tt> not <tt>align=&quot;CENTER&quot;</tt> or <tt>align=&quot;Center&quot;</tt>)</li>
+<li>Quotes around values can be optional, but recommend that you always use them</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Simple Formatting</h1>
+<ul>
+<li>Physical styles:
+<ul>
+<li><tt>&lt;b&gt;</tt> - bold</li>
+<li><tt>&lt;i&gt;</tt> - italics</li>
+<li><tt>&lt;tt&gt;</tt> - teletype (non-proportional font)</li>
+<li><tt>&lt;u&gt;</tt> - underlined text</li>
+</ul>
+</li>
+<li>Logical styles:
+<ul>
+<li><tt>&lt;em&gt;</tt> - emphasis</li>
+<li><tt>&lt;strong&gt;</tt> - strong emphasis</li>
+<li><tt>&lt;cite&gt;</tt> - a title</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Lists</h1>
+<ul>
+<li>Two types of list:
+<ul>
+<li><tt>&lt;ul&gt;</tt> - unordered list</li>
+<li><tt>&lt;ol&gt;</tt> - ordered list</li>
+</ul>
+</li>
+<li><tt>&lt;li&gt;</tt> - list item</li>
+<li>Lists can be nested</li>
+<li>Ordered list attributes - type (e.g. <tt>type=&quot;i&quot;</tt>) and start (e.g. <tt>start=&quot;3&quot;</tt>)</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Example List</h1>
+<p><tt>
+&lt;ul&gt;<br />
+&nbsp;&nbsp;&lt;li&gt;Arsenal<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Jack Kelsey&lt;/li&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lee Dixon&lt;/li&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<br />
+&nbsp;&nbsp;&lt;/li&gt;<br />
+&nbsp;&nbsp;&lt;li&gt;England<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Gordon Banks&lt;/li&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lee Dixon&lt;/li&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<br />
+&nbsp;&nbsp;&lt;/li&gt;<br />
+&lt;/ul&gt;    
+</tt></p>
+</div>
+
+<div class="slide">
+<h1>Miscellaneous Tags</h1>
+<ul>
+<li><tt>&lt;blockquote&gt;</tt> - long quotation</li>
+<li><tt>&lt;address&gt;</tt> - address</li>
+<li><tt>&lt;sub&gt;</tt> - subscript</li>
+<li><tt>&lt;sup&gt;</tt> - superscript</li>
+<li><tt>&lt;hr&gt;</tt> - horizontal rule</li>
+<li><tt>&lt;pre&gt;</tt> - preformatted text</li>
+<li><tt>&lt;!-- comments --&gt;</tt></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Special Characters</h1>
+<ul>
+<li>&lt;, &gt; and &quot; all appear in HTML tags</li>
+<li>If we want to display them then we must use:
+<ul>
+<li><tt>&amp;lt;</tt> for a &lt;</li>
+<li><tt>&amp;gt;</tt> for a &gt;</li>
+<li><tt>&amp;quot;</tt> for a &quot;</li>
+</ul>
+</li>
+<li>This also means that the &amp; is a special character</li>
+<li>To display an &amp;, we use <tt>&amp;amp;</tt></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Hyperlinks</h1>
+<ul>
+<li>To link to another Web page we use an anchor tag (<tt>&lt;a&gt;</tt>) and an href attribute:<br />
+<tt>&lt;a href=&quot;URL&quot;&gt;Hyperlinked text&lt;/a&gt;</tt></li>
+<li>Link to a document on another Web server (must include http://, the protocol, in the URL):<br />
+<tt>&lt;a href=&quot;http://www.yahoo.co.uk/&quot;&gt;Yahoo!&lt;/a&gt;</tt></li>
+<li>Link to a document in the same directory:<br />
+<tt>&lt;a href=&quot;otherdocument.html&quot;&gt;Other&lt;/a&gt;</tt></li>
+<li>Filenames are case-sensitive on a UNIX server (but not on Windows-based Web servers)</li>
+<li>Recommend that lower case filenames are always used</li>
+<li>Filenames should not contain spaces</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Relative Paths</h1>
+<ul>
+<li>To link to a page in the directory above:<br />
+<tt>&lt;a href=&quot;../above.html&quot;&gt;Up a directory and into a page&lt;/a&gt;</tt></li>
+<li><tt>..</tt> means &quot;go up a directory&quot;</li>
+<li>To go up two directories:<br />
+<tt>&lt;a href=&quot;../../furtherabove.html&quot;&gt;Up 2 directories&lt;/a&gt;</tt></li>
+<li>To go into a subdirectory:<br />
+<tt>&lt;a href=&quot;chapter/page.html&quot;&gt;Go into subdirectory&lt;/a&gt;</tt></li>
+<li>To link to another directory at the same level:<br />
+<tt>&lt;a href=&quot;../parallel/doc.html&quot;&gt;Parallel document&lt;/a&gt;</tt></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Relative Paths Example</h1>
+</div>
+
+<div class="slide">
+<h1>Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel11.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel12.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel13.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel14.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel15.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel21.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel22.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel23.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel24.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel25.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel26.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel31.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel32.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel33.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel34.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel35.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel36.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel37.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel41.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel42.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel43.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel44.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel45.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel46.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Another Relative Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11rel47.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths</h1>
+<ul>
+<li>Relative paths describe how to find another page relative to the current page</li>
+<li>Absolute paths give the precise location of a page</li>
+<li>Absolute paths must start with a /</li>
+<li><tt>&lt;a href=&quot;/iansealy/&quot;&gt;Absolute path to my Web space&lt;/a&gt;</tt></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11abs1.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11abs2.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11abs3.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11abs4.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11abs5.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Absolute Paths Example</h1>
+<p style="text-align: center;">
+<img src="uploads/wdd1/wdd11/wdd11abs6.gif" alt="" />
+</p>
+</div>
+
+<div class="slide">
+<h1>Links Within A Page</h1>
+<ul>
+<li>Mark a point to be linked to using<br />
+<tt>&lt;a name=&quot;bitoftext&quot;&gt;Link To&lt;/a&gt;</tt></li>
+<li>Link to it using <tt>&lt;a href=&quot;#bitoftext&quot;&gt;Hyperlink&lt;/a&gt;</tt></li>
+<li>Can also link to that specific point from another document using <tt>&lt;a href=&quot;doc.html#bitoftext&quot;&gt;Hyperlink&lt;/a&gt;</tt></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Inline Images</h1>
+<ul>
+<li>Include an image in your page using:<br />
+<tt>&lt;img src=&quot;image.gif&quot; alt=&quot;Image description&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;</tt></li>
+<li>Must always include alt text</li>
+<li>Some people browse with images turned off and some people can't see images</li>
+<li>If there is no suitable alt text (e.g. the image is just a spacer) then use <tt>alt=&quot;&quot;</tt></li>
+<li>Width and height attributes allow page to be rendered before images have downloaded</li>
+</ul>
+</div>
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

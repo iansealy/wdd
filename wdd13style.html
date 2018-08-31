@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Cascading Stylesheets</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Cascading Stylesheets</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Cascading Stylesheets</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+
+<div class="slide">
+<h1>HTML Problems</h1>
+<p>Problems with HTML and their workarounds:</p>
+<ul>
+<li>Formatting:
+<ul>
+<li><tt>font</tt> tag</li>
+</ul>
+</li>
+<li>Positioning / Layout:
+<ul>
+<li>Tables</li>
+<li>Content as image (e.g. <a href="http://www.star-tracking.com/" target="image">http://www.star-tracking.com/</a>)</li>
+<li>Spacers (transparent single pixel image)</li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Transparent Single Pixel Image</h1>
+<img src="uploads/wdd1/wdd13/spacer.gif" width="50" height="150" align="left" alt="" />
+<p>This is some text with a margin to the left of it. The margin is a transparent single pixel image expanded to 50 pixels.</p>
+<br clear="all" />
+<img src="uploads/wdd1/wdd13/red.gif" width="50" height="150" align="left" alt="" />
+<p>This is some text with a margin to the left of it. The image is now a single pixel red image, so you can see it.</p>
+<br clear="all"/>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Workaround Problems</h1>
+<p>Problems with pages that use workarounds:</p>
+<ul>
+<li>Pages are larger (especially if images are used) and take longer to download</li>
+<li>Pages are harder to maintain because:
+<ul>
+<li>the content is more complex</li>
+<li>the content is harder to read</li>
+<li>changing the style of a set of pages involves altering every page and often each individual tag (e.g. if want to change <tt>&lt;font color=&quot;green&quot;&gt;</tt> to <tt>&lt;font color=&quot;red&quot;&gt;</tt>)</li>
+</ul>
+</li>
+</ul>
+<p>Both of these mean users waste time and so do authors. Since time is money, it would be much better to separate the content and the styling. Authors can concentrate on the content and designers can easily change the design.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascading Stylesheets</h1>
+<p>Cascading Stylesheets (CSS or just stylesheets) allow content to be separated from formatting</p>
+<p>Examples of sites that use CSS rather than tables for page formatting:</p>
+<ul>
+<li><a href="http://www.adaptivepath.com/" target="adaptive">http://www.adaptivepath.com/</a></li>
+<li><a href="http://www.joelsundkvist.com/" target="joel">http://www.joelsundkvist.com/</a></li>
+<li><a href="http://www.csszengarden.com/" target="zen">http://www.csszengarden.com/</a></li>
+<li><a href="http://www.strangebanana.com/" target="banana">http://www.strangebanana.com/</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Simple Example</h1>
+<p><tt>&lt;style type=&quot;text/css&quot;&gt;<br />
+body { color : red; }<br />
+&lt;/style&gt;</tt></p>
+<p>CSS is the bit between the <tt>&lt;style&gt;</tt> tags</p>
+<p><tt>&lt;style&gt;</tt> tag must go in head of page (like the <tt>&lt;title&gt;</tt> tag).</p>
+<p>All content (everything within the body tags) is red.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Syntax</h1>
+<p><tt>body { color : red; }</tt></p>
+<p>Part before the curly brackets (in this case the body tag) is the <b>selector</b>. Part within the curly brackets is the <b>declaration</b>.</p>
+<p>Each declaration consists of a <b>property name</b> (in this case color) and its <b>value</b> (in this case red). The name and value must be separated with a colon.</p>
+<p>Can have more than one selector, for example:<br /><tt>h1, h2 { color : red; }</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Syntax</h1>
+<p>Can have more than one property, for example:<br /><tt>body { color : red; background-color : green;}</tt></p>
+<p>Properties must be separated with semicolons.</p>
+<p>A stylesheet is just a collection of these rules.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Location of Styles</h1>
+<ul>
+<li><b>Internal stylesheet</b><br />
+<tt>&lt;style&gt;</tt> tag appears in head of document. Can use comments (<tt>&lt;!--</tt> and <tt>--&gt;</tt>) to prevent older browsers displaying styles.</li>
+<li><b>External stylesheet</b><br />
+A .css file contains the styles. Use this with:<br />
+<tt>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;</tt><br />
+Goes in the head of document.<br />
+File just contains CSS (no HTML, so no <tt>&lt;style&gt;</tt> tag)</li>
+<li><b>Inline styles</b><br />
+Within a single HTML tag<br />
+<tt>&lt;p style=&quot;color : blue&quot;&gt;</tt></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Classes</h1>
+<p>Styles can be applied to any HTML tags, but what if you want some <tt>h1</tt> tags to have one style, but other <tt>h1</tt> tags to have another style?</p>
+<p>Use classes. Can define different classes of style. For example:</p>
+<p><tt>h1.warning { color : red }<br />
+h1.ok { color : green }</tt></p>
+<p>Apply specific class to h1 tags:</p>
+<p><tt>&lt;h1 class=&quot;warning&quot;&gt;Red / Warning Heading&lt;/h1&gt;<br />
+&lt;h1 class=&quot;ok&quot;&gt;Green / OK Heading&lt;/h1&gt;</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Classes</h1>
+<p>Don't have to associate classes with a specific tag, for example:</p>
+<p><tt>h1.yuk { color : red; background-color : green; }</tt></p>
+<p><tt>&lt;h1 class=&quot;yuk&quot;&gt;Horrid style&lt;/h1&gt;<br />
+&lt;p class=&quot;yuk&quot;&gt;Normal style&lt;/p&gt;</tt></p>
+<p><tt>.yuk { color : red; background-color : green; }</tt></p>
+<p><tt>&lt;h1 class=&quot;yuk&quot;&gt;Horrid style&lt;/h1&gt;<br />
+&lt;p class=&quot;yuk&quot;&gt;Horrid style&lt;/p&gt;</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Comments</h1>
+<p>Can add comments to stylesheets using <tt>/*</tt> and <tt>*/</tt>. For example:</p>
+<p><tt>h1 { color : red; } /* Make headings red */<br />
+p { color : blue; } /* Make paragraphs blue */</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Stylesheet Precedence</h1>
+<p>What if an inline style says that paragraphs should be blue, but an external stylesheet says they should be green?</p>
+<p>Styles have an order of precedence:</p>
+<ul>
+<li>Inline styles</li>
+<li>Embedded styles</li>
+<li>Linked styles</li>
+<li>Default browser styles</li>
+</ul>
+<p>So an inline style overrides an external style.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Font Properties</h1>
+<ul>
+<li><b>Named fonts</b><br />
+<tt>p { font-family : Verdana, helvetica, sans-serif; } /* Go from specific to generic font */</tt></li>
+<li><b>Font size</b><br />
+<tt>p { font-size : 16pt; }</tt><br />
+Can define size using points (e.g. 16pt), percent (e.g. 150% or 1.5 times larger than the current default), ems (e.g. 1.5em or 1.5 times larger than the current default), pixels (e.g. 30px), etc...<br />
+Recommend percent or ems</li>
+<li><b>Font style</b><br />
+<tt>p { font-style : italic; }</tt></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Font Properties</h1>
+<ul>
+<li><b>Font weight</b><br />
+<tt>p { font-weight : bold; }<br />
+p { font-weight : normal; }</tt></li>
+<li><b>Text transform</b><br />
+<tt>p { text-transform : uppercase; }<br />
+p { text-transform : lowercase; }<br />
+p { text-transform : capitalize; }</tt></li>
+<li><b>Text decoration</b><br />
+<tt>p { text-decoration : underline; }<br />
+p { text-decoration : overline; }<br />
+p { text-decoration : none; }<br />
+p { text-decoration : line-through; }<br />
+p { text-decoration : blink; }<br /></tt></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Margin Properties</h1>
+<p><tt>p { margin-left : 50px; }<br />
+p { margin-right : 20%; }<br />
+p { margin-top : 50px; }<br />
+p { margin-bottom : 3cm; }<br />
+p { margin : <i>top right bottom left</i>; }</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>CSS Support</h1>
+<p>New Web browsers (IE6, Netscape 7+, Opera 7+, Mozilla, Firefox) have good CSS support, but older browsers don't.</p>
+<p>Sites that use CSS should always be thoroughly tested on a range of browsers (i.e. different types of browser and different versions of each type of browser).</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Reading</h1>
+<p>Just a very small sample of what can be done with stylesheets. We haven't looked at colours or positioning.</p>
+<p>For a brief introduction to stylesheets, read <a href="http://www.w3.org/MarkUp/Guide/Style.html" target="touch">Adding a touch of style</a>.</p>
+<p>For more detailed information you should read <a href="http://hotwired.lycos.com/webmonkey/authoring/stylesheets/tutorials/tutorial1.html" target="mulder">Mulder's Stylesheets Tutorial</a>.</p>
+<p>The recommended text for learning more about stylesheets is <a href="http://www.amazon.co.uk/exec/obidos/ASIN/073571245X/iansealycom" target="eric">Eric Meyer on CSS</a>.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

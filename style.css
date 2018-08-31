@@ -1,0 +1,16 @@
+P, TD, TH, LI, H1, H2, H3, H4, H5, H6 {
+   font-family : Verdana, helvetica, sans-serif; 
+}
+
+H1 {
+   font-size : 150%; 
+}
+
+.menu {
+   text-decoration : none; 
+   color : #330099; 
+}
+
+.slide {
+   font-size : 130%; 
+}

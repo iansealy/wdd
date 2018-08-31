@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>SSIs</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>SSIs</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Server Side Includes</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+
+<div class="slide">
+<h1>Introduction</h1>
+<ul>
+<li>Server Side Includes (SSIs) are directives that are parsed by the Web server <b>before</b> the page is returned to the Web browser</li>
+<li>Main use is to separate presentation from content by removing repetitive HTML into a separate file</li>
+<li>Many Web servers support SSIs</li>
+<li>Only covering Apache, because it's the <a href="http://news.netcraft.com/archives/web_server_survey.html" target="netcraft"> most popular server</a> and DreamHost uses it</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Parsed Files and Syntax</h1>
+<ul>
+<li>Can choose for any file types to be parsed for SSIs, but .shtml is most common (e.g. <a href="http://wiki.dreamhost.com/index.php/KB_/_Web_Programming_/_CGI%2C_PHP_%26_Databases_/_SSI:_Server-Side_Includes">DreamHost</a>)</li>
+<li>Basic syntax:<br /><tt>&lt;!--#element attribute=value --&gt;</tt></li>
+<li>Example:<br /><tt>&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</tt></li>
+<li><tt>&lt;!--#config timefmt=&quot;%A %B %d, %Y&quot; --&gt;</tt></li>
+<li><tt>&lt;!--#echo var=&quot;LAST_MODIFIED&quot; --&gt;</tt></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Separation of Content and Presentation</h1>
+<p>Example file:</p>
+<tt>
+&lt;!--#include virtual=&quot;ssi/header.html&quot; --&gt;
+<br />
+&lt;p&gt;Content&lt;/p&gt;
+<br />
+&lt;!--#include virtual=&quot;/ssi/footer.html&quot; --&gt;
+</tt>
+<p>Need to create <tt>header.html</tt> and <tt>footer.html</tt> in <tt>ssi</tt> subdirectory</p>
+<p>Can use either relative path (<tt>ssi/header.html</tt>) or absolute path (<tt>/ssi/footer.html</tt>)</p>
+<p>Only need to edit <tt>ssi/header.html</tt> and <tt>ssi/footer.html</tt> to change look and feel</p>
+<div class="handout">
+</div>
+</div>
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

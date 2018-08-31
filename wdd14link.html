@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Link Checking</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Link Checking</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Link Checking</h1>
+<h2>Kieren Pitts</h2>
+</div>
+
+
+<div class="slide">
+<h1>Why Link Checking Is Important</h1>
+<ul>
+<li>In an ideal world, URLs would never change (see <a href="http://www.w3.org/Provider/Style/URI.html" target="cool">Cool URIs don't change</a> and <a href="http://www.useit.com/alertbox/990321.html" target="ui">URL as UI</a>)</li>
+
+<li>Unfortunately, links do break - <a href="http://www.pantos.org/atw/35654.html" target="pantos">5.7% of the links surveyed on 200 pages in May 1999</a> were broken (and 28.5% of those pages contained broken links)</li>
+<li>Broken links make your site look unprofessional and reduces user confidence</li>
+<li>Especially broken internal links</li>
+<li>Therefore all sites should be link checked before being made public</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>How To Link Check</h1>
+<ul>
+<li>Link check up to 150 pages using <a href="http://validator.w3.org/checklink" target="w3c">W3C Link Checker</a></li>
+<li><a href="http://www.htmlhelp.org/tools/valet/" target="valet">Link Valet</a></li>
+<li>Link check (plus extras) 5 pages using <a href="http://www.netmechanic.com/toolbox/html-code.htm" target="mech">NetMechanic</a><br />
+<a href="http://r.netmechanic.com/toolbox/summary.cgi?f=f/117/327/1539/49-03857/&amp;s=NetMechanic&amp;ft=3&amp;fp=1&amp;so=0&amp;fv=5" target="example">Example NetMechanic output</a></li>
+<li>Link checking larger sites needs locally installed software</li>
+<li><a href="http://home.snafu.de/tilman/xenulink.html" target="xenu">Xenu</a> is recommended because it is free and simple<br />
+
+<a href="uploads/wdd1/wdd14/xenu.htm" target="xenueg">Example Xenu output</a></li>
+<li>Xenu can link check sites that are only on your computer</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Common Error Codes (HTTP Status Codes)</h1>
+<ul>
+<li><b>404</b> - Not Found<br />
+
+Permanent. Link is broken.</li>
+<li><b>503</b> - Service Unavailable<br />
+Perhaps temporary. The Web site may be undergoing maintenance or there may be a network problem.</li>
+<li><b>500</b> - Internal Server Error<br />
+Perhaps temporary. The Web server has found an error whilst trying to display the page.</li>
+<li><b>401</b> - Unauthorized<br />
+
+Access requires a username and password.</li>
+<li><b>403</b> - Forbidden<br />
+Access is not allowed (e.g. because access is restricted to specific machines).</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>404 Pages</h1>
+<ul>
+
+<li>If links must be broken then at least have a custom 404 page</li>
+<li><a href="http://www.apache.org/nonexistent" target="apache">Standard 404 page</a></li>
+<li><a href="http://www.w3.org/nonexistent" target="w3c">W3C 404 page</a></li>
+<li><a href="http://www.tasi.ac.uk/nonexistent" target="tasi">TASI 404 page</a></li>
+<li><a href="http://www.bized.ac.uk/nonexistent" target="bized">Biz/ed 404 page</a></li>
+<li><a href="http://www.lookitsme.co.uk/nonexistent" target="look">Lookitsme 404 page</a></li>
+<li><a href="http://www.3complete.com/page_cannot_be_displayed.htm" target="harder">Click Harder 404 page</a></li>
+<li><a href="http://www.plinko.net/404/" target="lab">404 Research Lab</a></li>
+<li>Customising 404 pages needs to be done on the server</li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

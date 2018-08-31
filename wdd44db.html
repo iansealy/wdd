@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Database-Backed Web Sites</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Database-Backed Web Sites</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Database-Backed Web Sites</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+
+<div class="slide">
+<h1>Advantages</h1>
+<ul>
+<li>Easier to repurpose data</li>
+<li>Easier to maintain</li>
+<li>Greater functionality</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Disadvantages</h1>
+<ul>
+<li>More complex to develop</li>
+<li>Poorer performance</li>
+<li>Higher cost</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>LAMP</h1>
+<ul>
+<li>Database-backed Web sites commonly use LAMP:
+<ul>
+<li><b>L</b>inux (operating system)</li>
+<li><b>A</b>pache (Web server)</li>
+<li><b>M</b>ySQL (database server)</li>
+<li><b>P</b>erl, <b>P</b>HP or <b>P</b>ython (programming language)</li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Example Application</h1>
+<ul>
+<li>Create a Web site to display the movies in a <a href="uploads/wdd4/wdd44/movies.csv">CSV file</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Index Page</h1>
+<pre>
+&lt;?php
+
+require 'DB.php';
+
+$dbh = DB::connect('mysql://movies:movies@mysql.bbkweb.org/movies');
+if ( DB::isError($dbh) ) {
+    die ( $dbh-&gt;getMessage() );
+}
+
+$sth = $dbh-&gt;query(&quot;
+    SELECT movie_id, title FROM movies ORDER BY title
+&quot;);
+print &quot;&lt;ul&gt;\n&quot;;
+while($row = $sth-&gt;fetchRow()) {
+    list($movie_id, $title) = $row;
+    print &quot;&lt;li&gt;&quot;;
+    print &quot;&lt;a href=\&quot;movie.php?movie_id=$movie_id\&quot;&gt;$title&lt;/a&gt;&quot;;
+    print &quot;&lt;/li&gt;\n&quot;;
+}
+print &quot;&lt;/ul&gt;\n&quot;;
+
+?&gt;
+</pre>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Movie Page</h1>
+<pre>
+&lt;?php
+
+require 'DB.php';
+
+$dbh = DB::connect('mysql://movies:movies@mysql.bbkweb.org/movies');
+if ( DB::isError($dbh) ) {
+    die ( $dbh-&gt;getMessage() );
+}
+
+$sth = $dbh-&gt;query(&quot;
+    SELECT title, description, year FROM movies WHERE movie_id = &quot;
+    . $_GET['movie_id']
+);
+while($row = $sth-&gt;fetchRow()) {
+    list($title, $description, $year) = $row;
+    print &quot;&lt;h1&gt;$title ($year)&lt;/h1&gt;\n&quot;;
+    print &quot;&lt;p&gt;$description&lt;/p&gt;\n&quot;;
+}
+
+?&gt;
+</pre>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Advantages Revisited</h1>
+<ul>
+<li>Easier to repurpose data (same data could be used to construct a list sorted by title and date)</li>
+<li>Easier to maintain (update title in the database and title is updated everywhere)</li>
+<li>Greater functionality (can show films from certain decades without creating and having to maintain separate pages)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Disadvantages Revisited</h1>
+<ul>
+<li>More complex to develop (need to know PHP and SQL)</li>
+<li>Poorer performance (won't scale as well as static pages)</li>
+<li>Higher cost (need a developer who knows PHP and SQL)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Reading</h1>
+<ul>
+<li><a href="http://www.w3schools.com/sql/">W3Schools SQL Tutorial</a></li>
+<li><a href="http://sqlzoo.net/">SQLzoo - Interactive SQL Tutorial</a></li>
+<li><a href="http://www.w3schools.com/php/">W3Schools PHP Tutorial</a></li>
+<li><a href="http://learn.perl.org/library/beginning_perl/">Beginning Perl</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

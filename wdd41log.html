@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Server Log Analysis</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Server Log Analysis</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Server Log Analysis</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+<div class="slide">
+<h1>Introduction</h1>
+<ul>
+<li>All Web servers generate logs</li>
+<li>Logs generally contain one line per request</li>
+<li>Example:</li>
+</ul>
+<tt><small>
+62.255.32.17 - - [12/May/2006:13:29:34 -0700] "GET / HTTP/1.1" 200 1604 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"<br /><br />
+62.255.32.17 - - [12/May/2006:13:29:35 -0700] "GET /style.css HTTP/1.1" 304 - "http://wdd0506.bbkweb.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"<br /><br />
+62.255.32.17 - - [12/May/2006:13:29:35 -0700] "GET /birkbeck.gif HTTP/1.1" 304 - "http://wdd0506.bbkweb.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"<br /><br />
+62.255.32.17 - - [12/May/2006:13:29:43 -0700] "GET /module.html HTTP/1.1" 200 1771 "http://wdd0506.bbkweb.org/" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.0.3) Gecko/20060426 Firefox/1.5.0.3"
+</small></tt>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Example Logs</h1>
+<ul>
+<li>wdd0506.bbkweb.org log</li>
+<li>Biz/ed log</li>
+<li>Too much information, so must use a log analysis tool</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Example Reports</h1>
+<ul>
+<li><a href="uploads/wdd4/wdd41/ucisa/" target="ucisa">UCISA report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> - free software)</li>
+<li><a href="uploads/wdd4/wdd41/port/" target="port">PORT report</a> (compiled using <a href="http://www.webtrends.com/" target="webtrends">WebTrends</a> - commercial software)</li>
+<li><a href="http://maths.sci.shu.ac.uk/reports/" target="shumaths">SHUMaths report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> and <a href="http://www.reportmagic.com/" target="reportmagic">Report Magic</a>)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Caching</h1>
+<ul>
+<li>Fundamental problem is caching</li>
+<li>Caching occurs at browser level (one person) and ISP level (many people)</li>
+<li>Page may be downloaded once, but viewed many times (by one person or many people)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Visitors</h1>
+<ul>
+<li>Can't estimate number of visitors</li>
+<li>Assumes 1 IP address = 1 visitor</li>
+<li>But many users may appear to connect from the same IP address (because they're using the same proxy server)</li>
+<li>Each request from an AOL user comes from a different IP address (multiple proxy servers)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Visits</h1>
+<ul>
+<li>Can't estimate number of visits</li>
+<li>1 &quot;visit&quot; = activity from 1 IP address that is terminated by 30 minutes of inactivity</li>
+<li>Again, one IP address does not correspond to one visitor</li>
+<li>Can be a 30 minute gap in a genuine visit (e.g. go to another site temporarily or make a cup of tea)</li>
+<li>30 minutes is entirely arbitrary</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Cookie Tracking</h1>
+<ul>
+<li>Cookie tracking can improve estimates of visitors and visits</li>
+<li>Cookies are short bits of text sent by a Web server that get stored on the local computer</li>
+<li>Associated with a domain (e.g. microsoft.com)</li>
+<li>Each time that domain is accessed the cookie is sent back to the Web server</li>
+<li>In cookie tracking, if a cookie has not been set, then a cookie containing a unique ID is sent</li>
+<li>Cookie gets sent back to server on each subsequent request</li>
+<li>Unique ID is stored in server log</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Cookie Tracking</h1>
+<ul>
+<li>Allows tracking of an individual</li>
+<li>But some users refuse to accept cookies</li>
+<li>Some might delete cookies after each session</li>
+<li>Some browsers don't support cookies</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>False Information</h1>
+<ul>
+<li>Can't even trust browser type and referrer URLs</li>
+<li>Many browsers can be configured to lie about their browser type and may do so by default</li>
+<li>A few browsers send incorrect referrer URLs</li>
+<li>Anonymisers can be used that deliberately send false browser types and referrer URLs</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Other Problems</h1>
+<ul>
+<li>Can't determine a user's path through site (users often backtrack to cached pages)</li>
+<li>Can't tell where entered site (home page is most likely to be cached, so first request will be for a deeper page)</li>
+<li>Can't tell what site user went to next (because not logged, although could use custom script)</li>
+<li>Can't tell how long was spent reading a page (user may have gone to another site imbetween or have made a cup of tea)</li>
+<li>Can't tell how long was spent on site (same reason as above, plus don't know how long was spent on last page, which is likely to be long if they found something or short if became frustrated and left)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Remote Logging</h1>
+<ul>
+<li>If can't access server logs then often use remote logging</li>
+<li>Involves embedding HTML for an inline image hosted by a third party</li>
+<li>Third party counts accesses to this image and presents graphical report</li>
+<li><a href="http://www.exploit-lib.org/issue5/software-used/" target="exploit">Article and example reports</a></li>
+<li>Relies on use of graphical browser</li>
+<li>Ensure image is outside table structure of page or might delay rendering</li>
+<li><a href="http://www.scriptsearch.com/Remotely_Hosted/Web_Traffic_Analysis/" target="scriptsearch">ScriptSearch.com</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Further Info</h1>
+<ul>
+<li><a href="http://www.goldmark.org/netrants/webstats/" target="goldmark">Why web usage statistics are (worse than) meaningless</a></li>
+<li><a href="http://www.collectionscanada.ca/9/1/p1-256-e.html" target="measure">Measuring Web Site Usage: Log File Analysis</a></li>
+<li><a href="http://www.ario.ch/etc/webstats.html" target="interpret">Interpreting WWW statistics</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Agenda | Birkbeck College Diploma in Web Design and Development 2005/2006</title>
+<link rel="STYLESHEET" type="text/css" href="/style.css">
+</head><body bgcolor="#FFFFFF">
+<table border="0" cellpadding="6" cellspacing="0" width="100%" summary="">
+  <tr>
+    <td valign="top" width="200" bgcolor="#000000"><a href="/"><img src="/birkbeck.gif" border="0" width="200" height="63" alt=""></a></td>
+    <td valign="top" width="100%" bgcolor="#9999CC" align="right">
+    <p style="margin : 1px"><b>Birkbeck College - Faculty of Continuing Education<br>
+    Diploma in Web Design and Development 2005/2006</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="200" bgcolor="#9999CC">
+    <table border="0" cellspacing="16" cellpadding="0">
+      <tr><td><b><a class="menu" href="/">Home</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/timetable.html">Timetable</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/module.html">Modules</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/assignment.html">Assignments</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/mailinglist.html">Mailing Lists</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/staff.html">Staff</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/student.html">Students</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/readinglist.html">Reading List</a></b></td></tr>
+    </table>
+    </td>
+    <td valign="top" width="100%">
+<small>
+<a href="/">Home</a> »
+ <a href="http://wdd0506.bbkweb.org/module.html">Modules</a> »
+ <a href="http://wdd0506.bbkweb.org/wdd3.html">WDD3</a> »
+ <a href="http://wdd0506.bbkweb.org/wdd33.html">WDD33</a> »
+ Agenda
+</small>
+<h1>Agenda</h1>
+
+<table border="1" cellspacing="0" cellpadding="4" class="slide">
+  <tr bgcolor="#F0F8FF">
+    <td valign="top">09:30am - 09:45am</td>
+    <td valign="top"><a href="wdd33_intro.html">Introduction</a></td>
+  </tr>
+
+  <tr>
+    <td valign="top">09:45am - 10:15am</td>
+    <td valign="top"><a href="wdd33_content.html">Creating great content</a></td>
+  </tr>
+  <tr bgcolor="#F0F8FF">
+    <td valign="top">10:15am - 10:30am</td>
+
+    <td valign="top"><a href="wdd33_contentuser.html">Moving towards a design</a></td>
+  </tr>
+  <tr>
+    <td valign="top">10:30am - 11:00am</td>
+    <td valign="top"><a href="wdd33_org.html">Organising information for the Web</a></td>
+
+  </tr>
+  <tr bgcolor="#F0F8FF">
+    <td valign="top">11:00am - 11:20am</td>
+    <td valign="top">Break</td>
+  </tr>
+  <tr>
+    <td valign="top">11:20am - 12:10pm</td>
+
+    <td valign="top"><a href="wdd33_label.html">Labelling and classification</a></td>
+  </tr>
+  <tr bgcolor="#F0F8FF">
+    <td valign="top">12:10pm - 01:00pm</td>
+    <td valign="top"><a href="wdd33_nav.html">Designing navigation systems</a></td>
+
+  </tr>
+  <tr>
+    <td valign="top">01:00pm - 02:00pm</td>
+    <td valign="top">Lunch</td>
+  </tr>
+  <tr bgcolor="#F0F8FF">
+    <td valign="top">02:00pm - 03:00pm</td>
+
+    <td valign="top"><a href="wdd33_interact.html">Interaction design</a></td>
+  </tr>
+  <tr>
+    <td valign="top">03:00pm - 03:20pm</td>
+    <td valign="top">Break</td>
+
+  </tr>
+  <tr bgcolor="#F0F8FF">
+    <td valign="top">03:20pm - 03:50pm</td>
+    <td valign="top"><a href="wdd33_proto.html">Developing prototypes</a></td>
+  </tr>
+  <tr>
+
+    <td valign="top">03:50pm - 04:30pm</td>
+    <td valign="top">General Q &amp; A / Project work</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#9999CC">&nbsp;</td>
+    <td width="100%" bgcolor="#E8E8E8">
+    <p align="right"><small><a
+    href="/location.html">Location</a> | &copy; Birkbeck College 2005/2006 | <a href="http://www.dreamhost.com/r.cgi?77128">Hosted by DreamHost</a></small></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

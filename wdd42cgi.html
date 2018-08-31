@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>CGI</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>CGI</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>CGI</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+
+<div class="slide">
+<h1>Introduction</h1>
+<ul>
+<li>CGI = Common Gateway Interface</li>
+<li>Method of creating dynamic or interactive Web pages (e.g. database-driven pages)</li>
+<li>Examples:
+<ul>
+<li><a href="http://www.bized.ac.uk/search/seahome.htm" target="bizedsearch">Biz/ed search engine</a> (URL contains &quot;cgi-bin&quot;)</li>
+<li><a href="http://www.bized.ac.uk/dataserv/penndata/graphs/" target="penn">Penn World Data graphing tool</a> (URL contains &quot;cgi-bin&quot;)</li>
+<li><a href="https://www.234car.com/carshare/contact.html" target="234car">234car contact form</a> (URL does <b>not</b> contain &quot;cgi-bin&quot;, but is CGI, as is rest of system)</li>
+</ul>
+</li>
+<li>CGI is an interface between the Web server and a program running on the computer hosting the Web server</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>More Introduction</h1>
+<ul>
+<li>Normally a requested file is sent back to a Web browser directly</li>
+<li>With CGI the requested file is executed as a program and that program's output is sent back to the Web browser</li>
+<li>Parameters (e.g. your search term or your email address) are sent to the Web server in a standard way (the Common Gateway)</li>
+<li>CGI script must be able to get at these parameters</li>
+<li>CGI scripts can be written in any language that will run on the computer hosting the Web server</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Languages</h1>
+<p>Examples of programming languages that are often used to write CGI scripts:</p>
+<ul>
+<li>Perl - very popular (I use Perl given the choice)</li>
+<li>PHP - also very popular</li>
+<li>VBScript - a Microsoft Windows scripting language (often used with ASP)</li>
+<li>C and C++ - used when speed is important (because compiled, not interpreted)</li>
+<li>Python</li>
+<li>Tcl</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Reusing CGI Scripts</h1>
+<p>Teaching any of these languages is beyond the scope of this course. Many Web developers never write their own scripts. Is easy to reuse scripts that other people have written.</p>
+<p>Sources:</p>
+<ul>
+<li><a href="http://www.cgi-resources.com/" target="cgiresources">CGI Resource Index</a></li>
+<li><a href="http://www.scriptsearch.com/" target="scriptsearch">ScriptSearch.com</a></li>
+<li><a href="http://nms-cgi.sourceforge.net/" target="nms">nms</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>What You Need</h1>
+<ul>
+<li>A cgi-bin on your Web server (an area where files are executed rather than just sent back directly)</li>
+<li>On the DreamHost server, CGI scripts can be run from any directory below htdocs and scripts just need to have the right file extension (e.g. .pl or .php)</li>
+<li>Is also possible to use scripts hosted by a third party - <a href="http://cgi.resourceindex.com/Remotely_Hosted/" target="cgiresourcesremote">CGI Resource Index</a> and <a href="http://www.scriptsearch.com/Remotely_Hosted/" target="scriptsearchremote">ScriptSearch.com</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Example</h1>
+<p><tt>
+#!/usr/bin/perl<br />
+<br />
+use CGI qw(param);<br />
+<br />
+print&nbsp;&quot;Content-type:&nbsp;text/html\n\n&quot;;<br />
+<br />
+print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username'),&nbsp;&quot;&lt;/h1&gt;&lt;/html&gt;&quot;;
+</tt></p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Example</h1>
+<ul>
+<li>Is a Perl script</li>
+<li>Located at <small><a href="cgi-bin/cgiexample.pl" target="cgiexample">http://wdd0506.bbkweb.org/cgi-bin/cgiexample.pl</a></small></li>
+<li>Takes a parameter called &quot;username&quot; and displays the value of that parameter after &quot;Hello&quot;</li>
+<li>Can pass parameter as part of URL</li>
+<li><small><a href="cgi-bin/cgiexample.pl?username=Ian" target="cgiexampleian">http://wdd0506.bbkweb.org/cgi-bin/cgiexample.pl?username=Ian</a></small></li>
+<li><small><a href="cgi-bin/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://wdd0506.bbkweb.org/cgi-bin/cgiexample.pl?username=Kieren</a></small></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Forms</h1>
+<ul>
+<li>Using URLs is one way of sending parameters to a CGI script, but most common way is probably to use forms</li>
+<li>Forms are HTML that allow user to enter information and send it to the Web server</li>
+<li>All forms are enclosed in <b><tt>&lt;form&gt;</tt></b> elements</li>
+<li>action attribute of form element points to CGI script</li>
+<li>Are three main elements within a form - <b><tt>&lt;input&gt;</tt></b>, <b><tt>&lt;select&gt;</tt></b> and <b><tt>&lt;textarea&gt;</tt></b></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>input element</h1>
+<p><tt>
+&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&gt;<br />
+&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;username&quot;&nbsp;size=&quot;10&quot;&gt;<br />
+&lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+&lt;/form&gt;
+</tt></p>
+<form action="cgi-bin/cgiexample.pl" target="cgiexampleinput">
+<input type="text" name="username" size="10" />
+<input type="submit" value="Go" />
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>More input element</h1>
+<p><tt><small>
+&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&gt;<br />
+&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name&lt;br&gt;<br />
+&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Kieren&quot;&gt;Kieren's&nbsp;first&nbsp;name&lt;br&gt;<br />
+&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&nbsp;Sealy&quot;&gt;Ian's&nbsp;full&nbsp;name&lt;br&gt;<br />
+&lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Kieren&nbsp;Pitts&quot;&gt;Kieren's&nbsp;full&nbsp;name&lt;br&gt;<br />
+&lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+&lt;/form&gt;
+</small></tt></p>
+<form action="cgi-bin/cgiexample.pl" target="cgiexampleradio">
+<input type="radio" name="username" value="Ian" />Ian's first name<br />
+<input type="radio" name="username" value="Kieren" />Kieren's first name<br />
+<input type="radio" name="username" value="Ian Sealy" />Ian's full name<br />
+<input type="radio" name="username" value="Kieren Pitts" />Kieren's full name<br />
+<input type="submit" value="Go" />
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>select element</h1>
+<p><tt>
+&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&gt;<br />
+&lt;select&nbsp;name=&quot;username&quot;&gt;<br />
+&lt;option&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name<br />
+&lt;option&nbsp;value=&quot;Kieren&quot;&gt;Kieren's&nbsp;first&nbsp;name<br />
+&lt;option&nbsp;value=&quot;Ian&nbsp;Sealy&quot;&gt;Ian's&nbsp;full&nbsp;name<br />
+&lt;option&nbsp;value=&quot;Kieren&nbsp;Pitts&quot;&gt;Kieren's&nbsp;full&nbsp;name<br />
+&lt;/select&gt;<br />
+&lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+&lt;/form&gt;
+</tt></p>
+<form action="cgi-bin/cgiexample.pl" target="cgiexampleoption">
+<select name="username">
+<option value="Ian">Ian's first name</option>
+<option value="Kieren">Kieren's first name</option>
+<option value="Ian Sealy">Ian's full name</option>
+<option value="Kieren Pitts">Kieren's full name</option>
+</select>
+<input type="submit" value="Go" />
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>textarea element</h1>
+<p><tt>
+&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&gt;<br />
+&lt;textarea&nbsp;rows=&quot;10&quot;&nbsp;cols=&quot;40&quot;&nbsp;name=&quot;username&quot;&gt;&lt;/textarea&gt;<br />
+&lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+&lt;/form&gt;
+</tt></p>
+<form action="cgi-bin/cgiexample.pl" target="cgiexampletextarea">
+<textarea rows="10" cols="40" name="username"></textarea>
+<input type="submit" value="Go" />
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>method attribute</h1>
+<p>Two ways of accessing a CGI script. Determined by method attribute of form element.</p>
+<p><b>POST:</b><br />
+<tt>&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&nbsp;method=&quot;POST&quot;&gt;</tt></p>
+<form action="cgi-bin/cgiexample.pl" method="post" target="cgiexamplepost">
+<input type="text" name="username" size="10" />
+<input type="submit" value="Go" />
+</form>
+<p><b>GET:</b><br />
+<tt>&lt;form&nbsp;action=&quot;/cgi-bin/cgiexample.pl&quot;&nbsp;method=&quot;GET&quot;&gt;</tt></p>
+<form action="cgi-bin/cgiexample.pl" method="get" target="cgiexampleget">
+<input type="text" name="username" size="10" />
+<input type="submit" value="Go" />
+</form>
+<p>Which is used depends on CGI script. Can POST an unlimited amount of data. GET is limited.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Further Info</h1>
+<ul>
+<li><a href="http://www.w3.org/TR/html4/interact/forms.html" target="w3c">W3C forms specification</a></li>
+<li><a href="http://html.about.com/library/weekly/aa070699.htm" target="about">About.com HTML Forms Tutorial</a></li>
+<li><a href="http://www.w3schools.com/html/html_forms.asp" target="w3schools">W3Schools HTML Forms Tutorial</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

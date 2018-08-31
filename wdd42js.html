@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>JavaScript</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v2.0
+  if (document.MM_swapImgData != null)
+    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
+      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() { //v2.0
+  if (document.images) {
+    var imgFiles = MM_preloadImages.arguments;
+    if (document.preloadArray==null) document.preloadArray = new Array();
+    var i = document.preloadArray.length;
+    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
+      preloadArray[i] = new Image;
+      preloadArray[i++].src = imgFiles[j];
+  } }
+}
+
+function MM_swapImage() { //v2.0
+  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
+    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
+    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
+      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+    obj = eval(objStr);
+    if (obj != null) {
+      swapArray[j++] = obj;
+      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+      obj.src = MM_swapImage.arguments[i+2];
+  } }
+  document.MM_swapImgData = swapArray; //used for restore
+}
+// -->
+</script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>JavaScript</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>JavaScript</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+
+<div class="slide">
+<h1>What Is JavaScript?</h1>
+<ul>
+<li>A scripting language</li>
+<li>Mainly used on the client rather than the server</li>
+<li>Allows interactivity without using CGI scripts or similar technologies</li>
+<li>Because there is no connection to the server, JavaScript can be fast and therefore allows instant interactivity (e.g. respond to mouse clicks or movement)
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.test','document.test','uploads/wdd4/wdd42/on.gif')"><img name="test" border="0" src="uploads/wdd4/wdd42/off.gif" alt=""></a></li>
+<li><a href="http://www.bized.ac.uk/stafsup/options/bizqbank/index.htm" target="qbank">Biz/ed Question Bank</a> &amp; <a href="http://gmail.com/" target="gmail">Gmail</a></li>
+<li><a href="http://www.dynamicdrive.com/" target="dynamicdrive">Example uses</a> of JavaScript</li>
+<li><form action=""><input type="button" name="print" value="Print This Page" onclick="javascript:window.print()"></form></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Java And JavaScript</h1>
+<ul>
+<li>JavaScript is a relatively simple scripting language used on the Web</li>
+<li>Java is a complex programming language used for a wide range of applications (which are not necessarily Web-related)</li>
+<li>Java and JavaScript are completely different</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Where Is JavaScript?</h1>
+<ul>
+<li>Embedded within HTML</li>
+<li>Usually in the HEAD of a document</li>
+<li>Javascript starts with<br />
+<b><tt>&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot;&gt;</tt></b><br />
+and ends with<br />
+<b><tt>&lt;/script&gt;</tt></b></li>
+<li>JavaScript is often flanked by<br />
+<b><tt>&lt;!--</tt></b><br />
+and<br /><b><tt>// --&gt;</tt></b><br />
+to prevent it being displayed by older browsers</li>
+<li>Can be embedded in an <a href="#" onMouseOver="window.alert('Hi')">HTML tag</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Simple Example</h1>
+<form name="nameform">
+<p>What is your first name? <input type="text" name="firstname" /></p>
+<p>What is your surname? <input type="text" name="surname" /></p>
+<p><a href="#" onMouseOver="window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)">Greet</a></p>
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Simple Example</h1>
+<p><tt>&lt;form <b>name=&quot;nameform&quot;</b>&gt;<br />
+&lt;p&gt;What is your first name? &lt;input type=&quot;text&quot; <b>name=&quot;firstname&quot;</b> value=&quot;Ian&quot;&gt;&lt;/p&gt;<br />
+&lt;p&gt;What is your surname? &lt;input type=&quot;text&quot; <b>name=&quot;surname&quot;</b> value=&quot;Sealy&quot;&gt;&lt;/p&gt;<br />
+&lt;p&gt;&lt;a href=&quot;#&quot;
+<b>onMouseOver=&quot;window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)&quot;</b>&gt;Greet&lt;/a&gt;&lt;/p&gt;<br />
+&lt;/form&gt;</tt></p>
+<p>In the JavaScript Document Object Model (DOM) each object has a name so that it can be referred to.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Another Example</h1>
+<form>
+<p><input type="button" value="Open New Window" onClick="window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=no')"></p>
+<p><input type="button" value="Open New Window with tool bar, scroll bars and status bar" onClick="window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=yes,toolbar=yes,scrollbars=yes')"></p>
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Another Example</h1>
+<p>In the original page:</p>
+<p><tt>&lt;form&gt;<br>
+&lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Open New Window&quot; <b>onClick=&quot;window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=no')&quot;</b>&gt;<br />
+&lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Open New Window with tool bar, scroll bars and status bar&quot; <b>onClick=&quot;window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=yes,toolbar=yes,scrollbars=yes')&quot;</b>&gt;<br />
+&lt;/form&gt;</tt></p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Another Example</h1>
+<p>In the new window:</p>
+<p><tt>&lt;h3&gt;New Window&lt;/h3&gt;<br />
+&lt;form&gt;<br>
+&lt;input type=&quot;button&quot; value=&quot;Close Window&quot; <b>onClick=&quot;self.close()&quot;</b>&gt;<br />
+&lt;/form&gt;</tt></p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Problems With JavaScript</h1>
+<ul>
+<li>Like CSS, JavaScript does not work the same in all browsers</li>
+<li>Because of all the different versions, it is sometimes still necessary to <a href="http://www.webreference.com/tools/browser/javascript.html" target="sniff">detect browser type</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Netscape History</h1>
+<ul>
+<li>JavaScript was developed by Netscape for Navigator, but was then called LiveScript</li>
+<li>Was renamed JavaScript for marketing reasons (even though very different to Java)</li>
+<li>Navigator 2.0 supports JavaScript 1.0</li>
+<li>Navigator 3.0 supports JavaScript 1.1</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Netscape History</h1>
+<ul>
+<li>Navigator 4.0-4.05 support JavaScript 1.2</li>
+<li>Navigator 4.06+ support JavaScript 1.3</li>
+<li>Netscape 6.0+ support JavaScript 1.5</li>
+<li>Mozilla supports JavaScript 1.5</li>
+<li>(JavaScript 1.4 was used in a Netscape server product)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Microsoft History</h1>
+<ul>
+<li>Microsoft created its own version of JavaScript called JScript (Netscape owns the name)</li>
+<li>IE 3.0 supports JScript 1.0, but is very different to JavaScript</li>
+<li>IE 4.0 supports JScript 3.0</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Microsoft History</h1>
+<ul>
+<li>IE 5.0 supports JScript 5.0</li>
+<li>IE 5.5 supports JScript 5.5</li>
+<li>IE 6.0 supports JScript 6.0</li>
+<li>Confusingly IE3.0+ also support a scripting language called VBScript, which is not supported by Navigator</li>
+<li>(JScript 2.0 and 4.0 were used in other Microsoft products)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Standards History</h1>
+<ul>
+<li>Netscape, Microsoft and others collaborated with <a href="http://www.ecma-international.org/" target="ecma">ECMA</a> to create an official JavaScript specification called <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="ecmascript">ECMAScript</a></li>
+<li>ECMAScript v1 (or ECMA-262) is most similar to JavaScript 1.3</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Standards History</h1>
+<ul>
+<li>Navigator 4.06+ (JavaScript 1.3) and IE 4+ (JScript 3.0+) are ECMAScript-compliant</li>
+<li>Therefore the Web's &quot;official&quot; scripting language is based on Netscape's JavaScript</li>
+<li>But the Web's &quot;official&quot; <a href="http://www.w3.org/DOM/" target="dom">Document Object Model</a> is based on Microsoft's</li>
+<li>ECMAScript v2 was only released for maintenance purposes</li>
+<li>ECMAScript v3 is like JavaScript 1.5 or JScript 5.5</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Further Info</h1>
+<ul>
+<li>Tutorials:
+<ul>
+<li><a href="http://www.webteacher.com/javascript/" target="nonprog">JavaScript for the Total Non-Programmer</a></li>
+<li><a href="http://www.w3schools.com/js/" target="w3schools">W3Schools JavaScript Tutorial</a></li>
+<li><a href="http://hotwired.lycos.com/webmonkey/programming/javascript/tutorials/tutorial1.html" target="thau">Thau's JavaScript Tutorial</a></li>
+<li><a href="http://oopweb.com/JavaScript/Documents/jsintro/Volume/tutorial.htm" target="voodoo">Voodoo's Introduction to JavaScript</a></li>
+<li><a href="http://www.wdvl.com/Authoring/JavaScript/Tutorial/" target="prog">JavaScript Tutorial for Programmers</a></li>
+<li><a href="http://www.cs.brown.edu/courses/bridge/1998/res/javascript/javascript-tutorial.html" target="brown">JavaScript Tutorial</a></li>
+</ul>
+</li>
+<li>JavaScript scripts:
+<ul>
+<li><a href="http://www.js-examples.com/" target="jseg">JavaScript Examples</a></li>
+<li><a href="http://www.scriptsearch.com/JavaScript/Scripts/" target="scriptsearch">ScriptSearch.com</a></li>
+<li><a href="http://wsabstract.com/cutpastejava.shtml" target="kit">JavaScript Kit</a></li>
+<li><a href="http://www.dynamicdrive.com/" target="dynamic">Dynamic Drive</a></li>
+<li><a href="http://www.walterzorn.com/" target="zorn">www.walterzorn.com</a></li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>WDD Systems | Birkbeck College Diploma in Web Design and Development 2005/2006</title>
+<link rel="STYLESHEET" type="text/css" href="/style.css">
+</head><body bgcolor="#FFFFFF">
+<table border="0" cellpadding="6" cellspacing="0" width="100%" summary="">
+  <tr>
+    <td valign="top" width="200" bgcolor="#000000"><a href="/"><img src="/birkbeck.gif" border="0" width="200" height="63" alt=""></a></td>
+    <td valign="top" width="100%" bgcolor="#9999CC" align="right">
+    <p style="margin : 1px"><b>Birkbeck College - Faculty of Continuing Education<br>
+    Diploma in Web Design and Development 2005/2006</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="200" bgcolor="#9999CC">
+    <table border="0" cellspacing="16" cellpadding="0">
+      <tr><td><b><a class="menu" href="/">Home</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/timetable.html">Timetable</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/module.html">Modules</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/assignment.html">Assignments</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/mailinglist.html">Mailing Lists</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/staff.html">Staff</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/student.html">Students</a></b></td></tr>
+      <tr><td><b><a class="menu" href="/readinglist.html">Reading List</a></b></td></tr>
+    </table>
+    </td>
+    <td valign="top" width="100%">
+<small>
+<a href="/">Home</a> »
+ <a href="http://wdd0506.bbkweb.org/module.html">Modules</a> »
+ <a href="http://wdd0506.bbkweb.org/wdd1.html">WDD1</a> »
+ <a href="http://wdd0506.bbkweb.org/wdd11.html">WDD11</a> »
+ WDD Systems
+</small>
+<h1>WDD Systems</h1>
+
+<p>Each of you has been given a username and password that allows you to access Birkbeck computers. If you forget your username then a list is available on the course Web site at:</p>
+
+<p>&nbsp;<a href="http://wdd0506.bbkweb.org/student.html">http://wdd0506.bbkweb.org/student.html</a></p>
+
+<p>You should change your password from the one you have been allocated to one of your choosing as soon as possible. You can change your password at:</p>
+
+<p>&nbsp;<a href="http://www.bbk.ac.uk/ccs/password/">http://www.bbk.ac.uk/ccs/password/</a></p>
+
+<p>You will need your username and password in order to login to the computers in Room 402 at Birkbeck.</p>
+
+<h2>Network Drives</h2>
+
+<p>At Birkbeck you have two network drives, the N: drive and the Z: drive. When you're working during a session at Birkbeck, you should save all files in the N: drive or Z: drive. Both drives are available on any Birkbeck computer you login on. The contents will stay the same between sessions, but you are limited to 10 MB of files.
+
+<h2>File Extensions</h2>
+
+<p>By default Windows hides file extensions, but this is annoying for Web development. For example, football.html and football.htm are different files, but will appear to be the same in Windows. So you need to always show all file extensions. This is generally done by opening Windows Explorer and then choosing
+Tools --> Folder Options --> View tab and then unchecking &quot;Hide extensions for known file types&quot;. You'll want to make this change on your home computer as well as at Birkbeck.</p>
+
+<h2>Web Space</h2>
+
+<p>Each student has their own Web site on a DreamHost server. The URLs are all of the form <tt>http://<i>username</i>.wdd0506.bbkweb.org/</tt>. So, for example, the URL of my Web space is:</p>
+
+<p>&nbsp;<a href="http://iansealy.wdd0506.bbkweb.org/">http://iansealy.wdd0506.bbkweb.org/</a></p>
+
+<p>A list of all the URLs is available from:</p>
+
+<p>&nbsp;<a href="http://wdd0506.bbkweb.org/student.html">http://wdd0506.bbkweb.org/student.html</a></p>
+
+<p>Each student has a quota of 50 MB.</p>
+
+<p>Your username is the same for Birkbeck and for DreamHost. The passwords were originally the same, but you need to manually keep them in sync. Changing your Birkbeck password will not change your DreamHost password (and vice versa). See above for changing your Birkbeck password. Changing your DreamHost password is more complicated and involves logging into a remote DreamHost server. This can be done using a program called PuTTY that's installed on the Birkbeck machines and can also be downloaded for free from:</p>
+
+<p>&nbsp;<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></p>
+
+<p>Run PuTTY and then in the Host Name box type bbkweb.org and press the Open button. When the &quot;login as:&quot; prompt appears, type your username and press Enter.
+Then enter your password and press Enter. You should get logged into the Birkbeck server. Once you've logged in type <tt>passwd</tt> (in lower case) and then, when prompted, enter your existing password and press Enter. Then enter your new password (twice). If the system doesn't accept your new password then you'll need to run <tt>passwd</tt> again and retry. If the system accepts your new password then type <tt>exit</tt> and press Enter.</p>
+
+<h2>FTP</h2>
+
+<p>In order to put files on your Web site you will need to upload them to the DreamHost server. This is possible via FTP. FTP stands for File Transfer Protocol and simply allows you to transfer files from one computer to another.</p>
+
+<p>There are scores of different FTP programs available, but they all follow the same basic scenario:</p>
+
+<ul>
+<li>Specify remote computer to connect to</li>
+<li>Give username and password</li>
+<li>Either specify files to GET from the remote computer or PUT files from the local computer onto the remote computer</li>
+</ul>
+
+<p>For accessing your DreamHost Web space, the computer you want to connect to is:</p>
+
+<p>&nbsp;bbkweb.org</p>
+
+<p>You'll then need to login using your DreamHost username and password. Once you've been authenticated you'll be able to either GET files from the remote computer (the DreamHost Web server) or PUT files from your computer onto the DreamHost Web server.</p>
+
+<h3>FTP Clients</h3>
+
+<p>In order to access your Web space via FTP, you'll need an FTP client. For the handful of you that use Macs, the FTP program that I gather is good is Cyberduck, which you can find out more about from:</p>
+
+<p>&nbsp;<a href="http://cyberduck.ch/">http://cyberduck.ch/</a></p>
+
+<p>If you're using Windows, then I recommend you install <a href="http://filezilla.sourceforge.net/">FileZilla</a>, which is also on the Birkbeck computers. The current version can be downloaded from:</p>
+
+<p>&nbsp;<a href="http://kent.dl.sourceforge.net/sourceforge/filezilla/FileZilla_2_2_16_setup.exe">http://kent.dl.sourceforge.net/sourceforge/filezilla/FileZilla_2_2_16_setup.exe</a></p>
+
+<p>After you've downloaded FileZilla, you can install it by simply double clicking on it. You'll first be asked to select a language and you should just press OK. On the next screen is a License Agreement, which you should accept. The next screen allows you to choose components, but you should just press the Next button. On the next screen you can choose where to install FileZilla and again you should just press Next. The same goes for the next screen, where you're asked to choose a Start Menu folder. On the next screen you're asked to set some General Settings. If you don't share your computer then the defaults are fine. Once you click the Install button, FileZilla will be installed.</p>
+
+<p>You can now run FileZilla by choosing it from the Start menu. The FileZilla window is split into two main panes. The left-hand pane shows the files on your local computer. The right-hand pane shows the files in a directory on the remote computer. Since you haven't yet connected to a remote computer, the right-hand pane will be blank. Above these two main panes is a pane showing connection information and below is a pane showing the details of current transfers. Both of these panes will currently be blank. The simplest way to use FileZilla is to fill in three of the boxes at the top of the screen. In the &quot;Address&quot; box you should enter:
+
+<p>&nbsp;bbkweb.org</p>
+
+<p>In the &quot;User&quot; box you should enter your DreamHost username. If you forget your username then a list is available on the course Web site at:</p>
+
+<p>&nbsp;<a href="http://wdd0506.bbkweb.org/student.html">http://wdd0506.bbkweb.org/student.html</a></p>
+
+<p>In the &quot;Password&quot; box you should enter your DreamHost password. Finally you click on the &quot;Quickconnect&quot; button. You should then connect to the DreamHost server and the files in your Web space will be visible in the right-hand pane of the FileZilla window.</p>
+
+<p>If you want to transfer a file from your computer to the Web server then you should navigate to that file in the left-hand pane and then drag and drop it into the right-hand pane.</p>
+
+<p>If you want to transfer a file from the Web server to your PC so that you can work on it then you follow the same procedure but in reverse. You should navigate to the file in the right-hand pane and then drag and drop it to the left-hand pane.</p>
+
+<h2>Web Site Structure</h2>
+
+<p>Any files that I upload to the htdocs directory of my Web space will be visible on the Web. For example, if I FTP a file called ian.html to the htdocs directoy then I will be able to view this file on the Web by appending the name of the file to my base URL and going to:</p>
+
+<p>&nbsp;http://iansealy.wdd0506.bbkweb.org/ian.html</p>
+
+<p>If I create a subdirectory in htdocs called birkbeck and put a file in that directory called kieren.html then that file will be visible on the Web at:</p>
+
+<p>&nbsp;http://iansealy.wdd0506.bbkweb.org/birkbeck/kieren.html</p>
+
+<p>That is, I have appended the directory (birkbeck) and the name of the file (kieren.html) to my base URL (http://iansealy.wdd0506.bbkweb.org/). Each component of the URL is separated with a forward slash.</p>
+
+<p>If I create a subdirectory of birkbeck called college then the URL of that directory will be:</p>
+
+<p>&nbsp;http://iansealy.wdd0506.bbkweb.org/birkbeck/college/</p>
+
+<h2>Index Documents</h2>
+
+<p>If I were to put a file called index.html in the birkbeck/college directory then instead of seeing a default directory listing when I went to:</p>
+
+<p>&nbsp;http://iansealy.wdd0506.bbkweb.org/birkbeck/college/</p>
+
+<p>I would instead see the contents of the index.html document.</p>
+
+<p>The index.html file is just an ordinary file and, in fact, it can be viewed normally. The following two URLs would produce exactly the same page:</p>
+
+<p>&nbsp;http://iansealy.wdd0506.bbkweb.org/birkbeck/college/<br>
+&nbsp;http://iansealy.wdd0506.bbkweb.org/birkbeck/college/index.html</p>
+
+<p>The DreamHost Web server is configured so that if no index document is present then a directory listing is shown instead. This doesn't have to be the case and Web servers can be configured so that an error message is shown instead. An example of this can be seen at:</p>
+
+<p>&nbsp;<a href="http://www.bized.ac.uk/learn/">http://www.bized.ac.uk/learn/</a></p>
+
+<p>An index document doesn't have to be called index.html, although this is the most common. Other examples are index.htm, welcome.html, home.html and Default.htm. The latter is commonly used on Windows-based Web servers.</p>
+
+<p>As an example, the Biz/ed Web site doesn't have an index.html in the root directory (the top directory of the site). This means that the following URL does not work:</p>
+
+<p>&nbsp;<a href="http://www.bized.ac.uk/index.html">http://www.bized.ac.uk/index.html</a></p>
+
+<p>The real index document is actually:</p>
+
+<p>&nbsp;<a href="http://www.bized.ac.uk/index.htm">http://www.bized.ac.uk/index.htm</a></p>
+
+<p>This page is identical to:</p>
+
+<p>&nbsp;<a href="http://www.bized.ac.uk/">http://www.bized.ac.uk/</a></p>
+
+<p>For another explanation of index documents (as well as more information about the Web in general), have a look at:
+
+<p>&nbsp;<a href="http://daphne.palomar.edu/learnit/web.htm">http://daphne.palomar.edu/learnit/web.htm</a></p>
+
+<p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="#9999CC">&nbsp;</td>
+    <td width="100%" bgcolor="#E8E8E8">
+    <p align="right"><small><a
+    href="/location.html">Location</a> | &copy; Birkbeck College 2005/2006 | <a href="http://www.dreamhost.com/r.cgi?77128">Hosted by DreamHost</a></small></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

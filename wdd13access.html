@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Accessibility</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0506.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0506.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Accessibility</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Accessibility</h1>
+<h2>Ian Sealy</h2>
+</div>
+
+
+<div class="slide">
+<h1>Why Accessibility Is Important</h1>
+<ul>
+<li>10% to 20% of the world's population suffer from disability</li>
+<li>Is increasing as average age of population increases</li>
+<li>Many of these disabilities affect access to the Web (e.g. visual, aural, dexterity and memory problems)</li>
+<li>For example, blind users can't see graphics and users with neurological difficulties might be confused by complex presentation</li>
+<li>Everyone has a right to access the Web</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>It's The Law</h1>
+<ul>
+<li>In the UK there is a legal obligation due to the Disability Discrimination Act</li>
+<li>Most countries have disability discrimination laws</li>
+<li>Numbers make commercial sense</li>
+<li>&gt;1 million visually impaired people in the UK</li>
+<li><a href="http://www.w3.org/WAI/bcase/benefits.html" target="business">Business Benefits of Accessible Web Design</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Why Accessibility Is Important To All Users</h1>
+<p>Accessible Web sites can be used in a variety of environments:</p>
+<ul>
+<li>Low bandwidth, where images are slow to download (because accessible sites are usable without images)</li>
+<li>Noisy, where difficult to hear audio</li>
+<li>Bright, where difficult to see screen</li>
+<li>Mobile phone, where display is small</li>
+<li>Driving, where eyes and hands are busy</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Definitive Resources</h1>
+<ul>
+<li>Best work done by World Wide Web Consortium's Web Accessibility Initiative (WAI):<br />
+<a href="http://www.w3.org/WAI/" target="wait">http://www.w3.org/WAI/</a></li>
+<li><a href="http://www.w3.org/WAI/gettingstarted/" target="started">Getting Started: Making a Web Site Accessible</a></li>
+<li><a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist">Checklist of Checkpoints for Web Content Accessibility Guidelines</a></li>
+<li><a href="http://www.w3.org/TR/WCAG10/" target="guidelines">Web Content Accessibility Guidelines</a></li>
+<li><a href="http://www.w3.org/TR/WCAG10-TECHS/" target="techniques">Techniques for Web Content Accessibility Guidelines</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Priorities</h1>
+<p>From <a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist">Checklist of Checkpoints for Web Content Accessibility Guidelines</a>:</p>
+<ul>
+<li><b>Priority 1</b> - &quot;A Web content developer <b>must</b> satisfy this checkpoint. Otherwise, one or more groups will find it impossible to access information in the document. Satisfying this checkpoint is a basic requirement for some groups to be able to use Web documents.&quot;</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Priorities</h1>
+<ul>
+<li><b>Priority 2</b> - &quot;A Web content developer <b>should</b> satisfy this checkpoint. Otherwise, one or more groups will find it difficult to access information in the document. Satisfying this checkpoint will remove significant barriers to accessing Web documents.&quot;</li>
+<li><b>Priority 3</b> - &quot;A Web content developer <b>may address</b> this checkpoint. Otherwise, one or more groups will find it somewhat difficult to access information in the document. Satisfying this checkpoint will improve access to Web documents.&quot;</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Priority 1</h1>
+<ul>
+<li>Use text equivalent for all non-text content (e.g. by using alt attribute for images), including images, audio, video, animations, etc...<br />
+(Use <tt>alt=&quot;&quot;</tt> if image isn't important)</li>
+<li>Ensure documents can be read without stylesheet (won't look the same, but will be readable) (<a href="http://www.squarefree.com/bookmarklets/webdevel.html" target="zap">zap style sheets bookmarklet</a>)</li>
+<li>Ensure information conveyed with colour is available without colour</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Colour</h1>
+<table border="1" cellspacing="0" cellpadding="10">
+<tr>
+<th>&nbsp;</th>
+<th>Placebo</th>
+<th>Aspirin</th>
+</tr>
+<tr>
+<th>Male</th>
+<td>10</td>
+<td>11</td>
+</tr>
+<tr>
+<th>Female</th>
+<td>8</td>
+<td style="background-color : #cccccc">37</td>
+</tr>
+</table>
+<p>Significant results are shown in grey</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Colour</h1>
+<table border="1" cellspacing="0" cellpadding="10">
+<tr>
+<th>&nbsp;</th>
+<th>Placebo</th>
+<th>Aspirin</th>
+</tr>
+<tr>
+<th>Male</th>
+<td>10</td>
+<td>11</td>
+</tr>
+<tr>
+<th>Female</th>
+<td>8</td>
+<td style="background-color : #cccccc">37 *</td>
+</tr>
+</table>
+<p>Significant results are shown in grey and marked with an asterisk</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Priority 1</h1>
+<ul>
+<li>Avoid causing screen to flicker</li>
+<li>Use clearest and simplest language appropriate for site's content (mainly because of users with cognitive problems, but also because users tend to skim read Web pages)</li>
+<li>Use <tt>&lt;th&gt;</tt> to identify header cells (not <tt>&lt;td&gt;&lt;b&gt;</tt>)</li>
+<li>Ensure pages are usable when scripts are turned off</li>
+<li>If page can't be made accessible then provide a link to an alternative page that is accessible</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Priority 2</h1>
+<ul>
+<li>Ensure foreground and background colour provide sufficient <a href="http://www.bigcats.org/sfwrc/floridapanther.html" target="contrast">contrast</a> (important in bright environments, not just for users with poor vision)
+<table border="1" cellspacing="0" cellpadding="4">
+<tr>
+<td style="color : #cccccc">Low contrast</td>
+<td>High contrast</td>
+</tr>
+</table>
+</li>
+<li>Use markup rather than <a href="http://www.star-tracking.com/" target="images">images</a> if possible</li>
+<li>Use valid HTML</li>
+<li>Use stylesheets</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Priority 2</h1>
+<ul>
+<li>Use relative rather than absolute units</li>
+<li>Use headings to convey document structure</li>
+<li>Mark up lists properly</li>
+<li>Use &lt;blockquote&gt; for quotations, not to indent text</li>
+<li>Don't make content blink</li>
+<li>Don't automatically <a href="http://www.livedepartureboards.co.uk/ldb/sumdep.aspx?T=KGX&amp;R=1&amp;A=0">refresh page</a><br />
+<tt>&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;30&quot;&gt;</tt>
+</li>
+<li>Don't automatically <a href="http://friendsfiduciary.quaker.org/">redirect page</a> (except on the server)<br />
+<tt>&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;30; URL=http://google.com/&quot;&gt;</tt>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Priority 2</h1>
+<ul>
+<li>Don't open new windows or popups without warnings</li>
+<li>Use metadata</li>
+<li>Include a site map or table of contents (useful for all users, but especially those with cognitive difficulties)</li>
+<li>Use navigation tools consistently</li>
+<li>Don't use tables for layout unless the tables make sense when linearised</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Priority 3</h1>
+<ul>
+<li>Expand abbreviations and acronyms where they first occur</li>
+<li>Until browsers render adjacent links distinctly include characters between adjacent links
+<br /><a href="http://www.google.com/" target="google">Search</a> <a href="http://www.yahoo.com/" target="yahoo">Engines</a></li>
+<li>Provide navigation bars</li>
+<li>Provide different search functionality for different skill levels</li>
+<li>Provide a means to skip over <a href="http://www.chris.com/ascii/" target="ascii">ASCII art</a></li>
+<li>Have consistent user interface</li>
+<li>Provide summaries for tables</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Assessing Accessibility</h1>
+<ul>
+<li>Assess manually
+<ul>
+<li>Go through checkpoints</li>
+<li><a href="http://www.w3.org/WAI/eval/Overview.html" target="eval">Evaluating Web Sites for Accessibility</a></li>
+</ul>
+</li>
+<li>Assess &quot;automatically&quot;
+<ul>
+<li>Use <a href="http://webxact.watchfire.com/" target="webxact">WebXACT</a> (free online)</li>
+<li>Use <a href="http://aprompt.snow.utoronto.ca/" target="aprompt">A-Prompt</a> (free offline)</li>
+<li>Only semi-automatic so still need manual checks</li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Example Legal Case</h1>
+<ul>
+<li><a href="http://www.contenu.nu/socog.html" target="socog">http://www.contenu.nu/socog.html</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>
