@@ -6,10 +6,10 @@
 <head>
 <title>Sound and Video</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -58,13 +58,13 @@
 <li>Real Audio</li>
 <li>Midi - uses built in &quot;voices&quot; from your sound card</li>
 <li>MP3 - arguably the most common audio format</li>
-
+<li>FLAC - Free Lossless Audio Codec</li>
 <li>WMA - Windows Media Audio</li>
 <li>Ogg Vorbis - free, open, and unpatented</li>
 </ul>
 <p>See:</p>
 <ul>
-<li><a href="http://techgage.com/article/audio_archiving_guide_part_1_-_music_formats/" target="techgage">Audio Archiving Guide: Part 1 - Music Formats</a></li>
+<li><a href="http://www.jiscdigitalmedia.ac.uk/guide/choosing-a-digital-audio-file-format" target="jdm2">Choosing a Digital Audio File Format</a></li>
 <li><a href="http://www.jiscdigitalmedia.ac.uk/audio/advice/basic-audio-editing/" target="jdm1">Basic audio editing</a></li>
 </ul>
 <div class="handout">
@@ -126,7 +126,7 @@ How to add sound to your pages:
 <h1>Embedded Sound Clips</h1>
 
 <p>Embedding using the &lt;embed&gt; tag</p>
-<p><a href="http://www.w3schools.com/html/tryit.asp?filename=tryhtml_soundmidiembed" target="embedaudio">Example</a></p>
+<p><a href="http://www.tutorialspoint.com/cgi-bin/practice.cgi?file=html_embed_tag" target="embedaudio">HTML example</a> and <a href="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_embed" target="embedaudiohtml5">HTML5</a></p>
 <p>Advantages:</p>
 <ul>
 <li>Potentially all visitors (with compatible software) will hear the sound</li>
@@ -142,7 +142,7 @@ How to add sound to your pages:
 
 <p>Disadvantages:</p>
 <ul>
-<li>Uses non-standard code - your pages won't validate</li>
+<li>Embed has been supported in browsers for many years but was non-standard so HTML4 pages won't validate. Now included in HTML5 but much better to use &lt;audio&gt;.</li>
 <li>Visitors don't have a choice/may not work</li>
 <li>Bandwidth</li>
 <li>Intrusive/annoying - the music may not be to your taste or the user might be listening to something else already</li>
@@ -150,49 +150,6 @@ How to add sound to your pages:
 <div class="handout">
 </div>
 </div>
-
-
-<div class="slide">
-<h1>Syntax for Embedding Sound</h1>
-
-<p>
-For completeness the HTML code to embed sound is as follows:
-</p>
-<p>
-&lt;embed src=&quot;/song/me-singing.mid&quot; height=&quot;50&quot; width=&quot;50&quot;&gt;
-</p>
-<p>Height and width are the dimensions of a toolbar allowing people to control playback.</p>
-<p>It is possible to use hidden=&quot;true&quot; - this hides the toolbar and means visitors have no control over the music - please don't do this!</p>
-
-<p>Autostart=&quot;true&quot; - starts the sound automatically</p>
-<p>loop=&quot;true&quot; - loops the sound</p>
-<div class="handout">
-</div>
-
-</div>
-
-<div class="slide">
-<h1>Using a Flash audio player</h1>
-
-<p>It is still common for people to use Flash audio players in their Web pages. For example: <a href="http://www.jisc.ac.uk/news/stories/2012/02/podcast130benshowers.aspx" target="jisc">JISC</a></p>
-
-<p>Example players</p>
-
-<ul>
-<li><a href="http://www.macloo.com/examples/audio_player/" target="audioplayer">Embedded MP3 audio player</a></li>
-<li><a href="http://flash-mp3-player.net/" target="mp3player">MP3 audio player</a></li>
-<li><a href="http://www.labnol.org/internet/design/html-embed-mp3-songs-podcasts-music-in-blogs-websites/2232/" target="goohoo">Google or Yahoo! audio player</a></li>
-
-<li><a href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines/ccmp3player-home" target="ccmp3player">NCAM/ccMP3Player</a></li>
-</ul>
-
-<p>Flash is well supported but has its disadvantages.</p>
-
-<div class="handout">
-</div>
-
-</div>
-
 
 <div class="slide">
 <h1>HTML5 &lt;audio&gt;</h1>
@@ -217,6 +174,27 @@ For completeness the HTML code to embed sound is as follows:
 </div>
 
 
+<div class="slide">
+<h1>Using a Flash audio player</h1>
+
+<p>It is still common for people to use Flash audio players in their Web pages. For example: <a href="http://www.bbc.co.uk/podcasts/series/cff1" target="bbc">BBC</a></p>
+
+<p>Example players</p>
+
+<ul>
+<li><a href="http://www.macloo.com/examples/audio_player/" target="audioplayer">Embedded MP3 audio player</a></li>
+<li><a href="http://flash-mp3-player.net/" target="mp3player">MP3 audio player</a></li>
+<li><a href="http://www.labnol.org/internet/design/html-embed-mp3-songs-podcasts-music-in-blogs-websites/2232/" target="goohoo">Google or Yahoo! audio player</a></li>
+
+<li><a href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines/ccmp3player-home" target="ccmp3player">NCAM/ccMP3Player</a></li>
+</ul>
+
+<p>Flash is not supported on many mobile devices.</p>
+
+<div class="handout">
+</div>
+
+</div>
 
 <div class="slide">
 <h1>Video delivery</h1>
@@ -239,8 +217,6 @@ You have two choices for making video available on the web:
 
 <p>Normal download, not true streaming. The video is downloaded to the viewer's computer but may begin playing before download is complete.</p>
 
-<p>For example: <a href="http://archive.org/details/Quicksand_clear" target="quicksand">Quicksand</a></p>
-
 <p>It is preferable where bandwidth is likely to be low but this can be problematic for long clips due to their file size.</p>
 <p>Common formats are:-</p>
 <ul>
@@ -261,66 +237,6 @@ You have two choices for making video available on the web:
 <li>Downloadable</li>
 </ol>
 <p>The visitor will need relevant software or a plug-in to be able to view the file and you should also provide a link to a source of the relevant software/plug-in.</p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Embedded Video</h1>
-<p>Embedding using the &lt;embed&gt; tag.</p>
-
-<p>
-&lt;embed src=&quot;/video/example.mov&quot; height=&quot;100&quot; width=&quot;50&quot; controller=&quot;false&quot; autoplay=&quot;true&quot; pluginspage=&quot;http://www.apple.com/&quot; loop=&quot;true&quot;&gt;
-
-</p>
-<p>
-<strong>height/width</strong> - set the size of your movie (pixels or percent)<br />
-
-<strong>controller</strong> - adds controls for the movie (true/false)
-<br />
-<strong>autoplay</strong> - If &quot;true&quot; your movie will play as soon as it starts to download, if &quot;false&quot; the user must click to play it.
-
-<br />
-<strong>pluginspage</strong> - location of the required plug-in.
-
-<br />
-<strong>loop</strong> - If &quot;true&quot; movie loops, if &quot;false&quot; movie plays once and stops, if &quot;palindrome&quot; movie plays to the end, plays back in reverse, plays to end again etc.
-
-</p>
-<div class="handout">
-</div>
-</div>
-
-<div class="slide">
-<h1>Embedded Video 2</h1>
-<p><a href="http://www.public.iastate.edu/~rdalhoff/embedvideo.html" target="embedvid">Example</a></p>
-<p>
-Issues:</p>
-<ul>
-<li>Requires correct plug-in</li>
-<li>Clip loads as soon as the viewer enters the page</li>
-
-<li>Not valid HTML but there are <a href="http://xahlee.org/js/html_embed_video.html" target="standardembed">standards compliant alternatives</a></li>
-
-</ul>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Downloadable Video</h1>
-<p>&lt;a href=&quot;example.mpg&quot;&gt;Ian dancing - 50K MPEG 4 file&lt;/a&gt;</p>
-
-<p>What happens depends on the browser configuration</p>
-<p>You should provide the following information:</p>
-<ul>
-<li>Filesize</li>
-<li>Format</li>
-<li>Suggested download times</li>
-<li>Link to a relevant media player</li>
-</ul>
 <div class="handout">
 </div>
 </div>
@@ -406,8 +322,31 @@ This causes an external player to open and connect to the streaming server, the 
 
 
 <div class="slide">
+<h1>Embedded Video</h1>
+<p>Embedding using the &lt;embed&gt; tag.</p>
+
+<p>
+&lt;embed src=&quot;/video/example.mov&quot;&gt;
+</p>
+
+<p>
+Issues:</p>
+<ul>
+<li>Requires correct plug-in</li>
+<li>Clip loads as soon as the viewer enters the page</li>
+
+<li>Not valid if using HTML4 but is valid in HTML5 although &lt;video&gt; is preferable</li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+
+<div class="slide">
 <h1>Flash Video</h1>
-<p>Popular user generated video resources (such as <a href="http://www.youtube.com/" target="yt">YouTube</a> and <a href="http://www.vimeo.com/" target="vimeo">Vimeo</a>) use Flash Video (FLV) but also have HTML5.</p>
+<p>Popular user generated video resources (such as <a href="http://www.youtube.com/" target="yt">YouTube</a> and <a href="http://www.vimeo.com/" target="vimeo">Vimeo</a>) use Flash Video (FLV) and HTML5.</p>
 
 <p>Both services originally used progressive streaming but now use real time streaming for many videos.</p>
 
@@ -515,9 +454,8 @@ This causes an external player to open and connect to the streaming server, the 
 <h1>Further Info</h1>
 
 <ul>
-<li><a href="http://www.webstandards.org/2006/08/15/valid-flash-video-and-audio-embed-object-markup/" target="stanflv">Valid Flash, video, and audio embed (object) mark-up</a></li>
-<li><a href="http://www.longtailvideo.com/support/tutorials/Making-Video-Accessible" target="accessvid">Making video accessible</a></li>
-
+<li><a href="http://www.w3.org/2008/06/video-notes" target="accessvid">Multimedia Accessibility FAQ</a></li>
+<li><a href="http://webaccess.msu.edu/tutorials/accessible-videos.html" target="accessvid2">Creating Accessible Videos</a></li>
 <li><a href="http://www.soundscreen.com/streaming/compress_hint.html" target="hint">Compressing and hinting media</a></li>
 <li><a href="http://www.mediacollege.com/video/streaming/overview.html" target="mediacoll">How to create streaming video</a></li>
 <li><a href="http://diveintohtml5.info/video.html" target="html5">Video on the Web - HTML5</a></li>
@@ -529,7 +467,6 @@ This causes an external player to open and connect to the streaming server, the 
 </div>
 
 </div>
-
 <div class="slide">
 <h1></h1>
 </div>

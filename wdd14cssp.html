@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -38,13 +38,13 @@
 
 <ul>
 <li>Historically Web sites use HTML tables for layout and Cascading Style Sheets (CSS) for the text formatting.</li>
-<li>This approach isn't ideal (you need to check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>)  and it's old fashioned.</li>
 <li>There are good reasons why tables shouldn't be used for layout:
 <ul>
 <li>Strictly speaking HTML tables should be used for <a href="http://www.bized.co.uk/cgi-bin/penndatadb/pennchart.pl?datarequest=fromform&amp;format=html&amp;yrstart=1950&amp;yrend=2000&amp;isocode=AUS&amp;variables=pop&amp;variables=xrat&amp;go=Submit+data+request" target="tabular">tabular data</a> only</li>
-<li>Doesn't separate <em>presentation from content</em></li>
+<li>Doesn't separate <em>presentation from content</em> (you need to check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>)</li>
 <li>Tabular layouts are complicated to maintain</li>
 <li>Larger file size for your HTML file</li>
+<li>It's old fashioned</li>
 </ul>
 </li>
 </ul>
@@ -88,8 +88,8 @@
 
 <p>There are two types of box:</p>
 <ul>
-<li><em>Block</em> - e.g. h1, p and div tags.<br />Form new blocks of content.</li>
-<li><em>Inline</em> - e.g. em, strong and span tags.<br />Do not form new blocks but lines of content.</li>
+<li><em>Block</em> - Form new blocks of content<br />e.g. h1, p and div tags.</li>
+<li><em>Inline</em> - Do not form new blocks but lines of content<br />e.g. em, strong and span tags.</li>
 </ul>
 
 <div class="handout">
@@ -125,8 +125,7 @@
 <li>div - block level container (short for division)</li>
 <li>span - inline container</li>
 </ul>
-<p>&lt;div&gt; and &lt;span&gt; have no inherent properties/styles of their own so can be used to apply styles to the content within
-them.</p>
+<p>&lt;div&gt; and &lt;span&gt; have no inherent properties/styles of their own so can be used to apply styles to the content within them.</p>
 
 <div class="handout">
 </div>
@@ -136,18 +135,41 @@ them.</p>
 
 <div class="slide">
 <h1>CSS positioning schemes</h1>
-<p>Most of the examples we will look at demonstrate how elements can be arranged using <em>static</em> positioning and floats.</p>
+<p>Most of the examples we will look at demonstrate how elements can be arranged using <em>static</em> positioning and floats. This is arguably the commonest form of CSS positioning.</p>
 
 <p>However, there are four positioning schemes (elements can only have one):</p>
 
 <ul>
-<li><em>position: static;</em> - normal page layout rules. Usually combined with floats. As it's the default you rarely set it.</li>
+<li><em>position: static;</em> - normal page layout rules (block boxes stack vertically). Usually combined with floats. As it's the default you very rarely set it.</li>
 <li><em>position: relative;</em> - positioned relative to where the box would normally appear. A gap is left where the box would be.</li>
 <li><em>position: absolute;</em> - positioned relative to a 'positioned' parent box <strong>or</strong> other container.</li>
 <li><em>position: fixed;</em> - the same as absolute except positioned with respect to the browser window.</li>
 </ul>
 
-<p>When using relative, absolute or fixed schemes boxes can have four offsets: top, right, bottom and left. However, it doesn't make sense to set both top <em>and</em> bottom or both left <em>and</em> right at the same time. You can set top and left etc though.</p>
+<p><em>relative</em>, <em>absolute</em> and <em>fixed</em> are rarely used.</p>
+
+<div class="slide">
+<h1>CSS positioning offsets</h1>
+
+<p>When using <em>relative</em>, <em>absolute</em> or <em>fixed</em>, boxes can have four offsets:</p>
+
+<ul>
+<li>top</li>
+<li>right</li>
+<li>bottom</li>
+<li>left</li>
+</ul>
+
+<p>However, it doesn't make sense to set both top <em>and</em> bottom or both left <em>and</em> right at the same time. You can set top and left etc though.</p>
+
+<p>So, to move a box you might do something like:</p>
+
+<p>
+#navigation { <br />
+ position: absolute;<br />
+ top: 150px;<br />
+ left: 200px;<br />
+} </p>
 
 <div class="handout">
 </div>
@@ -215,9 +237,9 @@ them.</p>
 <h1>Browser support</h1>
 <p>Test your Web site in as many Web browsers as possible before launch.</p>
 
-<p>In addition you should also be aware of browser &quot;<a href="http://en.wikipedia.org/wiki/Quirks_mode" target="quirks">Quirks mode</a>&quot;. This is a particular problem for IE6 but Microsoft has issued a &quot;<a href="http://www.digital-web.com/articles/toward_a_more_standards_compliant_ie/" target="hack">hack/fix</a>&quot;.</p>
+<p>In addition you should also be aware of browser &quot;<a href="http://en.wikipedia.org/wiki/Quirks_mode" target="quirks">Quirks mode</a>&quot;</p>
 
-<p>When using CSS Positioning it's really important that you create valid HTML and CSS.</p>
+<p>When using CSS Positioning it's <strong>really</strong> important that you create valid HTML and CSS.</p>
 <div class="handout">
 </div>
 </div>
@@ -288,9 +310,9 @@ them.</p>
 <li>Don't develop in any version of IE</li>
 </ul>
 </li>
-<li>Then test in IE7, 8 and 9 (6 if you know your audience will use it)</li>
+<li>Then test in IE7, 8, 9 and 10 (6 if you know your audience will use it)</li>
 <li>Edit your CSS and retest</li>
-<li>Avoid mixing positioning types as much as possible. I almost always work with static (browser default) positioned elements and then use floats. I don't tend to need other positioning and avoid 'fixed' as the resulting site is usually inflexible and degrades badly on different screen sizes.</li>
+<li>Avoid mixing positioning types as much as possible. I almost always work with static (browser default) positioned elements and then use floats. I rarely use other positioning types and avoid 'fixed' as the resulting site is usually inflexible and degrades badly on different screen sizes.</li>
 <li>Avoid the temptation to set a height on any element that contains content that will vary in length - let the browser do the work.</li>
 </ul>
 
@@ -302,7 +324,7 @@ them.</p>
 <div class="slide">
 <h1>Troubleshooting</h1>
 <ul>
-<li>Don't develop in any version of IE</li>
+<li><strong>Don't</strong> develop in any version of IE - it's not even the <a href="http://gs.statcounter.com/" target="browserstat">most popular browser for users</a></li>
 <li>What to do when something goes awry:
 <ul>
 <li>The <em>Golden Rule</em>: Validate... validate... validate
@@ -318,7 +340,7 @@ them.</p>
 <li>Chrome - <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm" target="chwdt">Web Developer Toolbar</a></li>
 </ul>
 </li>
-<li>Avoid the temptation to use <a href="http://www.quirksmode.org/css/csshacks.html" target="csshacks">CSS hacks</a> - ask for help on the mailing list</li>
+<li>Avoid <a href="http://www.quirksmode.org/css/csshacks.html" target="csshacks">CSS hacks</a> - ask for help on the mailing list</li>
 </ul>
 </li>
 <li>Other useful tools/services:

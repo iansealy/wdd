@@ -6,10 +6,10 @@
 <head>
 <title>HTML and CSS Validation</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -35,17 +35,19 @@
 
 <div class="slide">
 <h1>Introduction</h1>
-<ul>
+<ul style="margin-bottom : 50px;">
 <li>HTML has rules (e.g. <tt>&lt;tr&gt;</tt> <strong>must</strong> appear within <tt>&lt;table&gt;</tt>)</li>
 <li>If rules are broken then HTML is not valid</li>
 <li>Rules are known as Document Type Definition (DTD)
 <ul>
 <li>DOCTYPE specifies DTD and must be the first line in an HTML document</li>
-<li>Specifies HTML version used, for example HTML 4.01:</li>
-<li><tt>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</tt></li>
+<li>Specifies HTML version used, for example HTML 4.01</li>
 </ul>
 </li>
 </ul>
+
+<tt>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</tt>
+
 <div class="handout">
 </div>
 </div>
@@ -55,6 +57,8 @@
 <h1>All Documents Must Have A DOCTYPE</h1>
 <p>XHTML DOCTYPE:<br />
 <b><tt>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd"&gt;</tt></b></p>
+
+<p>HTML 4 and XHTML have several different versions of the DOCTYPE including 'strict' or 'transitional/loose'. For now, use 'transitional/loose'</p>
 
 <p>HTML5 DOCTYPE:<br />
 <b><tt>&lt;!DOCTYPE html&gt;</tt></b></p>
@@ -89,9 +93,26 @@
 <li>W3C requires DOCTYPE and an encoding, for example:<br />
 <tt>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;</tt></li>
 <li><a href="http://www.htmlhelp.org/tools/validator/" target="wdg">WDG HTML Validator</a></li>
-<li><a href="javascript:void(self.location='http://www.htmlhelp.org/cgi-bin/validate.cgi?url='+escape(self.location));">HTML validation bookmarklet</a> (<a href="http://www.bookmarklets.com/" target="bookmarklets">http://www.bookmarklets.com/</a> and <a href="http://validator.w3.org/favelets.html" target="favelets">http://validator.w3.org/favelets.html</a>)</li>
 <li><a href="http://jigsaw.w3.org/css-validator/" target="w3ccss">W3C CSS Validation Service</a></li>
-<li>Can be accessed via HTML-Kit's Online tab</li>
+<li>Can be accessed via HTML-Kit's Online tab or the Web Developer Toolbar in Firefox or Chrome</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Tips for validating</h1>
+<ul>
+<li>Errors cascade - once you have one error it can cause others to be reported in the same page</li>
+<li>When starting out, always fix the first error in the list and then re-validate and fix the next</li>
+<li>The validator reports a line and column number - use this to track down the problem
+<ul>
+<li>Errors might not always be at this point, but will be close by</li>
+</ul>
+</li>
+<li>If you don't understand the error message, use the <a href="http://validator.w3.org/docs/errors.html" target="validatorerrors">online help for the validator</a> and, failing that, ask on the mailing list
+</li>
+<li>If your pages don't display as intended, validate your code and fix any errors. Don't try and diagnose issues when you have invalid code.</li>
 </ul>
 <div class="handout">
 </div>
