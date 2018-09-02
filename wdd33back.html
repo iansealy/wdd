@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Background Images</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>Background Images</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Background Images</h1>
+<h2>Jonathan Fox</h2>
+</div>
+
+<div class="slide">
+<h1>CSS and Background Images</h1>
+<p>It is possible to add a background image to an element with CSS using the <code>background-image: url(<i>url</i>)</code> property.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>background-repeat</h1>
+<ul>
+<li><code>body { background-image: url(image.gif);}</code><br />
+Repeats image to fill the background</li>
+<li><code>body { background-image: url(image.gif); background-repeat: repeat-x }</code><br />
+<a href="wdd33repeatx.html" target="repeatx">Repeats image horizontally in a single row</a></li>
+<li><code>body { background-image: url(image.gif); background-repeat: repeat-y }</code><br />
+<a href="wdd33repeaty.html" target="repeaty">Repeats image vertically in a single column</a></li>
+<li><code>body { background-image: url(image.gif); background-repeat: no-repeat }</code><br />
+<a href="wdd33norepeat.html" target="norepeat">Does not repeat image</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>background-attachment</h1>
+<ul>
+<li><code>body { background-image: url(image.gif); background-attachment: fixed }</code><br />
+<a href="wdd33attachment.html" target="attachment">Background image does not scroll with the page's content</a></li>
+<li><code>body { background-image: url(image.gif); background-attachment: scroll }</code><br />
+<a href="wdd33scroll.html" target="scroll">Background image scrolls with the page's content</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>background-position</h1>
+<p>To position a background image use the <tt>background-position</tt> property. Values for this property come in pairs and specify the distance from the left and top edges of the browser window. This distance can be specified as:</p>
+<ul>
+<li><a href="wdd33position1.html" target="position1">A percentage of the browser window</a><br />
+<code>body { background-image: url(image.gif); background-position: 50% 50% }</code></li>
+<li><a href="wdd33position2.html" target="position2">A pixel measurement</a><br />
+<code>body { background-image: url(image.gif); background-position: 100px 100px }</code></li>
+<li><a href="wdd33position3.html" target="position3">A keyword (top, bottom, left, right, center)</a><br />
+<code>body { background-image: url(image.gif); background-position: center center }</code></li>
+<li>Note that the relative values will only work correctly in Firefox and Opera if the background-attachment property is set to fixed</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+
+
+<div class="slide">
+<h1>background - Shorthand property</h1>
+<p>The shorthand property for background is simply "background":</p>
+<p>Example:</p>
+<code>body { background:#ffffff url('img_tree.png') no-repeat right top;}</code>
+
+<p>When using the shorthand property the order of the property values are:</p>
+<ol>
+<li>background-color</li>
+<li>background-image</li>
+<li>background-repeat</li>
+<li>background-attachment</li>
+<li>background-position</li>
+</ol>
+<p>It does not matter if one of the property values are missing, as long as the ones that are present are in this order.</p>
+
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

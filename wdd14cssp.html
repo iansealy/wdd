@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -35,14 +35,18 @@
 
 <div class="slide">
 <h1>CSS Positioning - setting the scene</h1>
-<p>Most Web sites use HTML tables for layout and the text formatting is achieved through the use of Cascading Style Sheets (CSS).</p>
-<p>This approach isn't really 'wrong' (assuming you check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>). However, there are good reasons why it's less common for tables to be used for layout in modern Web development:</p>
 
 <ul>
-<li>Doesn't separate <em>presentation from content</em></li>
+<li>Many Web sites use HTML tables for layout and the text formatting is achieved through the use of Cascading Style Sheets (CSS).</li>
+<li>This approach isn't ideal (you need to check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>)  and it's increasingly old fashioned.</li>
+<li>There are good reasons why tables shouldn't be used for layout:
+<ul>
 <li>Strictly speaking HTML tables should be used for <a href="http://www.bized.co.uk/virtual/dc/resource/data/aid.htm" target="tabular">tabular data</a> only</li>
+<li>Doesn't separate <em>presentation from content</em></li>
 <li>Tabular layouts are complicated to maintain</li>
-<li>Larger filesize</li>
+<li>Larger file size for your HTML file</li>
+</ul>
+</li>
 </ul>
 <div class="handout">
 </div>
@@ -51,8 +55,11 @@
 
 <div class="slide">
 <h1>CSS Positioning - setting the scene</h1>
-<p>Instead of using HTML tables, CSS can be used for positioning.</p>
-<p>In this session we'll look at the basic concepts underlying CSS positioning (CSS-P) and some of the code that makes it possible.</p><p>This session will not give you definitive answers/solutions to producing particular page layouts. However, it will explain how page elements 'interact' and provide code examples in addition to links to further resources.</p>
+<ul>
+<li>Instead of using HTML tables, CSS can be used for positioning.</li>
+<li>In this session we'll look at the basic concepts underlying CSS positioning (CSS-P) and some of the code that makes it possible.</li>
+<li>This session will not give you definitive answers/solutions to producing particular page layouts. However, it will explain how page elements 'interact' and provide code examples in addition to links to further resources.</li>
+</ul>
 <div class="handout">
 </div>
 </div>
@@ -62,9 +69,13 @@
 <h1>Why use CSS positioning?</h1>
 <ul>
 <li>'Cleaner' Web pages</li>
-<li>Easy to restructure/re-skin</li>
+<li>Easier to work with</li>
+<li>Easier to restructure/re-skin</li>
 <li>Tables can present significant interoperability problems. For example, browsing using a mobile phone (or other device with a small screen):
-<br /><a href="http://www.squarefree.com/bookmarklets/validation.html#PDAize" target="pdaize">PDA-ize</a> your site.</li>
+<ul>
+<li><a href="http://www.squarefree.com/bookmarklets/validation.html#PDAize" target="pdaize">PDA-ize</a> your site.</li>
+</ul>
+</li>
 <li>It's the future...</li>
 </ul>
 <div class="handout">
@@ -75,7 +86,7 @@
 <div class="slide">
 <h1>The Box Model</h1>
 <p>Understanding CSS positioning relies on a understanding the <a href="http://www.w3.org/TR/REC-CSS2/box.html" target="boxmodel">Box Model</a>.</p>
-<p>Everything on an HTML page fits into a <a href="wdd14csspeg.html" target="examples">box</a>.</p>
+<p>Everything on an HTML page fits into a <a href="/uploads/wdd1/wdd14/blocks-example.htm" target="examples">box</a>.</p>
 
 <div class="handout">
 </div>
@@ -86,7 +97,7 @@
 
 <p>There are two types of box:</p>
 <ul>
-<li><em>Block</em> - e.g. h1, div and p tags.<br />Form new blocks of content.</li>
+<li><em>Block</em> - e.g. h1, p and div tags.<br />Form new blocks of content.</li>
 <li><em>Inline</em> - e.g. em, strong and span tags.<br />Do not form new blocks but lines of content.</li>
 </ul>
 
@@ -102,7 +113,7 @@
 <h1>Simple Boxes</h1>
 <p>A simple block box, with CSS to highlight the box and border.</p>
 <p style="background-color: #c0e5f4; border : 5px dashed #000000; font-size : 120%; padding : 15px;">This is a paragraph of text demonstrating the way that block boxes form new blocks.</p>
-<p>&lt;p style=&quot;background-color: #c0e5f4; border : 2px dashed #000000; font-size : 120%; padding : 15px;&quot;&gt;This is a paragraph of text demonstrating the way that block boxes form new blocks.&lt;/p&gt;</p>
+<p>&lt;p style=&quot;background-color: #c0e5f4; border : 2px dashed #000000; font-size : 120%; padding : 15px;&quot;&gt;<br />This is a paragraph of text demonstrating the way that block boxes form new blocks.<br />&lt;/p&gt;</p>
 <div class="handout">
 </div>
 
@@ -113,7 +124,7 @@
 <h1>Simple Boxes</h1>
 <p>A simple block box containing an inline box.</p>
 <p style="background-color: #c0e5f4; border : 5px dashed #000000; font-size : 120%; padding : 15px;">This is a paragraph of text demonstrating <span style="background-color: #ffff00;">a block box containing an inline box</span>.</p>
-<p>&lt;p style=&quot;background-color: #c0e5f4; border : 2px dashed #000000; font-size : 120%; padding : 15px;&quot;&gt;This is a paragraph of text demonstrating &lt;span style=&quot;background-color: #ffff00;&quot;&gt;a block box containing an inline box&lt;/span&gt;.&lt;/p&gt;</p>
+<p>&lt;p style=&quot;background-color: #c0e5f4; border : 2px dashed #000000; font-size : 120%; padding : 15px;&quot;&gt;<br />This is a paragraph of text demonstrating &lt;span style=&quot;background-color: #ffff00;&quot;&gt;a block box containing an inline box&lt;/span&gt;.<br />&lt;/p&gt;</p>
 <div class="handout">
 </div>
 </div>
@@ -157,9 +168,9 @@ them.</p>
 
 <div class="slide">
 <h1>More complex CSS positioning 1</h1>
-<p>The position of boxes within bounding boxes (or the page itself) can be controlled. In this example Box 2 and 3 have been given additional styles of <em>float : left</em> and Box 2 now has a width of 250px.</p>
+<p>The position of boxes within bounding boxes (or the page itself) can be controlled. In this example Box 2 and 3 have been given additional styles of <em>float : left</em> and Box 2 now has a width of 250px, Box 3 has a width of 450px.</p>
 
-<p>Note how the boxes (2 and 3) are positioned next to each other.</p>
+<p>This allows the boxes (2 and 3) to be positioned next to each other and the main box has collapsed (floating an element takes that element out of the normal flow of the page).</p>
 <p><a href="wdd14cssps2.html" target="cssps2">Example and source code</a></p>
 <div class="handout">
 </div>
@@ -178,10 +189,22 @@ them.</p>
 
 <div class="slide">
 <h1>More complex CSS positioning 3</h1>
-<p>Most of the examples so far have demonstrated how elements on the page arrange themselves relative to each other.</p>
-<p>However, you can specify positions relative to the 'bounding box' or the page itself, in this example Box 2 has an additional attribute of <em>margin-left : 250px</em> and Box 2 has attributes of <em>width : 100px; margin-top : 40px</em> and both boxes have been positioned absolutely (<em>position : absolute;</em>).</p>
+<p>Most of the examples so far have demonstrated how elements can be arranged using <em>static</em> positioning and floats.</p>
+
+<p>There are four positioning methods:</p>
+
+<ul>
+<li>Static - normal page layout rules</li>
+<li>Relative - position relative to self</li>
+<li>Absolute - position relative to the parent box/container</li>
+<li>Fixed</li>
+</ul>
+
+<p>In this example Box 2 has an additional attribute of <em>margin-left : 250px</em> and Box 2 has attributes of <em>width : 100px; margin-top : 40px</em> and both boxes have been positioned absolutely (<em>position : absolute;</em>).</p>
 
 <p><a href="wdd14cssps4.html" target="cssps4">Example and source code</a></p>
+
+<p>Absolute positioning can lead to overlapping of elements.</p>
 
 <div class="handout">
 </div>
@@ -192,10 +215,9 @@ them.</p>
 <h1>Browser support</h1>
 <p>The level of support for CSS positioning in browsers varies.</p>
 <ul>
-<li>Mozilla 1.6+, Netscape 7, Opera 6+, FireFox etc. are all very good.</li>
-<li>IE 6 is generally ok but see below. IE7 much better.</li>
-<li>Netscape 4 has very limited support. It will ignore styles rather than attempt to implement them in a lot of cases.</li>
-<li>IE 5 poses more problems than Netscape 4 due to errors in the way IE 5 interprets the box model. IE5 on the Mac is better than IE 5 for Windows.</li>
+<li>Current versions of Firefox, Safari, Chrome, Mozilla, Opera are all very good.</li>
+<li>IE6 is poor. IE7 and IE8 are good.</li>
+<li>IE5 poses problems due to errors in the way IE5 interprets the box model. IE5 on the Mac is better than IE5 for Windows in this respect but is still poor.</li>
 </ul>
 <div class="handout">
 </div>
@@ -204,7 +226,7 @@ them.</p>
 
 <div class="slide">
 <h1>Browser support</h1>
-<p>As we've said before you should test your Web site in as many Web browsers as possible before launch.</p>
+<p>Test your Web site in as many Web browsers as possible before launch.</p>
 
 <p>In addition you should also be aware of browser &quot;<a href="http://en.wikipedia.org/wiki/Quirks_mode" target="quirks">Quirks mode</a>&quot;. This is a particular problem for IE6 but Microsoft has issued a &quot;<a href="http://www.digital-web.com/articles/toward_a_more_standards_compliant_ie/" target="hack">hack/fix</a>&quot;.</p>
 
@@ -215,18 +237,18 @@ them.</p>
 
 <div class="slide">
 <h1>Browser support continued</h1>
-<p>You can prevent older browsers from attempting to use CSS formatting through importing your stylesheet using this code:</p>
+<p>Increasingly unnecessary but you can prevent older browsers from attempting to use CSS positioning code through importing your stylesheet using:</p>
 <p>
 &lt;style type=&quot;text/css&quot;&gt; <br />
 @import url(/style.css); <br />
-
 &lt;/style&gt;<br />
 </p>
+
 <div class="handout">
 </div>
 </div>
 
-
+<!--
 <div class="slide">
 <h1>Browser support continued</h1>
 <p>Often you see:</p>
@@ -242,7 +264,7 @@ them.</p>
 <div class="handout">
 </div>
 </div>
-
+-->
 
 <div class="slide">
 
@@ -284,7 +306,6 @@ them.</p>
 <p><a href="/" target="tablecomp">Tables-based design</a>: 50 lines, 2.67Kb, 70 tags.<br />
 <a href="wdd14csspsbbkexample.html" target="csspcomp">CSS-P version</a>: 42 lines of code, 2.16Kb, 52 tags.</p>
 
-<p>... and the CSS-P version is more <a href="wdd14csspsbbkexample2.html" target="inter">interoperable</a>.</p>
 <div class="handout">
 </div>
 </div>
@@ -300,7 +321,7 @@ them.</p>
 </div>
 </div>
 
-
+<!--
 <div class="slide">
 <h1>CSS skinning 2</h1>
 <p>Possibly the best know example of CSS skinning is:</p>
@@ -315,18 +336,43 @@ them.</p>
 <div class="handout">
 </div>
 </div>
-
+-->
 
 <div class="slide">
-<h1>Tools and Further Reading</h1>
+<h1>Development approach</h1>
 
-<p>If you're creating/debugging CSS-P then two invaluable tools are:</p>
+<ul>
+<li>Suggested approach:
+<ul>
+<li>Develop in a browser with good support for Web standards:
+<ul>
+<li>Firefox, Safari, Chrome</li>
+</ul>
+</li>
+<li>Then test in IE7 and 8 (6 if you know your audience will use it)</li>
+<li>Edit your CSS and retest</li>
+</ul>
+</li>
+<li>What to do when something goes awry:
+<ul>
+<li>Validate... validate... validate
+<ul>
+<li>HTML &amp; CSS</li>
+</ul>
+</li>
+<li>Two invaluable tools:
 <ul>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/60" target="wdt">Web Developer Toolbar</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/1843" target="firebug">Firebug</a></li>
 </ul>
+</li>
+<li>Remember the box model</li>
+<li>Use CSS hacks as a <strong>last</strong> resort</li>
+</ul>
+</li>
+<li>Cross-Browser compatibility covered in WDD4</li>
+</ul>
 
-<p>CSS Positioning is a huge topic and this has been a very brief introduction, there are plenty of online resources available if you want to learn more. Here are a few Web sites you might find useful:</p>
 <div class="handout">
 </div>
 </div>
@@ -334,13 +380,15 @@ them.</p>
 
 <div class="slide">
 <h1>Further Reading</h1>
+<p>CSS Positioning is a huge topic and this has been a very brief introduction.</p>
 <ul>
 <li><a href="http://www.brainjar.com/css/positioning/" target="brainjar">CSS Positioning [Brainjar]</a></li>
 <li><a href="http://www.w3.org/TR/REC-CSS2/box.html" target="boxmodel">The Box Model</a></li>
+<li><a href="http://www.w3schools.com/css/css_positioning.asp" target="w3school">CSS Positioning - W3Schools</a></li>
+<li><a href="http://www.elated.com/articles/css-positioning/" target="elated">CSS Positioning - Elated.com</a></li>
 <li><a href="http://www.w3.org/TR/CSS21/" target="spec">CSS2.1 spec.</a></li>
-<li><a href="http://alistapart.com/stories/fear/" target="fear">Fear of Style Sheets</a></li>
-<li><a href="http://www.webreference.com/html/tutorial18/" target="webref">CSS Positioning - Webreference.com</a></li>
 <li><a href="http://www.w3.org/TR/REC-CSS2/media.html" target="media">CSS Media types</a></li>
+<li><a href="http://www.digital-web.com/articles/web_design_101_positioning/" target="posother">Web design 101: Positioning</a></li>
 <li><a href="http://www.alistapart.com/articles/goingtoprint/" target="print">CSS Design - Going to Print</a></li>
 </ul>
 <div class="handout">

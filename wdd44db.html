@@ -6,10 +6,10 @@
 <head>
 <title>Database-Backed Web Sites</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -36,8 +36,13 @@
 <div class="slide">
 <h1>Advantages</h1>
 <ul>
+<li>Easier to maintain
+<ul>
+<li>Structured data read from a database</li>
+<li>Data processed ready to be displayed</li>
+<li>No matter how many records you have, processed in the same way</li>
+</ul>
 <li>Easier to repurpose/reuse data in different forms [<a href="http://www.amentsoc.org/events/" target="aesevents">AES events example</a>]</li>
-<li>Easier to maintain</li>
 <li>Greater functionality [<a href="http://www.bized.co.uk/dataserv/penndata/pennhome.htm" target="bizeddata">Biz/ed Penn data example</a>]</li>
 </ul>
 <div class="handout">
@@ -48,10 +53,19 @@
 <div class="slide">
 <h1>Disadvantages</h1>
 <ul>
-<li>More complex to develop (than static HTML pages)</li>
+<li>More complex to develop (than static HTML pages); need to know:
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Scripting language</li>
+<li>SQL</li>
+<li>Possibly other database maintenance tools</li>
+</ul>
+</li>
 <li>Reduced performance</li>
 <li>Requires specific setup on the server (hosting implications)</li>
-<li>Higher cost (development and hosting)</li>
+<li>Higher costs for development and hosting</li>
+<li>Backups</li>
 </ul>
 <div class="handout">
 </div>
@@ -82,9 +96,9 @@
 <li>Create a Web site to display the movies in this <a href="uploads/wdd4/wdd44/movies.csv">CSV file</a></li>
 <li>Data structure, three fields/columns:
 <ul>
-<li>Title</li>
-<li>Description</li>
-<li>Year</li>
+<li>Title - varchar(200)</li>
+<li>Description - text</li>
+<li>Year - integer</li>
 </ul>
 </li>
 <li>11 records</li>
@@ -99,14 +113,20 @@ title 	varchar(200)
 description 	text
 year int(11)
 
-Import CSV file.
+Import CSV file
 Remember to change terminator to comma
 
 Add id column, int, make key, auto_increment and not null
 movie_id  	int(11)
 ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
 
-http://kierenpitts.wdd0809.bbkweb.org/
+http://kierenpitts.wdd0910.bbkweb.org/
+
+WP stuff
+
+bbkdemo2010wp
+bbkwptest
+10thjuly
 
 -->
 
@@ -118,14 +138,32 @@ http://kierenpitts.wdd0809.bbkweb.org/
 <div class="slide">
 <h1>Build and populate the database</h1>
 <ul>
-<li>Empty database already created on Dreamhost.</li>
-<li>Need to create the table:<br />
+<li>Empty database already created on Dreamhost
+<ul>
+<li>Database: bbkdemo2010</li>
+<li>Admin user: kierenpitts</li>
+<li>Script user: movies</li>
+</ul>
+</li>
+<li>Need to create the &quot;movies&quot; table:<br />
 <img src="/uploads/wdd4/wdd44/mysql-table.png" alt="Diagram of the MySQL table we will create" width="267" height="222" style="margin-top : 5px;" />
 </li>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases</li>
-<li>Log in at: mysql.bbkweb.org</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Build and populate the database - 2</h1>
+<ul>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd0910-mysql.bbkweb.org" target="phpmy2">wdd0910-mysql.bbkweb.org</a>
+<ol>
+<li>Create table</li>
 <li>Import data</li>
-<li>Add a numeric ID to each movie record</li>
+<li>Add a numeric ID to each movie record = movie_id</li>
+</ol>
+</li>
 </ul>
 <div class="handout">
 </div>
@@ -137,19 +175,24 @@ http://kierenpitts.wdd0809.bbkweb.org/
 <pre>
 &lt;?php
 
-set_include_path('/usr/local/lib/php');
-require 'DB.php';
+set_include_path('/home/kierenpitts/.pear/home/kierenpitts/pear/php');
+require_once 'MDB2.php';
 
-$dbh = DB::connect('mysql://movies:movies@mysql.bbkweb.org/movies');
-if ( DB::isError($dbh) ) {
-    die ( $dbh-&gt;getMessage() );
+$dbh = 'mysql://movies:movies@wdd0910-mysql.bbkweb.org/bbkdemo2010';
+$mdb2 =& MDB2::factory($dbh);
+
+if (PEAR::isError($mdb2)) {
+    echo ($mdb2-&gt;getMessage().' - '.$mdb2-&gt;getUserinfo());
 }
 
-$sth = $dbh-&gt;query(&quot;
-    SELECT movie_id, title FROM movies ORDER BY title
-&quot;);
+$sql ='SELECT movie_id, title FROM movies ORDER BY title';
+
+// run the query
+$result = $mdb2-&gt;query($sql);
+
+print &quot;&lt;h1&gt;My movie list&lt;/h1&gt;\n\n&quot;;
 print &quot;&lt;ul&gt;\n&quot;;
-while($row = $sth-&gt;fetchRow()) {
+while ($row = $result-&gt;fetchRow()) {
     list($movie_id, $title) = $row;
     print &quot;&lt;li&gt;&quot;;
     print &quot;&lt;a href=\&quot;movie.php?movie_id=$movie_id\&quot;&gt;$title&lt;/a&gt;&quot;;
@@ -169,19 +212,22 @@ print &quot;&lt;/ul&gt;\n&quot;;
 <pre>
 &lt;?php
 
-set_include_path('/usr/local/lib/php');
-require 'DB.php';
+set_include_path('/home/kierenpitts/.pear/home/kierenpitts/pear/php');
+require_once 'MDB2.php';
 
-$dbh = DB::connect('mysql://movies:movies@mysql.bbkweb.org/movies');
-if ( DB::isError($dbh) ) {
-    die ( $dbh-&gt;getMessage() );
+$dbh = 'mysql://movies:movies@wdd0910-mysql.bbkweb.org/bbkdemo2010';
+$mdb2 =& MDB2::factory($dbh);
+
+if (PEAR::isError($mdb2)) {
+    echo ($mdb2-&gt;getMessage().' - '.$mdb2-&gt;getUserinfo());
 }
 
-$sth = $dbh-&gt;query(&quot;
-    SELECT title, description, year FROM movies WHERE movie_id = &quot;
-    . $_GET['movie_id']
-);
-while($row = $sth-&gt;fetchRow()) {
+$sql = &quot;SELECT title, description, year FROM movies WHERE movie_id = &quot; . $_GET['movie_id'];
+
+// run the query
+$result = $mdb2-&gt;query($sql);
+
+while ($row = $result-&gt;fetchRow()) {
     list($title, $description, $year) = $row;
     print &quot;&lt;h1&gt;$title ($year)&lt;/h1&gt;\n&quot;;
     print &quot;&lt;p&gt;$description&lt;/p&gt;\n&quot;;
@@ -197,8 +243,8 @@ while($row = $sth-&gt;fetchRow()) {
 <div class="slide">
 <h1>Advantages Revisited</h1>
 <ul>
-<li>Easier to repurpose data (same data could be used to construct a list sorted by title and date)</li>
 <li>Easier to maintain (update title in the database and title is updated everywhere)</li>
+<li>Easier to repurpose data (same data could be used to construct a list sorted by title and date)</li>
 <li>Greater functionality (can show films from certain decades without creating and having to maintain separate pages)</li>
 </ul>
 <div class="handout">
@@ -224,7 +270,44 @@ while($row = $sth-&gt;fetchRow()) {
 <li><a href="http://www.w3schools.com/sql/" target="w3schoolssql">W3Schools SQL Tutorial</a></li>
 <li><a href="http://sqlzoo.net/" target="sqlzoo">SQLzoo - Interactive SQL Tutorial</a></li>
 <li><a href="http://www.w3schools.com/php/" target="w3schoolsphp">W3Schools PHP Tutorial</a></li>
-<li><a href="http://learn.perl.org/library/beginning_perl/" target="perl">Beginning Perl</a></li>
+<li><a href="http://www.perl.org/books/beginning-perl/" target="perl">Beginning Perl</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Demo install of WordPress</h1>
+<ul>
+<li>Popular blogging software</li>
+<li>Current version is <a href="http://wordpress.org/download/" target="wp3">WordPress 3.0</a></li>
+<li>Using MySQL database
+<ul>
+<li>Database: bbkdemo2010wp</li>
+<li>MySQL hostname: wdd0910-mysql.bbkweb.org</li>
+<li>User: bbkwptest</li>
+</ul>
+</li>
+<li>Famous <a href="http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install" target="5min">5 min install</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Demo install of Drupal</h1>
+<ul>
+<li>Popular Content Management Software</li>
+<li>Current version is <a href="http://drupal.org/project/drupal" target="dp6">Drupal 6.17</a></li>
+<li>Using MySQL database
+<ul>
+<li>Database: bbkotherdemo2010</li>
+<li>MySQL hostname: wdd0910-mysql.bbkweb.org</li>
+<li>User: bbkothertest</li>
+</ul>
+</li>
+<li>Read INSTALL.txt for installation instructions.</li>
 </ul>
 <div class="handout">
 </div>

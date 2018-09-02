@@ -6,10 +6,10 @@
 <head>
 <title>RSS, Podcasting and SVG</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -59,6 +59,7 @@
 <li>Email client e.g. <a href="http://www.mozillamessaging.com/en-US/thunderbird/" target="thun">Thunderbird</a></li>
 <li><a href="http://www.bloglines.com/" target="bloglines">Bloglines</a></li>
 <li><a href="http://www.google.co.uk/ig?hl=en">Google homepage</a></li>
+<li>Phones</li>
 </ul>
 </li>
 <li>Also, other people <em>pick up</em> the feed and present a list of your current headlines on their site. These headlines link back to the original articles on your site.</li>
@@ -132,7 +133,7 @@
 
 <p>Podcasting is a method of publishing audio broadcasts (usually mp3 files) via the Internet. It allows users to subscribe so they automatically receive new broadcasts as they are published.</p>
 <p>These audio broadcasts are called podcasts as they were originally intended for use on iPods. However, podcasts can be downloaded and listened to on a variety of devices: PCs, mobile phones, PDAs, mp3 players, as well as iPods.</p>
-<p>Similar to RSS but uses &lt;enclosure&gt; tag.<br /><a href="http://www.bized.co.uk/cgi-bin/chron/itnpodcast.pl?items=3" target="bizpod">Biz/ed podcast code</a>.</p>
+<p>Similar to RSS but uses &lt;enclosure&gt; tag.<br /><a href="http://www.bized.co.uk/learn/tourism/podcasts/xml/tt_podcasts.rss" target="bizpod">Biz/ed podcast code</a>.</p>
 
 <div class="handout">
 </div>
@@ -148,6 +149,7 @@
 </ul>
 <p>As with other audio files you should provide information on file format, file size and also a transcript. <a href="http://www.bized.co.uk/dataserv/chron/audio.htm" target="biztrans">For example</a></p>
 <p>How to <a href="http://www.jiscdigitalmedia.ac.uk/audio/advice/creating-an-audio-podcast/" target="jdm">create a podcast</a></p>
+<p><a href="http://www.apple.com/itunes/podcasts/specs.html" target="itunes">Submitting a podcast to iTunes</a></p>
 
 <div class="handout">
 
@@ -186,16 +188,16 @@
 <ul>
 <li>You can add metadata to an image</li>
 <li>Small filesize</li>
-<li>W3C recommendation</li>
+<li><a href="http://www.w3.org/TR/2001/REC-SVG-20010904/" target="w3crec">W3C recommendation</a></li>
 <li>Interoperability</li>
 <li>Currently requires a plugin:
 <ul>
 <li><a href="http://www.adobe.com/svg/viewer/install/" target="plugin">Adobe plugin</a> - discontinued in January 2009</li>
-<li><a href="http://www.examotion.com/index.php?id=product_player" target="rene">Renesis player</a></li>
+<li><a href="http://www.examotion.com/index.php?id=product_player" target="rene">Renesis player</a> - possibly now unavailable too</li>
 <li><a href="http://www.savarese.com/software/svgplugin/" target="ssrc">Ssrc SVG plugin</a></li>
 </ul>
 </li>
-<li>Most modern browsers support SVG natively, with the exception of IE8</li>
+<li>Most modern browsers support SVG natively, with the exception of IE8. Microsoft has promised support in IE9.</li>
 </ul>
 <div class="handout">
 </div>
@@ -226,7 +228,7 @@
 <div class="slide">
 <h1>SVG animation</h1>
 
-<p><a href="/uploads/wdd4/wdd43/rotate.svg" target="rotate">Example</a> - animation not yet supported in Firefox (unless you use the plugin) but is in Opera.</p>
+<p><a href="/uploads/wdd4/wdd43/rotate.svg" target="rotate">Example</a> - animation not yet supported in Firefox (unless you use the plugin) but is in Opera and Chrome.</p>
 
 <pre>
 
@@ -320,10 +322,9 @@
 <li><a href="http://www.adobe.com/products/illustrator/main.html?lid=//products//AI+Pdwn" target="ill">Adobe Illustrator</a></li>
 <li><a href="http://www.corel.com/servlet/Satellite/gb/en/Product/1191272117978" target="corel">Corel Draw</a></li>
 <li><a href="http://www.inkscape.org/" target="inks">Inkscape</a></li>
-<li>Use <a href="http://www.svgfactory.com" target="svgfact">SVG factory</a> in many Windows programs</li>
 </ul>
-<p>Unfortunately no tool yet matches Macromedia Flash</p>
-<p>Importantly, due to the open format, it is easy for CGI scripts (or developers) to produce SVG code &quot;<a href="http://kierenpitts.wdd0809.bbkweb.org/svgbuilder.pl" target="myexamp">on the fly</a>&quot;.</p>
+<p>Unfortunately no tool yet matches Adobe Flash</p>
+<p>Importantly, due to the open format, it is easy for CGI scripts (or developers) to produce SVG code &quot;<a href="http://kierenpitts.wdd0910.bbkweb.org/svgbuilder.pl" target="myexamp">on the fly</a>&quot;.</p>
 
 <div class="handout">
 </div>
@@ -356,13 +357,13 @@
 
 <div class="slide">
 <h1>Agent Adoption</h1>
-<p>SVG is becoming increasingly popular.</p>
+<p>SVG is becoming increasingly popular (used throughout Wikipedia).</p>
 <ul>
-<li>Already integrated into some browsers (not IE) and will be backwards compatible (text within the SVG will supply the location of a Gif if SVG is unsupported)</li>
+<li>Already integrated into some desktop browsers (not IE yet)</li>
+<li>Backwards compatible (text within the SVG will supply the location of a raster/bitmap images if SVG is unsupported)</li>
 <li>Integrates with XML tools</li>
 <li>Current generation mobile phones</li>
-<li>Palms</li>
-<li>PocketPCs</li>
+<li>Palms and PocketPCs</li>
 <li>Real Player</li>
 <li>Adobe Acrobat (PDFs)</li>
 </ul>
@@ -377,9 +378,7 @@
 <ul>
 <li><a href="http://www.w3.org/Graphics/SVG/Overview.htm8" target="svgw3c">W3C SVG pages</a></li>
 <li><a href="http://www.adobe.com/svg/" target="svgzone">Adobe SVG Zone</a></li>
-<li><a href="http://www.statistics.gov.uk/census2001/censusmaps/index.html" target="ukstats">UK statistics map</a></li>
 <li><a href="http://www.carto.net/papers/svg/us_population/index.html" target="uspop">US population map</a></li>
-<li><a href="http://swa.ethz.ch/googlemaps/" target="gsvg">SVG and Google maps</a></li>
 <li><a href="http://a.1asphost.com/svggames/" target="games">SVG games</a></li>
 
 </ul>
