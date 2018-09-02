@@ -6,10 +6,10 @@
 <head>
 <title>HTML and CSS Validation</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -29,7 +29,7 @@
 
 <div class="slide">
 <h1>HTML and CSS Validation</h1>
-<h2>Ian Sealy</h2>
+<h2>Kieren Pitts</h2>
 </div>
 
 
@@ -41,11 +41,40 @@
 <li>Rules are known as Document Type Definition (DTD)
 <ul>
 <li>DOCTYPE specifies DTD and must be the first line in an HTML document</li>
-<li>Specifies HTML version used</li>
+<li>Specifies HTML version used, for example HTML 4.01:</li>
 <li><tt>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</tt></li>
 </ul>
 </li>
-<li>Invalid HTML is not accessible and hard to debug</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>All Documents Must Have A DOCTYPE</h1>
+<p>XHTML DOCTYPE:<br />
+<b><tt>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd"&gt;</tt></b></p>
+
+<p>HTML5 DOCTYPE:<br />
+<b><tt>&lt;!DOCTYPE html&gt;</tt></b></p>
+<p>It is important that you use the correct DOCTYPE for the version of HTML you are using.</p>
+<p>Unless you know what version of HTML you are using then use the HTML 4.01 DOCTYPE until we've looked at XHTML and HTML5 in WDD4.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Invalid HTML</h1>
+<ul>
+<li>Invalid HTML is:-
+<ul>
+<li>Not accessible</li>
+<li>Hard to debug</li>
+<li>The single biggest reason for display problems when using CSS positioning</li>
+</ul>
+</li>
 <li>All your pages should be valid</li>
 <li>CSS also has rules and must also be valid</li>
 </ul>

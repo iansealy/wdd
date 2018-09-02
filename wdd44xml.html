@@ -6,10 +6,10 @@
 <head>
 <title>Introduction to XML</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -60,12 +60,11 @@
 <div class="slide">
 <h1>What is XML used for?</h1>
 <ul>
-<li>Separating content from presentation</li>
-<li>Sharing data
+<li>Sharing data (no presentation)
 	<ul>
 	<li>Strict structure - must be well-formed</li>
 	<li>Easily read by different applications</li>
-	<li>Self descriptive</li>
+	<li>Self descriptive - should be possible to write without previous knowledge</li>
 	<li>Plain text, it's not <em>special</em></li>
 	<li>Platform independent</li>
 	</ul>
@@ -132,12 +131,10 @@
 <div class="slide">
 
 <h1>Document Type Definition (DTD) and Schemas</h1>
-<p>XML documents are self-descriptive. This is achieved by using DTDs and Schemas</p>
+<p>XML documents are self-descriptive. This is achieved by using DTDs.</p>
 <ul>
 <li>Define the structure of your XML file</li>
 <li>Define the permissable elements (tags)</li>
-<li>Schemas do the same job as DTDs but are xml-based and extensible</li>
-<li>Schemas are likely to supersede DTDs</li>
 </ul>
 <div class="handout">
 </div>
@@ -185,127 +182,16 @@
 </div>
 
 
-
-<div class="slide">
-
-<h1>What is XSL?</h1>
-<ul>
-<li>E<strong>X</strong>tensible <strong>S</strong>tylesheet <strong>L</strong>anguage</li>
-<li>CSS is used for HTML
-	<ul>
-	<li>Tags clearly defined eg: &lt;hr&gt; = horizontal rule</li>
-
-	<li>Browsers interpret what to do</li>
-	</ul>
-</li>
-<li>XSL is used for XML
-	<ul>
-	<li>Tags user defined eg: &lt;hr&gt; could be hour, home runs, human resources</li>
-	<li>Must tell the browser how to interpret the tags</li>
-
-<li>XSL is written in XML</li>
-	</ul>
-</li>
-<li>Can transform XML documents in to other XML documents
-	<ul>
-	<li>Add items</li>
-	<li>Remove items</li>
-	<li>Sort items</li>
-	<li>Convert to XHTML, SVG, RSS etc</li>
-
-	</ul>
-</li>
-</ul>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>XSL in action</h1>
-<p>XML Document:</p>
-<pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-
-&lt;?xml-stylesheet type="text/xsl" href="/some/path/cd.xsl"?&gt;
-&lt;onmydesk&gt;
-	&lt;cd&gt;
-		&lt;artist&gt;Moby&lt;/artist&gt;
-		&lt;title&gt;18&lt;/title&gt;
-		&lt;label&gt;Mute&lt;/label&gt;
-	&lt;/cd&gt;
-	&lt;cd&gt;
-		&lt;artist&gt;The Verve&lt;/artist&gt;
-		&lt;title&gt;Urban Hymns&lt;/title&gt;
-		&lt;label&gt;Virgin&lt;/label&gt;
-	&lt;/cd&gt;
-	&lt;cd&gt;
-		&lt;artist&gt;Orbital&lt;/artist&gt;
-		&lt;title&gt;The Altogether&lt;/title&gt;
-		&lt;label&gt;London Records&lt;/label&gt;
-	&lt;/cd&gt;
-&lt;/onmydesk&gt;
-</pre>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-
-<h1>XSL in action</h1>
-<p>XSL Document:</p>
-<pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
-&lt;xsl:template match=&quot;/&quot;&gt;
-&lt;html&gt;
-&lt;body style=&quot;font-family:Verdana;font-size:12pt;background-color:#cccccc&quot;&gt;
-&lt;xsl:for-each select=&quot;onmydesk/cd&quot;&gt;
-
-	&lt;div style=&quot;color:red;padding:7px&quot;&gt;
-	&lt;span style=&quot;color:blue;font-weight:bold&quot;&gt;
-	&lt;xsl:value-of select=&quot;artist&quot;/&gt;&lt;/span&gt;
-	- &lt;xsl:value-of select=&quot;title&quot;/&gt;
-	&lt;/div&gt;
-
-	&lt;div style=&quot;margin-left:20px;font-size:10pt&quot;&gt;
-	&lt;span style=&quot;font-style:bold;colour:green&quot;&gt;
-	Label = &lt;strong&gt;&lt;xsl:value-of select=&quot;label&quot;/&gt;&lt;/strong&gt;
-	&lt;/span&gt;
-	&lt;/div&gt;
-
-&lt;/xsl:for-each&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;
-</pre>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-
-<h1>XSL in action</h1>
-<p>Produces:</p>
-<img src="/uploads/wdd4/wdd44/xsl_example.gif" alt="Example output" />
-<p>Can also be used by other applications [<a href="http://www.amentsoc.org/bug-club/fun/online-games-moth.html" target="drag">AES Bug games</a> uses this <a href="http://www.amentsoc.org/bug-club/xml/drag/moths1.xml">XML</a>]</p>
-<div class="handout">
-</div>
-</div>
-
 <div class="slide">
 <h1>AJAX</h1>
 <p>AJAX stands for Asynchronous Javascript And XML.</p>
 <p>Not a new technology but a group of existing technologies:</p>
 <ul>
-<li>XHTML and CSS</li>
+<li>XHTML/HTML5 and CSS</li>
+<li>JavaScript</li>
 <li>Document Object Model (DOM)</li>
 <li>XMLHttpRequest</li>
-<li>JavaScript</li>
-<li>XML</li>
+<li>XML (although not always)</li>
 </ul>
 <p>Dynamic update of page content without the need to reload the page.</p>
 <p>Makes the browser/Web application seem more responsive.</p>
@@ -314,19 +200,6 @@
 </div>
 </div>
 
-
-<div class="slide">
-<h1>Other cool technologies</h1>
-<p>Just a few cool things that XML makes possible:</p>
-<ul>
-
-<li>RSS</li>
-<li>Podcasting</li>
-<li>SVG - Scalable Vector Graphics</li>
-</ul>
-<div class="handout">
-</div>
-</div>
 
 <div class="slide">
 <h1>Problems with XML</h1>

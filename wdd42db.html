@@ -6,10 +6,10 @@
 <head>
 <title>Database-Backed Web Sites</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -58,9 +58,9 @@
 <ul>
 <li>HTML</li>
 <li>CSS</li>
-<li>Scripting language</li>
-<li>SQL</li>
-<li>Possibly other database maintenance tools</li>
+<li>Programming language - e.g. PHP, Python, Perl, C#</li>
+<li>Structured Query Language (SQL)</li>
+<li>(Possibly) Database maintenance tools</li>
 </ul>
 </li>
 <li>Reduced performance</li>
@@ -84,7 +84,9 @@
 <li><strong>P</strong>erl, <strong>P</strong>HP or <strong>P</strong>ython (programming language)</li>
 </ul>
 </li>
-<li>LAMP is a common setup but there are plenty of others.</li>
+<li>LAMP is a common setup but there are plenty of others.
+<ul><li>For local dev people often use <a href="http://en.wikipedia.org/wiki/Comparison_of_WAMPs" target="wamp">WAMP</a> or <a href="http://www.mamp.info/en/index.html" target="mamp">MAMP</a></li></ul>
+</li>
 </ul>
 <div class="handout">
 </div>
@@ -93,8 +95,9 @@
 
 <div class="slide">
 <h1>Example Application</h1>
+<!-- For 2014 provide a brief intro to PHP... variables, conditionals etc -->
 <ul>
-<li>Create a Web site to display the movies in this <a href="uploads/wdd4/wdd43/movies.csv">CSV file</a></li>
+<li>Create a Web site to display the movies in this <a href="uploads/wdd4/wdd42/movies.csv">CSV file</a></li>
 <li>Data structure, three fields/columns:
 <ul>
 <li>Title - varchar(200)</li>
@@ -121,9 +124,9 @@ Add id column, int, make key, auto_increment and not null
 movie_id  	int(11)
 ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
 
-http://kierenpitts.wdd1112.bbkweb.org/
+http://kierenpitts.wdd1213.bbkweb.org/
 
-bbkdemo2012
+bbkdemo2013
 kierenpitts
 9thJune
 
@@ -141,13 +144,13 @@ movies|movies
 <ul>
 <li>Empty database already created on Dreamhost
 <ul>
-<li>Database: bbkdemo2012</li>
-<li>Admin user: kierenpitts</li>
-<li>Script user: movies</li>
+<li>Database: bbkdemo2013</li>
+<li>Admin username: kierenpitts</li>
+<li>Script username: movies</li>
 </ul>
 </li>
 <li>Need to create the &quot;movies&quot; table:<br />
-<img src="/uploads/wdd4/wdd43/mysql-table.png" alt="Diagram of the MySQL table we will create" width="267" height="222" style="margin-top : 5px;" />
+<img src="/uploads/wdd4/wdd42/mysql-table.png" alt="Diagram of the MySQL table we will create" width="267" height="222" style="margin-top : 5px;" />
 </li>
 </ul>
 <div class="handout">
@@ -158,7 +161,7 @@ movies|movies
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1112-mysql.bbkweb.org" target="phpmy2">wdd1112-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1213-mysql.bbkweb.org" target="phpmy2">wdd1213-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
@@ -176,24 +179,24 @@ movies|movies
 <pre>
 &lt;?php
 
-set_include_path('/home/kierenpitts/.pear/home/kierenpitts/pear/php');
-require_once 'MDB2.php';
+// Connect to the database
+// Normal kept in a separate file and used with include()
+$hostname = &quot;wdd1213-mysql.bbkweb.org&quot;;
+$username = &quot;movies&quot;;
+$password = &quot;movies&quot;;
+$database = &quot;bbkdemo2013&quot;;
 
-$dbh = 'mysql://movies:movies@wdd1112-mysql.bbkweb.org/bbkdemo2012';
-$mdb2 =&amp; MDB2::factory($dbh);
-
-if (PEAR::isError($mdb2)) {
-    echo ($mdb2-&gt;getMessage().' - '.$mdb2-&gt;getUserinfo());
-}
+$link = mysql_connect($hostname,$username,$password);
+mysql_select_db($database) or die(&quot;Unable to select database&quot;);
 
 $sql ='SELECT movie_id, title FROM movies ORDER BY title';
 
 // run the query
-$result = $mdb2-&gt;query($sql);
+$result = mysql_query($sql,$link) or die(&quot;Unable to select: &quot;.mysql_error());
 
 print &quot;&lt;h1&gt;My movie list&lt;/h1&gt;\n\n&quot;;
 print &quot;&lt;ul&gt;\n&quot;;
-while ($row = $result-&gt;fetchRow()) {
+while ($row = mysql_fetch_row($result)) {
     list($movie_id, $title) = $row;
     print &quot;&lt;li&gt;&quot;;
     print &quot;&lt;a href=\&quot;movie.php?movie_id=$movie_id\&quot;&gt;$title&lt;/a&gt;&quot;;
@@ -213,22 +216,21 @@ print &quot;&lt;/ul&gt;\n&quot;;
 <pre>
 &lt;?php
 
-set_include_path('/home/kierenpitts/.pear/home/kierenpitts/pear/php');
-require_once 'MDB2.php';
+// Connect to the database
+$hostname = &quot;wdd1213-mysql.bbkweb.org&quot;;
+$username = &quot;movies&quot;;
+$password = &quot;movies&quot;;
+$database = &quot;bbkdemo2013&quot;;
 
-$dbh = 'mysql://movies:movies@wdd1112-mysql.bbkweb.org/bbkdemo2012';
-$mdb2 =&amp; MDB2::factory($dbh);
-
-if (PEAR::isError($mdb2)) {
-    echo ($mdb2-&gt;getMessage().' - '.$mdb2-&gt;getUserinfo());
-}
+$link = mysql_connect($hostname,$username,$password);
+mysql_select_db($database) or die(&quot;Unable to select database&quot;);
 
 $sql = &quot;SELECT title, description, year FROM movies WHERE movie_id = &quot; . $_GET['movie_id'];
 
 // run the query
-$result = $mdb2-&gt;query($sql);
+$result = mysql_query($sql,$link) or die(&quot;Unable to select: &quot;.mysql_error());
 
-while ($row = $result-&gt;fetchRow()) {
+while ($row = mysql_fetch_row($result)) {
     list($title, $description, $year) = $row;
     print &quot;&lt;h1&gt;$title ($year)&lt;/h1&gt;\n&quot;;
     print &quot;&lt;p&gt;$description&lt;/p&gt;\n&quot;;
@@ -268,7 +270,7 @@ while ($row = $result-&gt;fetchRow()) {
 <h1>Web application frameworks</h1>
 <ul>
 <li>Common/modern way to do Web development</li>
-<li>Rapid application development - provide libraries for common tasks. For example:
+<li>Rapid application development (RAD) - provide libraries for common tasks. For example:
 	<ul>
 	<li>Database access</li>
 	<li>Templating</li>
@@ -283,7 +285,8 @@ while ($row = $result-&gt;fetchRow()) {
 	<li>controller - controls events that affect data or display of data</li>
         </ul>
 </li>
-<li>Examples: <a href="http://framework.zend.com/" target="zend">Zend</a> (PHP), <a href="http://symfony.com/" target="symfony">Symfony</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://www.catalystframework.org/" target="catalyst">Catalyst</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
+<li>Examples: <a href="http://www.yiiframework.com/" target="yii">Yii</a> (PHP), <a href="http://framework.zend.com/" target="zend">Zend</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://flask.pocoo.org/" target="flask">Flask</a> (Python), <a href="http://www.perldancer.org/" target="dancer">Dancer</a> (Perl), <a href="http://mojolicio.us/" target="mojo">Mojolicious</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
+<li>There are <a href="http://www.hotframeworks.com/" target="hotframe">lots of frameworks</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -305,13 +308,16 @@ while ($row = $result-&gt;fetchRow()) {
 	<ul>
 	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmyad">phpMyAdmin</a></li>
 	<li><a href="http://wb.mysql.com/" target="mysqlwb">MySQL Workbench</a></li>
-	<li>Command line tool</li>
+	<li><a href="https://dev.mysql.com/doc/refman/5.7/en/mysql.html" target="mysqlcli">MySQL Command line tool</a></li>
 	</ul>
 </li>
 <li>Source control
 	<ul>
-	<li><a href="http://subversion.tigris.org/" target="svn">Subversion</a></li>
 	<li><a href="http://git-scm.com/" target="git">Git</a></li>
+	<li><a href="http://subversion.tigris.org/" target="svn">Subversion</a></li>
+        <li><a href="http://mercurial.selenic.com/" target="alesi">Mercurial</a></li>
+        <li><a href="https://github.com/" target="gh">GitHub</a> - hosted service</li>
+        <li><a href="https://bitbucket.org/" target="bb">BitBucket</a> - hosted service</li>
 	</ul>
 </li>
 </ul>
@@ -324,8 +330,13 @@ while ($row = $result-&gt;fetchRow()) {
 <ul>
 <li><a href="http://www.w3schools.com/sql/" target="w3schoolssql">W3Schools SQL Tutorial</a></li>
 <li><a href="http://sqlzoo.net/" target="sqlzoo">SQLzoo - Interactive SQL Tutorial</a></li>
+<li><a href="http://php.net/" target="phpnet">PHP</a></li>
 <li><a href="http://www.w3schools.com/php/" target="w3schoolsphp">W3Schools PHP Tutorial</a></li>
+<li><a href="http://devzone.zend.com/6/php-101-php-for-the-absolute-beginner/" target="php101">PHP 101</a></li>
+<li><a href="http://www.python.org/about/gettingstarted/" target="startpy">Getting started with Python</a></li>
 <li><a href="http://www.perl.org/books/beginning-perl/" target="perl">Beginning Perl</a></li>
+<li><a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book" target="railtuts">Ruby on Rails tutorials</a></li>
+<li><a href="http://railsforzombies.org/" target="zombie">Rails for zombies</a></li>
 </ul>
 <div class="handout">
 </div>

@@ -6,10 +6,10 @@
 <head>
 <title>Server Log Analysis</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,10 +40,10 @@
 <li>Example:</li>
 </ul>
 <tt><small>
-87.194.170.167 - - [22/Jun/2012:06:52:47 -0700] &quot;GET / HTTP/1.1&quot; 200 1475 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;<br /><br />
-87.194.170.167 - - [22/Jun/2012:06:52:49 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 163 &quot;http://wdd1112.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;<br /><br />
-87.194.170.167 - - [22/Jun/2012:06:52:49 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 165 &quot;http://wdd1112.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;<br /><br />
-87.194.170.167 - - [22/Jun/2012:06:52:52 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1729 &quot;http://wdd1112.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;
+188.223.42.30 - - [21/Jun/2013:13:26:57 -0700] &quot;GET / HTTP/1.1&quot; 200 1475 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36&quot;<br /><br />
+188.223.42.30 - - [21/Jun/2013:13:26:57 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 163 &quot;http://wdd1213.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36&quot;<br /><br />
+188.223.42.30 - - [21/Jun/2013:13:26:57 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 165 &quot;http://wdd1213.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36&quot;<br /><br />
+188.223.42.30 - - [21/Jun/2013:13:27:10 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1720 &quot;http://wdd1213.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36&quot;
 </small></tt>
 <div class="handout">
 </div>
@@ -52,7 +52,7 @@
 <div class="slide">
 <h1>Example Logs</h1>
 <ul>
-<li>http://wdd1112.bbkweb.org/ log</li>
+<li>http://wdd1213.bbkweb.org/ log</li>
 <li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li>
 <li>Too much information, so must use a log analysis tool</li>
 </ul>
@@ -171,12 +171,11 @@
 <div class="slide">
 <h1>Remote Logging</h1>
 <ul>
-<li>If can't access server logs (or want something easier) then often use remote logging</li>
+<li>If can't access server logs (or want something easier) then can use remote logging</li>
 <li>Involves embedding HTML for an inline image hosted by a third party</li>
 <li>Third party counts accesses to this image and presents graphical report</li>
 <li><a href="http://www.exploit-lib.org/issue5/software-used/" target="exploit">Article and example reports</a></li>
 <li>Relies on use of graphical browser</li>
-<li><a href="http://www.scriptsearch.com/Remotely_Hosted/Web_Traffic_Analysis/" target="scriptsearch">ScriptSearch.com</a></li>
 </ul>
 <div class="handout">
 </div>

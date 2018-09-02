@@ -6,10 +6,10 @@
 <head>
 <title>WYSIWYG Editors</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1213.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1213.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -51,9 +51,9 @@
 </li>
 <li>&quot;Through the Web&quot; applications:
 <ul>
-<li><a href="http://tinymce.moxiecode.com/" target="tinymce">TinyMCE</a></li>
 <li><a href="http://ckeditor.com/" target="cke">CKEditor</a> (was FCKEditor)</li>
-<li><a href="http://developer.yahoo.com/yui/editor/" target="yui">YUI 2 - Rich Text Editor</a></li>
+<li><a href="http://tinymce.moxiecode.com/" target="tinymce">TinyMCE</a></li>
+<li><a href="http://developer.yahoo.com/yui/editor/" target="yui">YUI 2 - Rich Text Editor</a> and <a href="http://yuilibrary.com/yui/docs/editor/" target="yui3">YUI 3 - Rich Text Editor</a></li>
 </ul>
 </li>
 </ul>
@@ -82,7 +82,7 @@
 <li>Simplicity:-
 <ul>
 <li>HTML code is generated for you</li>
-<li>Easier to spot mistakes in your content</li>
+<li>Easier to spot mistakes in <strong>content</strong></li>
 </ul>
 </li>
 <li>Speed:-
@@ -101,19 +101,10 @@
 <div class="slide">
 <h1>Problems with WYSIWYG Editors</h1>
 <ul>
-<li>WYSIAWYG
-<ul>
 <li>What You See is <em>ALMOST</em> What You Get</li>
-</ul>
-</li>
 <li><a href="http://www.60minutewebsites.com/" target="minute">Dreamweaver in action</a></li>
 <li>They don't always produce valid code</li>
-<li>They produce editor-specific code
-<ul>
-<li>FrontPage was the worst... by a long, long way! Thankfully Microsoft Expression is much better.</li>
-<li>They try to be <em>too</em> clever</li>
-</ul>
-</li>
+<li>They can include editor-specific code</li>
 <li>They often produce inefficient code</li>
 <li>Problems can occur if you add extra code (e.g. by using Notepad) and then load the same file back in the WYSIWYG editor</li>
 </ul>
@@ -129,21 +120,58 @@
 <ul>
 <li>can be very expensive</li>
 <li>can require a powerful PC</li>
+<li>often tied to a particular PC so you can't make updates remotely</li>
 </ul>
 </li>
-<li>To keep up-to-date with Web standards you need to upgrade and manufacturers often can't/don't keep up</li>
-<li>They can actually remove the creative thought processes behind designing Web pages
-<ul>
-<li>Themes (<a href="http://www.frontpage-templates.org/" target="themes">FrontPage</a>)</li>
-<li>Same can be said of themes in popular blogging tools and CMSs</li>
-</ul>
-</li>
+<li>To keep up-to-date with Web standards you need to upgrade and manufacturers often can't/<a href="http://www.macworld.com/article/1166980/adobe_dreamweaver_cs6_adds_mobile_tools_but_neglects_core_web_technologies.html" target="dwcs6lag">don't keep up</a> - hard to justify the purchase?</li>
 <li>Prevent developers building up core skills
 <ul>
+<li>Developers learn an application without understanding the language
+<ul>
 <li>Easy to spot people who can hand code</li>
-<li>Hand coders often more beneficial to an organisation</li>
+<li>Developers work with what's available in their application and not what's possible in browsers</li>
 </ul>
 </li>
+<li>Hand coders usually more knowledgeable and more beneficial to an organisation
+<ul>
+<li>Code is more efficient</li>
+<li>Developers are better skilled at finding and fixing errors/issues</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Has WYSIWYG editors had their day?</h1>
+<ul>
+<li>The Web has changed:
+<ul>
+<li>Edited using &quot;through the Web&quot; tools and a CMS</li>
+<li>Distributed editors
+<ul>
+<li>Community/user generated content</li>
+</ul>
+</li>
+<li>A suite of technologies, not just HTML and CSS</li>
+<li>The 'one package fits all' approach doesn't match current working practices.<br />Project teams often comprise:
+<ul>
+<li>Web designer</li>
+<li>HTML coder</li>
+<li>Front-end interaction designer</li>
+<li>Back-end developer</li>
+<li>Content editor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://blog.awardspace.com/the-end-of-wysiwyg-editors/" target="theend">The end of WYSIWYG editors</a></li>
+<li><a href="http://broadcast.oreilly.com/2009/03/is-dreamweaver-giving-way-to-d.html" target="drupal">Is Dreamweaver being beaten by Drupal?</a></li>
+<li><a href="http://www.pcpro.co.uk/blogs/2009/03/05/dreamweaver-is-dying/" target="dying">I'm sorry but Dreamweaver is dying</a></li>
 </ul>
 <div class="handout">
 </div>
