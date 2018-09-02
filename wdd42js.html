@@ -6,10 +6,10 @@
 <head>
 <title>JavaScript</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 <script language="JavaScript" type="text/javascript">
 <!--
 function MM_swapImgRestore() { //v2.0
@@ -46,6 +46,7 @@ function MM_swapImage() { //v2.0
 }
 // -->
 </script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 </head><body>
 
 <div class="layout">
@@ -73,13 +74,19 @@ function MM_swapImage() { //v2.0
 <h1>What Is JavaScript?</h1>
 <ul>
 <li>A scripting language</li>
-<li>Mainly used on the client rather than the server</li>
-<li>Allows interactivity without using CGI scripts or similar technologies</li>
+<li>Used on the client rather than the server</li>
+<li>Allows interactivity without reloading the entire page (unlike CGI scripts or similar technologies like PHP)</li>
 <li>Because there is no connection to the server, JavaScript can be fast and therefore allows instant interactivity (e.g. respond to mouse clicks or movement)
 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.test','document.test','uploads/wdd4/wdd42/on.gif')"><img name="test" border="0" src="uploads/wdd4/wdd42/off.gif" alt=""></a></li>
-<li><a href="http://www.bized.ac.uk/stafsup/options/bizqbank/index.htm" target="qbank">Biz/ed Question Bank</a> &amp; <a href="http://gmail.com/" target="gmail">Gmail</a></li>
-<li><a href="http://www.dynamicdrive.com/" target="dynamicdrive">Example uses</a> of JavaScript</li>
-<li><form action=""><input type="button" name="print" value="Print This Page" onclick="javascript:window.print()"></form></li>
+<li>Examples:
+<ul>
+<li><a href="http://www.bized.co.uk/stafsup/options/bizqbank/index.htm" target="qbank">Biz/ed Question Bank</a></li>
+<li><a href="http://www.thelocal.de/12303/" target="thelocal">The Local</a></li>
+<li><a href="http://maps.google.com/" target="maps">Google Maps</a></li>
+<li><a href="http://gmail.com/" target="gmail">Gmail</a></li>
+<li><a href="http://www.nihilogic.dk/labs/mariokart/" target="kart">Super Mario Kart</a></li>
+</ul>
+</li>
 </ul>
 <div class="handout">
 </div>
@@ -87,103 +94,11 @@ function MM_swapImage() { //v2.0
 
 
 <div class="slide">
-<h1>Java And JavaScript</h1>
+<h1>Aside: Java And JavaScript</h1>
 <ul>
-<li>JavaScript is a relatively simple scripting language used on the Web</li>
-<li>Java is a complex programming language used for a wide range of applications (which are not necessarily Web-related)</li>
+<li>JavaScript is a scripting language used on the Web</li>
+<li>Java is a programming language used for a wide range of applications (which are not necessarily Web-related)</li>
 <li>Java and JavaScript are completely different</li>
-</ul>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Where Is JavaScript?</h1>
-<ul>
-<li>Embedded within HTML</li>
-<li>Usually in the HEAD of a document</li>
-<li>Javascript starts with<br />
-<b><tt>&lt;script language=&quot;JavaScript&quot; type=&quot;text/javascript&quot;&gt;</tt></b><br />
-and ends with<br />
-<b><tt>&lt;/script&gt;</tt></b></li>
-<li>JavaScript is often flanked by<br />
-<b><tt>&lt;!--</tt></b><br />
-and<br /><b><tt>// --&gt;</tt></b><br />
-to prevent it being displayed by older browsers</li>
-<li>Can be embedded in an <a href="#" onMouseOver="window.alert('Hi')">HTML tag</a></li>
-</ul>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Simple Example</h1>
-<form name="nameform">
-<p>What is your first name? <input type="text" name="firstname" /></p>
-<p>What is your surname? <input type="text" name="surname" /></p>
-<p><a href="#" onMouseOver="window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)">Greet</a></p>
-</form>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Simple Example</h1>
-<p><tt>&lt;form <b>name=&quot;nameform&quot;</b>&gt;<br />
-&lt;p&gt;What is your first name? &lt;input type=&quot;text&quot; <b>name=&quot;firstname&quot;</b> value=&quot;Ian&quot;&gt;&lt;/p&gt;<br />
-&lt;p&gt;What is your surname? &lt;input type=&quot;text&quot; <b>name=&quot;surname&quot;</b> value=&quot;Sealy&quot;&gt;&lt;/p&gt;<br />
-&lt;p&gt;&lt;a href=&quot;#&quot;
-<b>onMouseOver=&quot;window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)&quot;</b>&gt;Greet&lt;/a&gt;&lt;/p&gt;<br />
-&lt;/form&gt;</tt></p>
-<p>In the JavaScript Document Object Model (DOM) each object has a name so that it can be referred to.</p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Another Example</h1>
-<form>
-<p><input type="button" value="Open New Window" onClick="window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=no')"></p>
-<p><input type="button" value="Open New Window with tool bar, scroll bars and status bar" onClick="window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=yes,toolbar=yes,scrollbars=yes')"></p>
-</form>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Another Example</h1>
-<p>In the original page:</p>
-<p><tt>&lt;form&gt;<br>
-&lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Open New Window&quot; <b>onClick=&quot;window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=no')&quot;</b>&gt;<br />
-&lt;p&gt;&lt;input type=&quot;button&quot; value=&quot;Open New Window with tool bar, scroll bars and status bar&quot; <b>onClick=&quot;window.open('wdd42jswindow.html','newwindow', 'width=250,height=150,status=yes,toolbar=yes,scrollbars=yes')&quot;</b>&gt;<br />
-&lt;/form&gt;</tt></p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Another Example</h1>
-<p>In the new window:</p>
-<p><tt>&lt;h3&gt;New Window&lt;/h3&gt;<br />
-&lt;form&gt;<br>
-&lt;input type=&quot;button&quot; value=&quot;Close Window&quot; <b>onClick=&quot;self.close()&quot;</b>&gt;<br />
-&lt;/form&gt;</tt></p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Problems With JavaScript</h1>
-<ul>
-<li>Like CSS, JavaScript does not always work the same in all browsers</li>
-<li>Because of all the different versions, it is sometimes still necessary to <a href="http://www.webreference.com/tools/browser/javascript.html" target="sniff">detect browser type</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -193,7 +108,7 @@ to prevent it being displayed by older browsers</li>
 <div class="slide">
 <h1>Netscape History</h1>
 <ul>
-<li>JavaScript was developed by Netscape for Navigator, but was then called LiveScript</li>
+<li>JavaScript was developed by Netscape for Navigator, but was called Mocha and then later LiveScript</li>
 <li>Was renamed JavaScript for marketing reasons (even though very different to Java)</li>
 <li>Navigator 2.0 (1996) supports JavaScript 1.0</li>
 <li>Navigator 3.0 (1996) supports JavaScript 1.1</li>
@@ -211,6 +126,7 @@ to prevent it being displayed by older browsers</li>
 <li>Netscape 6.0+ (2000) and Mozilla support JavaScript 1.5</li>
 <li>Firefox 1.5 (2005) supports JavaScript 1.6</li>
 <li>Firefox 2 (2006) supports JavaScript 1.7</li>
+<li>Firefox 3 (2008) supports JavaScript 1.8</li>
 <li>(JavaScript 1.4 was used in a Netscape server product)</li>
 </ul>
 <div class="handout">
@@ -237,6 +153,7 @@ to prevent it being displayed by older browsers</li>
 <li>IE 5.5 (2000) supports JScript 5.5</li>
 <li>IE 6.0 (2001) supports JScript 5.6</li>
 <li>IE 7.0 (2006) supports JScript 5.7</li>
+<li>IE 8.0 (2008) supports JScript 6</li>
 <li>Confusingly IE3.0+ also support a scripting language called VBScript, which is not supported by other browsers</li>
 <li>(JScript 4.0 was used in another Microsoft product)</li>
 </ul>
@@ -261,11 +178,166 @@ to prevent it being displayed by older browsers</li>
 <ul>
 <li>Navigator 4.06+ (JavaScript 1.3) and IE 4+ (JScript 3.0+) are ECMAScript-compliant</li>
 <li>Therefore the Web's &quot;official&quot; scripting language is based on Netscape's JavaScript</li>
-<li>But the Web's &quot;official&quot; <a href="http://www.w3.org/DOM/" target="dom">Document Object Model</a> is based on Microsoft's</li>
+<li>(But the Web's &quot;official&quot; <a href="http://www.w3.org/DOM/" target="dom">Document Object Model</a> is based on Microsoft's)</li>
 <li>ECMAScript v2 was only released for maintenance purposes</li>
 <li>ECMAScript v3 is like JavaScript 1.5 or JScript 5.5</li>
 <li>ECMAScript v4 is a work in progress and will be (exactly) like JavaScript 2.0</li>
 </ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Where Is JavaScript?</h1>
+<ul>
+<li>Can be embedded in an <a href="#" onclick="window.alert('Hi')">HTML tag</a></li>
+<li>Can be embedded in a page using the <tt>script</tt> tag:<br />
+<b><tt>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+window.alert('Hi');<br />
+&lt;/script&gt;</tt></b></li>
+<li>Can be included from an external file using the <tt>script</tt> tag:<br />
+<b><tt>&lt;script type=&quot;text/javascript&quot; src=&quot;example.js&quot;&gt;&lt;/script&gt;</tt></b></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Simple Example</h1>
+<form name="nameform">
+<p>What is your first name? <input type="text" name="firstname" /></p>
+<p>What is your surname? <input type="text" name="surname" /></p>
+<p><a href="#" onclick="window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)">Greet</a></p>
+</form>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Simple Example</h1>
+<p><tt>&lt;form <b>name=&quot;nameform&quot;</b>&gt;<br />
+&lt;p&gt;What is your first name? &lt;input type=&quot;text&quot; <b>name=&quot;firstname&quot;</b> value=&quot;Ian&quot;&gt;&lt;/p&gt;<br />
+&lt;p&gt;What is your surname? &lt;input type=&quot;text&quot; <b>name=&quot;surname&quot;</b> value=&quot;Sealy&quot;&gt;&lt;/p&gt;<br />
+&lt;p&gt;&lt;a href=&quot;#&quot;
+<b>onclick=&quot;window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)&quot;</b>&gt;Greet&lt;/a&gt;&lt;/p&gt;<br />
+&lt;/form&gt;</tt></p>
+<p>In the JavaScript Document Object Model (DOM) each part of a page can be referred to.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Popup Window</h1>
+<p><a href="#" onclick="window.open('wdd42jswindow.html', 'popup', 'width=400,height=300'); return false;">Popup</a></p>
+<p><tt>&lt;a href=&quot;#&quot; onclick=&quot;window.open('wdd42jswindow.html', 'popup', 'width=400,height=300'); return false;&quot;&gt;Popup&lt;/a&gt;</tt></p>
+<p>But doesn't work with JavaScript switched off, so not graceful degradation</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Popup Window</h1>
+<p><a href="wdd42jswindow.html" onclick="window.open('wdd42jswindow.html', 'popup', 'width=400,height=300'); return false;">Popup</a></p>
+<p><tt>&lt;a href=&quot;wdd42jswindow.html&quot; onclick=&quot;window.open('wdd42jswindow.html', 'popup', 'width=400,height=300'); return false;&quot;&gt;Popup&lt;/a&gt;</tt></p>
+<p>But URL is now duplicated, so hard to maintain</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Popup Window</h1>
+<p><a href="wdd42jswindow.html" onclick="window.open(this.href, 'popup', 'width=400,height=300'); return false;">Popup</a></p>
+<p><tt>&lt;a href=&quot;wdd42jswindow.html&quot; onclick=&quot;window.open(this.href, 'popup', 'width=400,height=300'); return false;&quot;&gt;Popup&lt;/a&gt;</tt></p>
+<p>But JavaScript (behaviour) is mixed with content, so still hard to maintain</p>
+<p>Need to separate content and behaviour in the same way we separate content and presentation using CSS</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Popup Window</h1>
+<p><a href="wdd42jswindow.html" class="popup">Popup</a></p>
+<script type="text/javascript">
+
+window.onload = makePopups;
+function makePopups() {
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].getAttribute('class') == 'popup') {
+            links[i].onclick = function() {
+                window.open(this.getAttribute('href'), 'popup', 'width=400,height=300');
+                return false;
+            }
+        }
+    }
+    startup();
+}
+</script>
+<p><tt>&lt;a href=&quot;wdd42jswindow.html&quot; class=&quot;popup&quot;&gt;Popup&lt;/a&gt</tt></p>
+<tt>window.onload = makePopups;<br />
+function makePopups() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var links = document.getElementsByTagName('a');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; links.length; i++) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (links[i].getAttribute('class') == 'popup') {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;links[i].onclick = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.open(this.getAttribute('href'), 'popup', 'width=400,height=300');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+}
+</tt>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Problems With JavaScript</h1>
+<ul>
+<li>Like CSS, JavaScript does not always work the same in all browsers</li>
+<li>Often overcome by using JavaScript libraries:
+<ul>
+<li><a href="http://jquery.com/" target="jquery">jQuery</a></li>
+<li><a href="http://developer.yahoo.com/yui/" target="yui">Yahoo! YUI</a></li>
+<li><a href="http://dojotoolkit.org/" target="dojo">Dojo</a></li>
+<li><a href="http://www.prototypejs.org/" target="prototype">Prototype</a></li>
+</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Popup Window</h1>
+<p><a href="wdd42jswindow.html" class="popup2">Popup</a></p>
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('a.popup2').click(function() {
+    window.open($('a.popup2').attr('href'), 'popup', 'width=400,height=300');
+    return false;
+  });
+});
+</script>
+<p><tt>&lt;a href=&quot;wdd42jswindow.html&quot; class=&quot;popup&quot;&gt;Popup&lt;/a&gt</tt></p>
+<p>jQuery version:</p>
+<tt>$(document).ready(function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;$('a.popup').click(function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.open($('a.popup').attr('href'), 'popup', 'width=400,height=300');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+});</tt>
+
 <div class="handout">
 </div>
 </div>
@@ -278,10 +350,6 @@ to prevent it being displayed by older browsers</li>
 <ul>
 <li><a href="http://www.webteacher.com/javascript/" target="nonprog">JavaScript for the Total Non-Programmer</a></li>
 <li><a href="http://www.w3schools.com/js/" target="w3schools">W3Schools JavaScript Tutorial</a></li>
-<li><a href="http://hotwired.lycos.com/webmonkey/programming/javascript/tutorials/tutorial1.html" target="thau">Thau's JavaScript Tutorial</a></li>
-<li><a href="http://oopweb.com/JavaScript/Documents/jsintro/Volume/tutorial.htm" target="voodoo">Voodoo's Introduction to JavaScript</a></li>
-<li><a href="http://www.wdvl.com/Authoring/JavaScript/Tutorial/" target="prog">JavaScript Tutorial for Programmers</a></li>
-<li><a href="http://www.cs.brown.edu/courses/bridge/1998/res/javascript/javascript-tutorial.html" target="brown">JavaScript Tutorial</a></li>
 </ul>
 </li>
 <li>JavaScript scripts:

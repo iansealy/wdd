@@ -6,10 +6,10 @@
 <head>
 <title>RSS, Podcasting and SVG</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -51,7 +51,18 @@
 <div class="slide">
 <h1>RSS News feeds</h1>
 <p>RSS is an XML format designed for sharing news headlines or &quot;What's new?&quot; for a particular Web site.</p>
-<p>Essentially you provide an RSS feed which is updated as and when something new appears on your Web site. Other people pick up the feed and present a list of current headlines on their site - these headlines link back to your original articles.</p>
+<ul>
+<li>Provide an RSS feed</li>
+<li>Updated as and when something new appears on your Web site</li>
+<li>Other people pick up the feed and present a list of current headlines on their site - these headlines link back to your original articles.</li>
+<li>People subscribe to the feed in a feed reader:
+<ul>
+<li>Email client</li>
+<li><a href="http://www.bloglines.com/" target="bloglines">Bloglines</a></li>
+<li><a href="http://www.google.co.uk/ig?hl=en">Google homepage</a></li>
+</ul>
+</li>
+</ul>
 
 <p><a href="http://www.bized.co.uk/dataserv/ons/onshome.htm" target="bized">For example</a>.</p>
 <div class="handout">
@@ -62,7 +73,7 @@
 
 <div class="slide">
 <h1>Creating an RSS feed?</h1>
-<p><a href="http://www.bized.ac.uk/cgi-bin/homepage/whatsnewrss.pl?items=5" target="bized2">Code example</a></p>
+<p><a href="http://www.amentsoc.org/about/news/feed" target="aes">Code example</a></p>
 
 <p>So, how do you create your own RSS feeds?</p>
 
@@ -82,7 +93,7 @@
 
 <p class="slide">Where should you look for feeds:</p>
 <ul>
-<li>On the Web site itself e.g. <a href="http://www.bized.co.uk/homeinfo/feeds.htm" target="bized3">Biz/ed</a></li>
+<li>On the Web site itself e.g. <a href="http://www.amentsoc.org/help/feeds.html" target="aes2">AES</a></li>
 <li>From a searchable directory:
 <ul>
 <li><a href="http://www.syndic8.com" target="s8">Syndic8.com</a> [worldwide]</li>
@@ -100,7 +111,7 @@
 <p class="slide">Incorporating feeds:</p>
 <ul>
 <li class="slide">Often done by a custom script on the server</li>
-<li class="slide">There are <a href="http://rssxpress.ukoln.ac.uk/lite/include/">Javascript alternatives</a> that do the processing for you and can just be pasted into your Web page</li>
+<li class="slide">There are <a href="http://rssxpress.ukoln.ac.uk/lite/include/" target="jsinclude">Javascript alternatives</a> that do the processing for you and can just be pasted into your Web page</li>
 
 </ul>
 <div class="handout">
@@ -120,7 +131,7 @@
 <h1>What is podcasting</h1>
 
 <p>Podcasting is a method of publishing audio broadcasts (usually mp3 files) via the Internet. It allows users to subscribe so they automatically receive new broadcasts as they are published.</p>
-<p>These audio broadcasts are called podcasts as they were originally intended for use on <a href="http://www.apple.com/ipod/ipod.html" target="ap">iPods</a>. However, podcasts can be downloaded and listened to on a variety of devices: PCs, mobile phones, PDAs, mp3 players, as well as iPods.</p>
+<p>These audio broadcasts are called podcasts as they were originally intended for use on <a href="http://www.apple.com/ipodclassic/" target="ap">iPods</a>. However, podcasts can be downloaded and listened to on a variety of devices: PCs, mobile phones, PDAs, mp3 players, as well as iPods.</p>
 <p>Similar to RSS but uses &lt;enclosure&gt; tag.<br /><a href="http://www.bized.co.uk/cgi-bin/chron/itnpodcast.pl?items=3" target="bizpod">Biz/ed podcast code</a>.</p>
 
 <div class="handout">
@@ -175,8 +186,13 @@
 <li>Small filesize</li>
 <li>W3C recommendation</li>
 <li>Interoperability</li>
-<li>Currently requires a <a href="http://sdx.archivesdefrance.culture.gouv.fr/gpl/navimages/en/svgViewer.html" target="plugin">plugin</a> for some browsers but is already part of Firefox 1.5+, nightly builds of Safari, and Opera but will be fully integrated into future browsers</li>
-
+<li>Currently requires a plugin:
+<ul>
+<li><a href="http://www.adobe.com/svg/viewer/install/main.html" target="plugin">Adobe plugin</a> - to be discontinued in 2009</li>
+<li><a href="http://www.examotion.com/">Renesis player</a></li>
+</ul>
+</li>
+<li>Some browsers support SVG natively: Firefox (as of 1.5), Safari, and Opera but will be fully integrated into future browsers</li>
 </ul>
 <div class="handout">
 </div>
@@ -299,11 +315,12 @@
 <ul>
 <li>By hand (can view source)</li>
 <li><a href="http://www.adobe.com/products/illustrator/main.html?lid=//products//AI+Pdwn" target="ill">Adobe Illustrator</a></li>
-<li><a href="http://www.corel.co.uk/servlet/Satellite?pagename=Corel3Uk/Products/Display&amp;pfid=1047024670787&amp;pid=1047023032901" target="corel">Corel Draw</a></li>
-<li><a href="http://www.inkscape.org/" target="inks">Inkscape</a></p>
+<li><a href="http://www.corel.com/servlet/Satellite/gb/en/Product/1191272117978" target="corel">Corel Draw</a></li>
+<li><a href="http://www.inkscape.org/" target="inks">Inkscape</a></li>
+<li>Use <a href="http://www.svgfactory.com" target="svgfact">SVG factory</a> in many Windows programs</li>
 </ul>
 <p>Unfortunately no tool yet matches Macromedia Flash</p>
-<p>Importantly, due to the open format, it is easy for CGI scripts (or developers) to produce SVG code &quot;<a href="http://kierenpitts.wdd0607.bbkweb.org/svgbuilder.pl" target="myexamp">on the fly</a>&quot;.</p>
+<p>Importantly, due to the open format, it is easy for CGI scripts (or developers) to produce SVG code &quot;<a href="http://kierenpitts.wdd0708.bbkweb.org/svgbuilder.pl" target="myexamp">on the fly</a>&quot;.</p>
 
 <div class="handout">
 </div>
@@ -312,7 +329,7 @@
 
 <div class="slide">
 <h1>SVG integration</h1>
-<p>SVG can be integrated in to a wide variety of applications because of its XML structure. To (currently) incorporate an SVG image in an XHTML page you would use this code, in the future integration will be seamless:</p>
+<p>SVG can be integrated in to a wide variety of applications because of its XML structure. Currently, to incorporate an SVG image in an XHTML page you would use this code, in the future integration will be seamless:</p>
 <pre>
 &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;<br /> &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
 &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
@@ -357,9 +374,9 @@
 <ul>
 <li><a href="http://www.w3.org/Graphics/SVG/Overview.htm8" target="svgw3c">W3C SVG pages</a></li>
 <li><a href="http://www.adobe.com/svg/" target="svgzone">Adobe SVG Zone</a></li>
-<li><a href="http://hotwired.lycos.com/webmonkey/99/10/index3a.html" target="svgmunky">Webmonkey</a> - a bit out of date now</li>
-<li><a href="http://www.carto.net/papers/svg/comparison_flash_svg.html" target="svgswf">Compare SVG and Flash</a></li>
-<li><a href="http://www.statistics.gov.uk/census2001/censusmaps/index.html" target="ukstats">UK Statistics map</a></li>
+<li><a href="http://www.statistics.gov.uk/census2001/censusmaps/index.html" target="ukstats">UK statistics map</a></li>
+<li><a href="http://www.carto.net/papers/svg/us_population/index.html" target="uspop">US population map</a></li>
+<li><a href="http://swa.ethz.ch/googlemaps/" target="gsvg">SVG and Google maps</a></li>
 <li><a href="http://a.1asphost.com/svggames/" target="games">SVG games</a></li>
 
 </ul>

@@ -6,10 +6,10 @@
 <head>
 <title>XHTML</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0607.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0607.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -29,14 +29,19 @@
 
 <div class="slide">
 <h1>XHTML</h1>
-<h2>Ian Sealy</h2>
+<h2>Kieren Pitts</h2>
 </div>
 
 <div class="slide">
 <h1>What Is XHTML?</h1>
 <ul>
 <li>HTML 4 rewritten in XML</li>
-<li>XHTML 1 is effectively HTML 5</li>
+<li>XHTML 1 was intended to be HTML 5
+<ul>
+<li>but now there is also an HTML 5 (more later)</li>
+</ul>
+</li>
+<li>XHTML spec finalised in 2002 and can be used now</li>
 <li>Offers advantages of XML (extensible, machine-readable, etc...), but is backwards compatible with HTML (will work on old browsers)</li>
 </ul>
 <div class="handout">
@@ -49,19 +54,20 @@
 <li>Documents must be well-formed</li>
 <li>Tags must be in lower case</li>
 <li>All elements must be closed</li>
-<li>Attribute values have to be quoted</li>
+<li>Attribute values must be quoted</li>
 <li>Attributes can't be minimised</li>
 <li>All documents must have a DOCTYPE declaration</li>
 </ul>
-<p>Also other trivial differences</p>
+<p>Also other trivial differences, do the above sound familiar though?</p>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
 <h1>Documents Must Be Well-Formed</h1>
-<p>Elements must be nested.</p>
-<p>Current browsers will allow<br /><b><tt>&lt;b&gt;&lt;i&gt;test&lt;/b&gt;&lt;/i&gt;</tt></b> (as in <b><i>test</b></i>),<br />but in an XHTML document this would be invalid. It must be<br /><b><tt>&lt;b&gt;&lt;i&gt;test&lt;/i&gt;&lt;/b&gt;</tt></b> (as in <b><i>test</i></b>).</p>
+<p>Elements must be nested correctly.</p>
+<p>Current browsers will allow<br /><b><tt>&lt;strong&gt;&lt;em&gt;test&lt;/strong&gt;&lt;/em&gt;</tt></b> (as in <b><i>test</b></i>),<br />but in an XHTML document this would be invalid. It must be<br /><b><tt>&lt;strong&gt;&lt;em&gt;test&lt;/em&gt;&lt;/strong&gt;</tt></b> (as in <b><i>test</i></b>).</p>
+
 <div class="handout">
 </div>
 </div>
@@ -71,6 +77,7 @@
 <ul>
 <li>Elements and attributes must be in lower case</li>
 <li><b><tt>&lt;TD&nbsp;valign=&quot;top&quot;&gt;</tt></b> was recommended in HTML 4 (more readable), but in XHTML it must be <b><tt>&lt;td&nbsp;valign=&quot;top&quot;&gt;</tt></b></li>
+
 <li>Reason why we have recommended this</li>
 </ul>
 <div class="handout">
@@ -80,8 +87,10 @@
 <div class="slide">
 <h1>All Elements Must Be Closed</h1>
 <p>In HTML 4<br /><b><tt>&lt;p&gt;1st&nbsp;para&lt;p&gt;2nd&nbsp;para</tt></b><br /> is valid. In XHTML it must be<br /><b><tt>&lt;p&gt;1st&nbsp;para&lt;/p&gt;&lt;p&gt;2nd&nbsp;para&lt;/p&gt;</tt></b></p>
+
 <p>This means that <b><tt>&lt;hr&gt;</tt></b>, <b><tt>&lt;br&gt;</tt></b> and <b><tt>&lt;img&gt;</tt></b> are all invalid.</p>
 <p>So <b><tt>&lt;hr&gt;</tt></b> must be <b><tt>&lt;hr&gt;&lt;/hr&gt;</tt></b> or <b><tt>&lt;hr/&gt;</tt></b>.</p>
+
 <p>Neither of these work well in older browsers, so have to use <b><tt>&lt;hr&nbsp;/&gt;</tt></b> instead.</p>
 <div class="handout">
 </div>
@@ -93,15 +102,17 @@
 <p>Here's an <b><tt>&lt;hr&gt;&lt;/hr&gt;</tt></b>:</p> <hr></hr>
 <p>Here's an <b><tt>&lt;hr/&gt;</tt></b>:</p> <hr/>
 <p>Here's an <b><tt>&lt;hr&nbsp;/&gt;</tt></b>:</p> <hr />
+
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>Attribute Values Have To Be Quoted</h1>
+<h1>Attribute Values Must Be Quoted</h1>
 <ul>
 <li>Browsers don't care if you use <b><tt>&lt;tr&nbsp;valign=top&gt;</tt></b> or <b><tt>&lt;tr&nbsp;valign="top"&gt;</tt></b></li>
 <li>In XHTML it must be <b><tt>&lt;tr&nbsp;valign=&quot;top&quot;&gt;</tt></b></li>
+
 </ul>
 <div class="handout">
 </div>
@@ -110,7 +121,8 @@
 <div class="slide">
 <h1>Attributes Can't Be Minimised</h1>
 <p><b><tt>&lt;hr&nbsp;noshade&gt;</tt></b> is actually an abbreviation of <b><tt>&lt;hr&nbsp;noshade=&quot;noshade&quot;&gt;</tt></b>. In XHTML must use <b><tt>&lt;hr&nbsp;noshade=&quot;noshade&quot;&gt;</tt></b>.</p>
-<p>Some older browsers have problems with this.</p>
+
+<p>Some very old browsers have problems with this.</p>
 <div class="handout">
 </div>
 </div>
@@ -119,6 +131,7 @@
 <h1>Minimised Examples</h1>
 <p>Here's an <b><tt>&lt;hr&nbsp;noshade&gt;</tt></b>:</p> <hr noshade>
 <p>Here's an <b><tt>&lt;hr&nbsp;noshade=&quot;noshade&quot;&gt;</tt></b>:</p> <hr noshade="noshade">
+
 <p>Should actually be <b><tt>&lt;hr&nbsp;noshade=&quot;noshade&quot;&nbsp;/&gt;</tt></b>:</p> <hr noshade="noshade" />
 <div class="handout">
 </div>
@@ -127,14 +140,16 @@
 <div class="slide">
 <h1>All Documents Must Have A DOCTYPE</h1>
 <p>An example of an XHTML DOCTYPE:<br />
-<b><tt>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd"&gt;</tt></b></p>
+
+<b><tt>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;</tt></b></p>
 <p>This DTD (document type definition) or DOCTYPE defines the structure of the document (what tags can be used and where they can be used) in a machine-readable format.</p>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>DOCTYPEs</h1>
+<h1>DOCTYPE refresher</h1>
 <ul>
 <li>DOCTYPEs are essential</li>
 <li>Indicate the version of HTML or XHTML used in a page</li>
@@ -142,6 +157,7 @@
 <li>Pages aren't valid without a DOCTYPE</li>
 <li>Without a DOCTYPE (or with an invalid DOCTYPE) browsers enter quirks mode, which is slower and displays pages differently</li>
 <li><a href="http://www.alistapart.com/articles/doctype/" target="alistapart">More Information</a> and <a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="dtds">List of DOCTYPEs</a></li>
+<li>Should you use the Strict or Transitional DOCTYPES? Ideally you should <a href="http://www.456bereastreet.com/archive/200609/no_more_transitional_doctypes_please/">use Strict</a>, you can use Transitional if you've lots of old presentational mark-up but only really as a stop-gap.</li>
 </ul>
 <div class="handout">
 </div>
@@ -149,9 +165,10 @@
 
 <div class="slide">
 <h1>Why Use XHTML?</h1>
+
 <ul>
-<li>XHTML is effectively HTML 5, so you're bound to start using it sooner or later</li>
-<li>Unlike HTML, XHTML is readable by machines, so new user agents (e.g. mobile phones or Web-aware fridges) will be able to read it</li>
+<li>For the time being XHTML is the future of HTML 4, and so you're bound to start using it sooner or later</li>
+<li>Unlike HTML, XHTML is readable by machines, so new user agents (e.g. mobile phones or Web-aware appliances) will be able to read it</li>
 <li>XHTML is easily extensible - new tags can be added</li>
 <li>XHTML works with older browsers as well as current browsers</li>
 <li>XHTML is less complex than HTML, so browsers will be simpler and smaller and so will run on a wider range of devices</li>
@@ -161,27 +178,83 @@
 </div>
 
 <div class="slide">
+
 <h1>Converting HTML To XHTML</h1>
 <ul>
 <li>Conversion can be done manually</li>
 <li><a href="wdd14tidy.html" target="tidy">HTML Tidy</a> can automatically convert HTML to XHTML</li>
-<li>With Tidy UI is output-xhtml option under Markup</li>
+<li>With Tidy UI the output-xhtml option under Markup</li>
 </ul>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>Further Info</h1>
+
+<h1>Nothing is ever simple</h1>
 <ul>
-<li><a href="http://www.w3.org/TR/xhtml1/" target="w3">The official XHTML 1.0 Recommendation</a></li>
-<li><a href="http://www.w3schools.com/xhtml/" target="school">XHTML tutorial</a></li>
-<li><a href="http://www.nypl.org/styleguide/xhtml/" target="nypl">http://www.nypl.org/styleguide/xhtml/</a></li>
-<li><a href="http://wdvl.com/Authoring/Languages/XML/XHTML/" target="wdvl">http://wdvl.com/Authoring/Languages/XML/XHTML/</a></li>
+<li>XHTML 1.x was made a recommendation in 2002</li>
+<li>Lots of advantages and most modern <strong>techies</strong> use it</li>
+<li>However, it's now not clear if it's the future...</li>
+<li>TBL/W3C admitted that <a href="http://dig.csail.mit.edu/breadcrumbs/node/166">uptake of XHTML was slow/poor</a> (largely due to fault-tolerant browsers)</li>
+<li>Incremental development of HTML and XHTML</li>
+<li>Which leaves us with the following possibilities... HTML 4, XHTML 1.0, XHTML 1.1, HTML 5, XHTML 2</li>
 </ul>
 <div class="handout">
 </div>
 </div>
+
+<div class="slide">
+
+<h1>Choices choices</h1>
+<ul>
+<li>What do real developers do...</li>
+<li>Current W3C recommendations:
+<ul>
+<li>HTML 4 - can be used but probably best kept for old sites and using a Strict DOCTYPE. It makes many developers feel <em>dirty</em></li>
+<li>XHTML 1.0 - arguably the best compromise at present. Again should be used with Strict DOCTYPE if possible</li>
+<li>XHTML 1.1 - not advisable as it required specific Web server set up and this isn't supported in IE</li>
+</ul>
+</li>
+<li>The future...</li>
+<li>HTML 5 - due to be released in 2012, browser support will follow, does have some nice features but had some old HTML problems too</li>
+<li>XHTML 2 - also still in draft, not backwards compatible.</li>
+</li>
+<li>Keep reading techie sites and keep up-to-date with developments</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+
+<div class="slide">
+
+<h1>Further Info</h1>
+<ul>
+<li><a href="http://www.w3.org/TR/xhtml1/" target="w3">The official XHTML 1.0 Recommendation</a></li>
+<li><a href="http://www.w3.org/html/wg/html5/" target="html5">HTML 5 working draft</a></li>
+<li><a href="http://www.w3.org/TR/xhtml2/" target="xhtml2">XHTML 2 working draft</a></li>
+<li><a href="http://xhtml.com/en/future/x-html-5-versus-xhtml-2/" target="xhtml2html5">HTML 5 vs XHTML 2</a></li>
+<li><a href="http://www.whatwg.org/" target="whatwg">Web Hypertext Application Technology Working Group (WHATWG)</a></li>
+<li><a href="http://dig.csail.mit.edu/breadcrumbs/node/166" target="tbl">Reinventing HTML</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Further Info 2</h1>
+<ul>
+<li><a href="http://www.w3schools.com/xhtml/" target="school">XHTML tutorial</a></li>
+<li><a href="http://www.nypl.org/styleguide/xhtml/" target="nypl">XHTML guidelines &amp; benefits</a></li>
+<li><a href="http://wdvl.com/Authoring/Languages/XML/XHTML/" target="wdvl">Introduction to XHTML</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
 <div class="slide">
 <h1></h1>
 </div>
