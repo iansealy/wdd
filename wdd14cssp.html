@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -41,7 +41,7 @@
 <li>This approach isn't ideal (you need to check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>)  and it's increasingly old fashioned.</li>
 <li>There are good reasons why tables shouldn't be used for layout:
 <ul>
-<li>Strictly speaking HTML tables should be used for <a href="http://www.bized.co.uk/virtual/dc/resource/data/aid.htm" target="tabular">tabular data</a> only</li>
+<li>Strictly speaking HTML tables should be used for <a href="http://www.bized.co.uk/cgi-bin/penndatadb/pennchart.pl?datarequest=fromform&amp;format=html&amp;yrstart=1950&amp;yrend=2000&amp;isocode=AUS&amp;variables=pop&amp;variables=xrat&amp;go=Submit+data+request" target="tabular">tabular data</a> only</li>
 <li>Doesn't separate <em>presentation from content</em></li>
 <li>Tabular layouts are complicated to maintain</li>
 <li>Larger file size for your HTML file</li>
@@ -132,9 +132,7 @@
 
 <div class="slide">
 <h1>Div and Span reminder</h1>
-<p>One of the key building blocks of CSS-P is being able to group elements together using &lt;div&gt; and &lt;span&gt; tags. Think of
-
-&lt;div&gt; and &lt;span&gt; tags as containers for other tags.</p>
+<p>One of the key building blocks of CSS-P is being able to group elements together using &lt;div&gt; and &lt;span&gt; tags.</p>
 <ul>
 <li>div - block level container (short for division)</li>
 <li>span - inline container</li>
@@ -224,8 +222,8 @@ them.</p>
 <p>The level of support for CSS positioning in browsers varies.</p>
 <ul>
 <li>Current versions of Firefox, Safari, Chrome, Mozilla, Opera are all very good.</li>
-<li>IE6 is poor. IE7 and IE8 are good.</li>
-<li>If you know your audience still use it... IE5 poses problems due to errors in the way IE5 interprets the box model. IE5 on the Mac is better than IE5 for Windows but is still poor.</li>
+<li>IE6 is poor. IE7 onwards are reasonably good.</li>
+<li>If you know your audience still use it... IE5 poses problems due to errors in the way IE5 interprets the box model. IE5 on the Mac is better than IE5 for Windows but is still very poor.</li>
 </ul>
 <div class="handout">
 </div>
@@ -358,7 +356,7 @@ them.</p>
 <li>Don't develop in any version of IE</li>
 </ul>
 </li>
-<li>Then test in IE7 and 8 (6 if you know your audience will use it)</li>
+<li>Then test in IE7, 8 and 9 (6 if you know your audience will use it)</li>
 <li>Edit your CSS and retest</li>
 <li>Avoid mixing positioning types as much as possible. I tend to work with static (browser default) positioned elements and then use floats. I avoid absolute positioning.</li>
 </ul>

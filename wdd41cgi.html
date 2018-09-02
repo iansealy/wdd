@@ -6,10 +6,10 @@
 <head>
 <title>CGI and Forms</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -42,7 +42,7 @@
 
 <ul>
 <li><a href="http://www.bized.co.uk/dataserv/penndata/graphs/" target="penn">Penn World Data graphing tool</a> (URL contains &quot;cgi-bin&quot;)</li>
-<li><a href="https://www.234car.com/carshare/contact.html" target="234car">234car contact form</a> (URL does <strong>not</strong> contain &quot;cgi-bin&quot;, but is CGI, as is rest of system)</li>
+<li><a href="https://www.234car.com/contact.html" target="234car">234car contact form</a> (URL does <strong>not</strong> contain &quot;cgi-bin&quot;, but is CGI, as is rest of system)</li>
 </ul>
 </li>
 <li>CGI is an interface between the Web server and a program running on the computer hosting the Web server</li>
@@ -73,7 +73,6 @@
 <ul>
 <li>Perl - very popular (I use Perl given the choice)</li>
 <li>PHP - also very popular</li>
-<li>VBScript - a Microsoft Windows scripting language (often used with ASP)</li>
 <li>C and C++ - used when speed is important (because compiled, not interpreted)</li>
 <li>Python</li>
 <li>Ruby</li>
@@ -133,11 +132,11 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <h1>Example</h1>
 <ul>
 <li>Is a Perl script</li>
-<li>Located at <small><a href="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl" target="cgiexample">http://iansealy.wdd1011.bbkweb.org/cgiexample.pl</a></small></li>
+<li>Located at <small><a href="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl" target="cgiexample">http://iansealy.wdd1112.bbkweb.org/cgiexample.pl</a></small></li>
 <li>Takes a parameter called &quot;username&quot; and displays the value of that parameter after &quot;Hello&quot;</li>
 <li>Can pass parameter as part of URL</li>
-<li><small><a href="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://iansealy.wdd1011.bbkweb.org/cgiexample.pl?username=Kieren</a></small></li>
-<li><small><a href="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl?username=Ian" target="cgiexampleian">http://iansealy.wdd1011.bbkweb.org/cgiexample.pl?username=Ian</a></small></li>
+<li><small><a href="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://iansealy.wdd1112.bbkweb.org/cgiexample.pl?username=Kieren</a></small></li>
+<li><small><a href="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl?username=Ian" target="cgiexampleian">http://iansealy.wdd1112.bbkweb.org/cgiexample.pl?username=Ian</a></small></li>
 </ul>
 <div class="handout">
 </div>
@@ -150,7 +149,6 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <li>Using URLs is one way of sending parameters to a CGI script, but most common way is probably to use forms</li>
 <li>Forms are HTML that allow user to enter information and send it to the Web server</li>
 <li>All forms are enclosed in <b><tt>&lt;form&gt;</tt></b> elements</li>
-
 <li>The action attribute of form element points to CGI script</li>
 <li>There are three main elements within a form - <b><tt>&lt;input&gt;</tt></b>, <b><tt>&lt;select&gt;</tt></b> and <b><tt>&lt;textarea&gt;</tt></b></li>
 </ul>
@@ -163,13 +161,13 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 
 <h1>input element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;username&quot;&nbsp;size=&quot;10&quot;&gt;<br />
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
 
 &lt;/form&gt;
 </tt></p>
-<form action="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl" target="cgiexampleinput">
+<form action="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl" target="cgiexampleinput">
 <input type="text" name="username" size="10" />
 <input type="submit" value="Go" />
 </form>
@@ -181,7 +179,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>More input element</h1>
 <p><tt><small>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 
 &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name&lt;br&gt;<br />
 &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Kieren&quot;&gt;Kieren's&nbsp;first&nbsp;name&lt;br&gt;<br />
@@ -192,7 +190,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
 &lt;/form&gt;
 </small></tt></p>
-<form action="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl" target="cgiexampleradio">
+<form action="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl" target="cgiexampleradio">
 <input type="radio" name="username" value="Ian" />Ian's first name<br />
 <input type="radio" name="username" value="Kieren" />Kieren's first name<br />
 <input type="radio" name="username" value="Ian Sealy" />Ian's full name<br />
@@ -208,7 +206,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>select element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;select&nbsp;name=&quot;username&quot;&gt;<br />
 
 &lt;option&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name&lt;/option&gt;<br />
@@ -221,7 +219,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 &lt;/form&gt;
 
 </tt></p>
-<form action="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl" target="cgiexampleoption">
+<form action="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl" target="cgiexampleoption">
 <select name="username">
 <option value="Ian">Ian's first name</option>
 <option value="Kieren">Kieren's first name</option>
@@ -238,7 +236,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>textarea element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;textarea&nbsp;rows=&quot;10&quot;&nbsp;cols=&quot;40&quot;&nbsp;name=&quot;username&quot;&gt;&lt;/textarea&gt;<br />
 
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
@@ -256,7 +254,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>hidden input element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;<br />
 
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
@@ -274,15 +272,15 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <h1>method attribute</h1>
 <p>Two ways of accessing a CGI script. Determined by method attribute of form element.</p>
 <p><b>POST:</b><br />
-<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;POST&quot;&gt;</tt></p>
-<form action="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl" method="post" target="cgiexamplepost">
+<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;POST&quot;&gt;</tt></p>
+<form action="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl" method="post" target="cgiexamplepost">
 <input type="text" name="username" size="10" />
 <input type="submit" value="Go" />
 
 </form>
 <p><b>GET:</b><br />
-<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1011.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;GET&quot;&gt;</tt></p>
-<form action="http://iansealy.wdd1011.bbkweb.org/cgiexample.pl" method="get" target="cgiexampleget">
+<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1112.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;GET&quot;&gt;</tt></p>
+<form action="http://iansealy.wdd1112.bbkweb.org/cgiexample.pl" method="get" target="cgiexampleget">
 <input type="text" name="username" size="10" />
 <input type="submit" value="Go" />
 </form>

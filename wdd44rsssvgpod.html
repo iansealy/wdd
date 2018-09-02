@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>RSS, Podcasting and SVG</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>RSS, Podcasting and SVG</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+
+<h1>RSS, Podcasting and SVG</h1>
+<h2>Kieren Pitts</h2>
+</div>
+
+<div class="slide">
+<h1>RSS News feeds</h1>
+<p>RSS can stand for a variety of things:</p>
+<ul>
+<li>RDF Site Summary</li>
+<li>Really Simple Syndication</li>
+<li>Remote Site Summary</li>
+<li>Rich Site Summary</li>
+</ul>
+<p>Assume it doesn't stand for anything and just use the acronym.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>RSS News feeds</h1>
+<p>RSS is an XML format designed for sharing news headlines or &quot;What's new?&quot; for a particular Web site.</p>
+<ul>
+<li>The feed is updated as and when something new appears on your Web site</li>
+<li>People subscribe to the feed using:
+<ul>
+<li>Feed reader e.g. <a href="http://www.feedreader.com/" target="feedre">Feedreader</a></li>
+<li>Email client e.g. <a href="http://www.mozilla.org/en-GB/thunderbird/" target="thun">Thunderbird</a></li>
+<li><a href="http://www.bloglines.com/" target="bloglines">Bloglines</a></li>
+<li><a href="http://www.google.co.uk/ig?hl=en" target="goog">Google homepage</a></li>
+<li>Phones</li>
+</ul>
+</li>
+<li>Also, other Webmasters <em>pick up</em> the feed and present a list of your current headlines on their site. These headlines link back to the original articles on your site.</li>
+</ul>
+
+<p><a href="http://www.lfhe.ac.uk/" target="lf">For example</a>.</p>
+<div class="handout">
+</div>
+</div>
+
+
+
+<div class="slide">
+<h1>Creating an RSS feed?</h1>
+<p><a href="http://www.amentsoc.org/about/news/feed" target="aes">Code example</a></p>
+
+<p>So, how do you create your own RSS feeds?</p>
+
+<ul>
+<li>By hand - time consuming and you're liable to introduce errors.</li>
+<li>Using a program on your server that queries a database and produces the RSS for you - requires technical knowledge and ability to run scripts and databases on your server.</li>
+<li>The feed might be already provided if you use a third-party blogger/news group or even have your own blog software (such as WordPress) installed.</li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Finding feeds</h1>
+
+<p class="slide">Where should you look for feeds:</p>
+<ul>
+<li>On the Web site itself e.g. <a href="http://www.amentsoc.org/help/feeds.html" target="aes2">AES</a></li>
+<li>In the browser</li>
+<li>From a searchable directory:
+<ul>
+<li><a href="http://www.syndic8.com" target="s8">Syndic8.com</a> [worldwide]</li>
+<li><a href="http://rssxpress.ukoln.ac.uk/" target="xpress">RSS Xpress</a> [UK only]</li>
+</ul>
+
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Using feeds</h1>
+<p class="slide">Incorporating feeds:</p>
+<ul>
+<li class="slide">Often done by a custom script on the server</li>
+<li class="slide">There are JavaScript alternatives (such as <a href="http://www.rssinclude.com" target="rssinclude">RSSinclude</a>) that do the processing for you and can just be pasted into your Web page</li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<!-- Podcasting -->
+
+<div class="slide">
+<h2 style="font-size : 200%; margin-top: 30px; font-family: Verdana; font-weight: bold;">Podcasting</h2>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>What is podcasting</h1>
+
+<p>Podcasting is a method of publishing audio broadcasts (usually mp3 files) via the Internet. It allows users to subscribe so they automatically receive new broadcasts as they are published.</p>
+<p>These audio broadcasts are called podcasts as they were originally intended for use on iPods. However, podcasts can be downloaded and listened to on a variety of devices: PCs, mobile phones, PDAs, mp3 players, as well as iPods.</p>
+<p>Similar to RSS but uses &lt;enclosure&gt; tag.<br /><a href="http://www.rss-specifications.com/rss-podcast.xml" target="expod">Example podcast code</a>.</p>
+
+<div class="handout">
+</div>
+
+</div>
+
+
+<div class="slide">
+<h1>Why podcast?</h1>
+<ul>
+<li>Flexibility</li>
+<li>Learning styles</li>
+</ul>
+<p>As with other audio files you should provide information on file format, file size and also a transcript. <a href="http://www.bized.co.uk/dataserv/chron/interactive.htm" target="biztrans">For example</a></p>
+<p>How to <a href="http://www.jiscdigitalmedia.ac.uk/audio/advice/creating-an-audio-podcast/" target="jdm">create a podcast</a></p>
+<p><a href="http://www.apple.com/itunes/podcasts/specs.html" target="itunes">Submitting a podcast to iTunes</a></p>
+
+<div class="handout">
+
+</div>
+</div>
+
+
+<!-- SVG -->
+
+<div class="slide">
+<h2 style="font-size : 200%; margin-top: 30px; font-family: Verdana; font-weight: bold;">SVG</h2>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>What is SVG?</h1>
+<p><strong>S</strong>calable <strong>V</strong>ector <strong>G</strong>raphics</p>
+
+<ul>
+<li>It is a vector-based graphics format</li>
+<li>XML application</li>
+<li>Open format</li>
+<li>It's &quot;readable&quot; - view source</li>
+<li>Huge accessibility advantages</li>
+<li>Can be animated</li>
+<li>Uses CSS</li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>What is SVG? continued</h1>
+<ul>
+<li>You can add metadata to an image</li>
+<li>Small filesize</li>
+<li><a href="http://www.w3.org/TR/2001/REC-SVG-20010904/" target="w3crec">W3C recommendation</a></li>
+<li>Interoperability</li>
+<li>Most modern browsers support SVG natively. Microsoft only introduced support in IE9.</li>
+<li>Can also use <a href="http://code.google.com/p/svgweb/" target="svgweb">SVGweb</a> which provides a shim using JavaScript and Flash.</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>SVG Structure</h1>
+<pre>
+&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 20001102//EN&quot;
+&quot;http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd&quot;&gt;
+&lt;svg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+	&lt;circle cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;75&quot;
+	style=&quot;fill:blue;stroke:green;stroke-width:6;&quot; /&gt;
+
+&lt;/svg&gt;
+</pre>
+<p>Produces:</p>
+<img src="/uploads/wdd4/wdd44/svg_example.gif" alt="SVG example" />
+<p><a href="/uploads/wdd4/wdd44/circle.svg" target="svgex1">SVG example</a> (Older IEs <a href="http://www.savarese.com/software/svgplugin/" target="ssrc">require a plugin)</a></p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>SVG animation</h1>
+
+<p><a href="/uploads/wdd4/wdd44/rotate.svg" target="rotate">Example</a> - animation supported modern versions of Firefox, Opera and Chrome.</p>
+
+<pre>
+
+&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;
+&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 20001102//EN&quot;
+&quot;http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd&quot;&gt;
+&lt;svg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+
+	&lt;text id=&quot;name&quot; font-size=&quot;100%&quot; x=&quot;24&quot; y=&quot;118&quot;&gt;KIEREN
+	&lt;animate attributeName=&quot;font-size&quot; attributeType=&quot;XML&quot; begin=&quot;0s&quot;
+
+	dur=&quot;7s&quot; fill=&quot;freeze&quot; from=&quot;0&quot; to=&quot;40&quot; /&gt;
+	&lt;/text&gt;
+
+	&lt;g&gt;
+	&lt;circle	cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;75&quot; fill-opacity=&quot;1.0&quot;
+	stroke-width=&quot;6&quot; style=&quot;fill:blue;stroke:green;&quot;&gt;
+
+	    &lt;animate attributeName=&quot;cx&quot; attributeType=&quot;XML&quot;
+	             begin=&quot;0s&quot; dur=&quot;9s&quot; fill=&quot;freeze&quot; from=&quot;0&quot; to=&quot;100&quot; /&gt;
+
+	    &lt;animate attributeName=&quot;cy&quot; attributeType=&quot;XML&quot;
+	             begin=&quot;0s&quot; dur=&quot;9s&quot; fill=&quot;freeze&quot; from=&quot;0&quot; to=&quot;100&quot; /&gt;
+
+	    &lt;animate attributeName=&quot;r&quot; attributeType=&quot;XML&quot;
+	             begin=&quot;0s&quot; dur=&quot;7s&quot; fill=&quot;freeze&quot; from=&quot;0&quot; to=&quot;75&quot; /&gt;
+
+	    &lt;animate attributeName=&quot;fill-opacity&quot; attributeType=&quot;XML&quot;
+	             begin=&quot;9s&quot; dur=&quot;7s&quot; fill=&quot;freeze&quot; from=&quot;1&quot; to=&quot;0.1&quot; /&gt;
+
+	    &lt;animate attributeName=&quot;stroke-width&quot; attributeType=&quot;XML&quot;
+	             begin=&quot;9s&quot; dur=&quot;7s&quot; fill=&quot;freeze&quot; from=&quot;6&quot; to=&quot;1&quot; /&gt;
+
+	&lt;/circle
+	&lt;/g&gt;
+&lt;/svg&gt;
+</pre>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>SVG supports:</h1>
+
+<p>Predefined shapes:</p>
+	<ul>
+	<li>Rectangles</li>
+	<li>Circles</li>
+	<li>Ellipses</li>
+	<li>Polygons</li>
+	<li>Lines</li>
+	<li>Polylines</li>
+	<li>Paths/Bezier curves</li>
+	</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>SVG also supports:</h1>
+<ul>
+<li>Fill</li>
+
+<li>Stroke</li>
+<li>Text</li>
+<li>Gradients</li>
+<li>Masks</li>
+<li>Opacity and visibility</li>
+<li>Transformations
+	<ul>
+	<li>Rotation</li>
+	<li>Scale</li>
+	<li>Skew</li>
+	<li>Movement (translation)</li>
+	</ul>
+</li>
+<li>Layers - position an SVG over a photograph</li>
+</ul>
+<p>This means that complex images are <a href="/uploads/wdd4/wdd44/route.svg" target="route">possible</a></p>
+<div class="handout">
+</div>
+
+</div>
+
+
+<div class="slide">
+<h1>SVG authoring</h1>
+<ul>
+<li>By hand (can view source)</li>
+<li><a href="http://www.adobe.com/products/illustrator/main.html?lid=//products//AI+Pdwn" target="ill">Adobe Illustrator</a></li>
+<li><a href="http://www.corel.com/corel/product/index.jsp?pid=prod4260069" target="corel">Corel Draw</a></li>
+<li><a href="http://www.inkscape.org/" target="inks">Inkscape</a></li>
+</ul>
+<p>Unfortunately no tool yet matches Adobe Flash</p>
+<p>Importantly, due to the open format, it is easy for CGI scripts (or developers) to produce SVG code &quot;<a href="http://kierenpitts.wdd1112.bbkweb.org/svgbuilder.pl" target="myexamp">on the fly</a>&quot;.</p>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>SVG integration</h1>
+<p>SVG can be integrated in to a wide variety of applications because of its XML structure. Currently, to incorporate an SVG image in an XHTML page you would use this code, in the future integration will be seamless:</p>
+<pre>
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;<br /> &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+
+&lt;head&gt;
+&lt;title&gt;SVG Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;object data=&quot;example.svg&quot; width=&quot;200&quot; height=&quot;200&quot; type=&quot;image/svg+xml&quot;&gt;
+
+&lt;embed src=&quot;example.svg&quot; width=&quot;200&quot; height=&quot;200&quot; type=&quot;image/svg+xml&quot; /&gt;
+&lt;/object&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Agent Adoption</h1>
+<p>SVG is becoming increasingly popular (used throughout Wikipedia).</p>
+<ul>
+<li>Already integrated into most desktop browsers and on iPads</li>
+<li>Backwards compatible (text within the SVG will supply the location of a raster/bitmap images if SVG is unsupported)</li>
+<li>Integrates with XML tools</li>
+<li>Some mobile phones</li>
+<li>Real Player</li>
+<li>Adobe Acrobat (PDFs)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>Further Resources</h1>
+<ul>
+<li><a href="http://www.w3.org/Graphics/SVG/Overview.htm8" target="svgw3c">W3C SVG pages</a></li>
+<li><a href="http://www.adobe.com/svg/" target="svgzone">Adobe SVG Zone</a></li>
+<li><a href="http://www.carto.net/papers/svg/us_population/index.html" target="uspop">US population map</a></li>
+<li><a href="http://games.co.za/svg" target="games">SVG games</a></li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

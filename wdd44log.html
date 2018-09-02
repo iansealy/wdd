@@ -6,10 +6,10 @@
 <head>
 <title>Server Log Analysis</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1112.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1112.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,10 +40,10 @@
 <li>Example:</li>
 </ul>
 <tt><small>
-87.194.170.167 - - [01/Jul/2011:13:33:50 -0700] &quot;GET / HTTP/1.1&quot; 200 1474 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;<br /><br />
-87.194.170.167 - - [01/Jul/2011:13:33:50 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 171 &quot;http://wdd1011.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;<br /><br />
-87.194.170.167 - - [01/Jul/2011:13:33:50 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 173 &quot;http://wdd1011.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;<br /><br />
-87.194.170.167 - - [01/Jul/2011:13:33:55 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1737 &quot;http://wdd1011.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;
+87.194.170.167 - - [22/Jun/2012:06:52:47 -0700] &quot;GET / HTTP/1.1&quot; 200 1475 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;<br /><br />
+87.194.170.167 - - [22/Jun/2012:06:52:49 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 163 &quot;http://wdd1112.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;<br /><br />
+87.194.170.167 - - [22/Jun/2012:06:52:49 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 165 &quot;http://wdd1112.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;<br /><br />
+87.194.170.167 - - [22/Jun/2012:06:52:52 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1729 &quot;http://wdd1112.bbkweb.org/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5&quot;
 </small></tt>
 <div class="handout">
 </div>
@@ -52,7 +52,7 @@
 <div class="slide">
 <h1>Example Logs</h1>
 <ul>
-<li>http://wdd1011.bbkweb.org/ log</li>
+<li>http://wdd1112.bbkweb.org/ log</li>
 <li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li>
 <li>Too much information, so must use a log analysis tool</li>
 </ul>
@@ -61,7 +61,7 @@
 </div>
 
 <div class="slide">
-<h1>Example Reports</h1>
+<h1>Old School Example Reports</h1>
 <ul>
 <li><a href="uploads/wdd4/wdd44/ucisa/" target="ucisa">UCISA report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> - free software)</li>
 <li><a href="uploads/wdd4/wdd44/port/" target="port">PORT report</a> (compiled using <a href="http://www.webtrends.com/" target="webtrends">WebTrends</a> - commercial software)</li>
@@ -127,7 +127,6 @@
 <li>Allows tracking of an individual</li>
 <li>But some users refuse to accept cookies</li>
 <li>Some might delete cookies after each session</li>
-<li>Some browsers don't support cookies</li>
 <li>Users don't always use the same computer</li>
 </ul>
 <div class="handout">
@@ -184,15 +183,17 @@
 </div>
 
 <div class="slide">
-<h1>Google Analytics</h1>
+<h1>JavaScript-based Analytics</h1>
 <ul>
+<li>Using JavaScript allows other data to be recorded (e.g. screen resolution)</li>
 <li>Most commonly used remote logging is now <a href="http://www.google.com/analytics/" target="analytics">Google Analytics</a></li>
+<li>Used by half of the top million Web sites according to <a href="http://www.alexa.com/" target="alexa">Alexa</a></li>
+<li>Can install similar software locally if don't want all data going to Google (e.g. <a href="http://piwik.org/" target="piwik">Piwik</a>)</li>
 <li>Relies on JavaScript</li>
 </ul>
 <div class="handout">
 </div>
 </div>
-
 <div class="slide">
 <h1></h1>
 </div>
