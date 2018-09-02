@@ -6,10 +6,10 @@
 <head>
 <title>CGI and Forms</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -39,13 +39,13 @@
 <li>CGI = Common Gateway Interface</li>
 <li>Method of creating dynamic or interactive Web pages (e.g. database-driven pages)</li>
 <li>Examples:
-
 <ul>
-<li><a href="http://www.freecen.org.uk/cgi/search.pl" target="freecen">FreeCEN</a> (URL contains &quot;cgi-bin&quot;)</li>
-<li><a href="https://www.234car.com/contact.html" target="234car">234car contact form</a> (URL does <strong>not</strong> contain &quot;cgi-bin&quot;, but is CGI, as is rest of system)</li>
+<li><a href="http://www.freecen.org.uk/cgi/search.pl" target="freecen">FreeCEN</a> (URL contains &quot;cgi&quot;)</li>
+<li><a href="http://www.iansealy.com/prediction/worldcup2014/ian/" target="predicto">World Cup 2014 Prediction Competition</a> (URL does <strong>not</strong> contain &quot;cgi&quot;, but is CGI)</li>
 </ul>
 </li>
 <li>CGI is an interface between the Web server and a program running on the computer hosting the Web server</li>
+<li>i.e. Server-side scripts</li>
 </ul>
 <div class="handout">
 </div>
@@ -57,7 +57,7 @@
 <ul>
 <li>Normally a requested file is sent back to a Web browser directly</li>
 <li>With CGI the requested file is executed as a program and that program's output is sent back to the Web browser</li>
-<li>Parameters (e.g. your search term or your email address) are sent to the Web server in a standard way (the Common Gateway)</li>
+<li>Parameters (e.g. your search term or your username and password) are sent to the Web server in a standard way (the Common Gateway)</li>
 <li>CGI script must be able to get at these parameters</li>
 <li>CGI scripts can be written in any language that will run on the computer hosting the Web server</li>
 </ul>
@@ -71,7 +71,7 @@
 <p>Examples of programming languages that are often used to write server-side scripts:</p>
 
 <ul>
-<li>Perl (I use Perl given the choice)</li>
+<li>Perl</li>
 <li>PHP</li>
 <li>Python</li>
 <li>Ruby</li>
@@ -88,7 +88,7 @@
 <p>Teaching any of these languages is beyond the scope of this course. Many Web developers never write their own scripts. It is easy to reuse scripts that other people have written.</p>
 <p>Sources:</p>
 <ul>
-<li><a href="http://www.cgi-resources.com/" target="cgiresources">CGI Resource Index</a></li>
+<li><a href="http://www.cgi-resources.com/" target="cgiresources">Resource Index</a></li>
 <li><a href="http://nms-cgi.sourceforge.net/" target="nms">nms</a></li>
 </ul>
 
@@ -101,8 +101,8 @@
 <h1>What You Need</h1>
 <ul>
 <li>A cgi-bin on your Web server (an area where files are executed rather than just sent back directly)</li>
-<li>On the DreamHost server, CGI scripts can be run from any directory below htdocs and scripts just need to have the right file extension (e.g. .pl or .php)</li>
-<li>Is also possible to use scripts hosted by a third party - <a href="http://cgi.resourceindex.com/Remotely_Hosted/" target="cgiresourcesremote">CGI Resource Index</a></li>
+<li>On the DreamHost server, server-side scripts can be run from any directory below htdocs and scripts just need to have the right file extension (e.g. .pl or .php)</li>
+<li>Is also possible to use scripts hosted by a third party - <a href="http://webapps.resourceindex.com/website_tools/" target="cgiresourcesremote">Resource Index</a> (but beware of advertising)</li>
 
 </ul>
 <div class="handout">
@@ -131,11 +131,11 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <h1>Example</h1>
 <ul>
 <li>Is a Perl script</li>
-<li>Located at <small><a href="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl" target="cgiexample">http://iansealy.wdd1415.bbkweb.org/cgiexample.pl</a></small></li>
+<li>Located at <small><a href="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl" target="cgiexample">http://iansealy.wdd1516.bbkweb.org/cgiexample.pl</a></small></li>
 <li>Takes a parameter called &quot;username&quot; and displays the value of that parameter after &quot;Hello&quot;</li>
 <li>Can pass parameter as part of URL</li>
-<li><small><a href="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://iansealy.wdd1415.bbkweb.org/cgiexample.pl?username=Kieren</a></small></li>
-<li><small><a href="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl?username=Ian" target="cgiexampleian">http://iansealy.wdd1415.bbkweb.org/cgiexample.pl?username=Ian</a></small></li>
+<li><small><a href="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl?username=Kieren" target="cgiexamplekieren">http://iansealy.wdd1516.bbkweb.org/cgiexample.pl?username=Kieren</a></small></li>
+<li><small><a href="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl?username=Ian" target="cgiexampleian">http://iansealy.wdd1516.bbkweb.org/cgiexample.pl?username=Ian</a></small></li>
 </ul>
 <div class="handout">
 </div>
@@ -145,10 +145,10 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>Forms</h1>
 <ul>
-<li>Using URLs is one way of sending parameters to a CGI script, but most common way is probably to use forms</li>
+<li>Using URLs is one way of sending parameters to a server-side script, but most common way is probably to use forms</li>
 <li>Forms are HTML that allow user to enter information and send it to the Web server</li>
 <li>All forms are enclosed in <b><tt>&lt;form&gt;</tt></b> elements</li>
-<li>The action attribute of form element points to CGI script</li>
+<li>The action attribute of form element points to server-side script</li>
 <li>There are three main elements within a form - <b><tt>&lt;input&gt;</tt></b>, <b><tt>&lt;select&gt;</tt></b> and <b><tt>&lt;textarea&gt;</tt></b></li>
 </ul>
 <div class="handout">
@@ -160,13 +160,13 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 
 <h1>input element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;username&quot;&nbsp;size=&quot;10&quot;&gt;<br />
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
 
 &lt;/form&gt;
 </tt></p>
-<form action="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl" target="cgiexampleinput">
+<form action="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl" target="cgiexampleinput">
 <input type="text" name="username" size="10" />
 <input type="submit" value="Go" />
 </form>
@@ -178,7 +178,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>More input element</h1>
 <p><tt><small>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 
 &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name&lt;br&gt;<br />
 &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Kieren&quot;&gt;Kieren's&nbsp;first&nbsp;name&lt;br&gt;<br />
@@ -189,7 +189,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
 &lt;/form&gt;
 </small></tt></p>
-<form action="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl" target="cgiexampleradio">
+<form action="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl" target="cgiexampleradio">
 <input type="radio" name="username" value="Ian" />Ian's first name<br />
 <input type="radio" name="username" value="Kieren" />Kieren's first name<br />
 <input type="radio" name="username" value="Ian Sealy" />Ian's full name<br />
@@ -205,7 +205,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>select element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;select&nbsp;name=&quot;username&quot;&gt;<br />
 
 &lt;option&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name&lt;/option&gt;<br />
@@ -218,7 +218,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 &lt;/form&gt;
 
 </tt></p>
-<form action="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl" target="cgiexampleoption">
+<form action="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl" target="cgiexampleoption">
 <select name="username">
 <option value="Ian">Ian's first name</option>
 <option value="Kieren">Kieren's first name</option>
@@ -235,7 +235,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>textarea element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;textarea&nbsp;rows=&quot;10&quot;&nbsp;cols=&quot;40&quot;&nbsp;name=&quot;username&quot;&gt;&lt;/textarea&gt;<br />
 
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
@@ -253,7 +253,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <div class="slide">
 <h1>hidden input element</h1>
 <p><tt>
-&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&gt;<br />
+&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&gt;<br />
 &lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;<br />
 
 &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
@@ -269,21 +269,21 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 
 <div class="slide">
 <h1>method attribute</h1>
-<p>Two ways of accessing a CGI script. Determined by method attribute of form element.</p>
+<p>Two ways of accessing a server-side script. Determined by method attribute of form element.</p>
 <p><b>POST:</b><br />
-<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;POST&quot;&gt;</tt></p>
-<form action="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl" method="post" target="cgiexamplepost">
+<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;POST&quot;&gt;</tt></p>
+<form action="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl" method="post" target="cgiexamplepost">
 <input type="text" name="username" size="10" />
 <input type="submit" value="Go" />
 
 </form>
 <p><b>GET:</b><br />
-<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1415.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;GET&quot;&gt;</tt></p>
-<form action="http://iansealy.wdd1415.bbkweb.org/cgiexample.pl" method="get" target="cgiexampleget">
+<tt>&lt;form&nbsp;action=&quot;http://iansealy.wdd1516.bbkweb.org/cgiexample.pl&quot;&nbsp;method=&quot;GET&quot;&gt;</tt></p>
+<form action="http://iansealy.wdd1516.bbkweb.org/cgiexample.pl" method="get" target="cgiexampleget">
 <input type="text" name="username" size="10" />
 <input type="submit" value="Go" />
 </form>
-<p>Which is used depends on CGI script. Can POST an unlimited amount of data. GET is limited.</p>
+<p>Which is used depends on server-side script. Can POST an unlimited amount of data. GET is limited.</p>
 <div class="handout">
 </div>
 
@@ -296,8 +296,7 @@ print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username')
 <li><a href="http://www.w3.org/TR/html4/interact/forms.html" target="w3c">W3C forms specification</a></li>
 <li><a href="http://webdesign.about.com/od/forms/ss/html-forms-tutorial.htm" target="about">About.com HTML Forms Tutorial</a></li>
 <li><a href="http://www.w3schools.com/html/html_forms.asp" target="w3schools">W3Schools HTML Forms Tutorial</a></li>
-<li><a href="http://www.webcredible.co.uk/user-friendly-resources/css/css-forms.shtml" target="webcred">Applying CSS to forms</a></li>
-<li><a href="http://www.smashingmagazine.com/2006/11/11/css-based-forms-modern-solutions/" target="cssforms">CSS-based forms</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms" target="cssforms">Styling forms</a></li>
 </ul>
 <div class="handout">
 </div>

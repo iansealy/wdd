@@ -6,10 +6,10 @@
 <head>
 <title>JavaScript</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 <script language="JavaScript" type="text/javascript">
 <!--
 function MM_swapImgRestore() { //v2.0
@@ -75,7 +75,7 @@ function MM_swapImage() { //v2.0
 <ul>
 <li>A scripting language</li>
 <li>Traditionally used on the client (i.e. Web browser) rather than the server</li>
-<li>Allows interactivity without reloading the entire page (unlike CGI scripts or similar technologies like PHP)</li>
+<li>Allows interactivity without reloading the entire page (unlike CGI scripts or similar server-side technologies like PHP)</li>
 <li>Because there is no connection to the server, JavaScript can be fast and therefore allows instant interactivity (e.g. respond to mouse clicks or movement)
 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.test','document.test','uploads/wdd4/wdd41/on.gif')"><img name="test" border="0" src="uploads/wdd4/wdd41/off.gif" alt=""></a></li>
 <li>Examples:
@@ -84,7 +84,6 @@ function MM_swapImage() { //v2.0
 <li><a href="http://maps.google.com/" target="maps">Google Maps</a></li>
 <li><a href="http://mrdoob.com/projects/chromeexperiments/ball_pool/" target="ballpool">Ball Pool</a> (via <a href="http://www.chromeexperiments.com/" target="chromeexp">Chrome Experiments</a>)</li>
 <li><a href="http://hereistoday.com/" target="here">Here Is Today</a></li>
-<li><a href="http://currantcat.com/convergence/" target="convergence">The Convergence</a></li>
 </ul>
 </li>
 </ul>
@@ -111,7 +110,7 @@ function MM_swapImage() { //v2.0
 <li>JavaScript was developed by Netscape for Navigator, but was called Mocha and then later LiveScript</li>
 <li>Was renamed JavaScript for marketing reasons (even though very different to Java)</li>
 <li>Navigator 2.0 (1996) first supported JavaScript</li>
-<li>Microsoft created its own version of JavaScript called JScript (Netscape owns the name)</li>
+<li>Microsoft created its own version of JavaScript called JScript (Netscape owned the name)</li>
 </ul>
 <div class="handout">
 </div>
@@ -134,7 +133,8 @@ function MM_swapImage() { //v2.0
 <div class="slide">
 <h1>Where Is JavaScript?</h1>
 <ul>
-<li>Can be embedded in an <a href="#" onclick="window.alert('Hi')">HTML tag</a></li>
+<li>Can be embedded in an <a href="#" onclick="window.alert('Hi')">HTML tag</a>:<br />
+<b><tt>&lt;a href=&quot;#&quot; onclick=&quot;window.alert('Hi')&quot;&gt;HTML tag&lt;/a&gt;</tt></b></li>
 <li>Can be embedded in a page using the <tt>script</tt> tag:<br />
 <b><tt>&lt;script type=&quot;text/javascript&quot;&gt;<br />
 window.alert('Hi');<br />
@@ -255,7 +255,7 @@ function makePopups() {<br />
 <li><a href="http://www.prototypejs.org/" target="prototype">Prototype</a></li>
 </ul>
 </li>
-<li>Recent <a href="http://www.webdirections.org/blog/state-of-web-development-2010/" target="webdirections">survey</a> indicated over 3/4 of Web developers use jQuery</li>
+<li><a href="http://www.webdirections.org/blog/state-of-web-development-2010/" target="webdirections">Survey</a> indicated over 3/4 of Web developers use jQuery</li>
 </ul>
 <div class="handout">
 </div>
@@ -293,14 +293,20 @@ $(document).ready(function() {
 <ul>
 <li>Tutorials:
 <ul>
+<li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript" target="mdn">MDN Tutorials</a></li>
 <li><a href="http://docs.jquery.com/Tutorials" target="jquerytutorials">jQuery Tutorials</a></li>
 <li><a href="http://www.webteacher.com/javascript/" target="nonprog">JavaScript for the Total Non-Programmer</a></li>
 <li><a href="http://www.w3schools.com/js/" target="w3schools">W3Schools JavaScript Tutorial</a></li>
 </ul>
 </li>
+<li>Book:
+<ul>
+<li><a href="http://eloquentjavascript.net/" target="eloquent">Eloquent JavaScript</a></li>
+</ul>
+</li>
 <li>JavaScript scripts:
 <ul>
-<li><a href="http://plugins.jquery.com/" target="jqueryplugins">jQuery Plugins</a></li>
+<li><a href="https://www.npmjs.com/browse/keyword/jquery-plugin" target="jqueryplugins">jQuery Plugins on npm</a></li>
 <li><a href="http://developer.yahoo.com/yui/" target="yui">Yahoo! User Interface Library</a></li>
 <li><a href="http://wsabstract.com/cutpastejava.shtml" target="kit">JavaScript Kit</a></li>
 <li><a href="http://www.dynamicdrive.com/" target="dynamic">Dynamic Drive</a></li>

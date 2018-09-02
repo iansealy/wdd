@@ -6,10 +6,10 @@
 <head>
 <title>eCommerce</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -107,7 +107,7 @@
 <li>Not always easy/possible to customise</li>
 <li>Some rely solely on JavaScript for shopping cart functionality</li>
 </ul>
-<p>Example: <a href="http://www.amentsoc.org/about/donate-online.html" target="aesdonation">Online donations</a></p>
+<p>Example: <a href="http://www.benhs.org.uk/publications/british-hoverflies-an-illustrated-identification-guide-second-edition/" target="aesdonation">Simple PayPal integration</a></p>
 <div class="handout">
 </div>
 </div>
@@ -155,10 +155,11 @@
 <h1>Hosted shops</h1>
 <p>Shop software written and hosted by a third party. For example:</p>
 <ul>
-<li><a href="http://www.amazonservices.com/content/webstore-by-amazon.htm" target="amazonwebstore">Amazon Webstore</a></li>
 <li><a href="http://pages.ebay.com/storefronts/start.html" target="ebaystores">eBay stores</a></li>
 <li><a href="http://www.shopify.com/" target="shopify">Shopify</a></li>
 <li><a href="http://www.3dcart.com/" target="3dcart">3Dcart</a></li>
+<li><a href="https://www.bluepark.co.uk/" target="bluepark">Bluepark</a></li>
+<li><a href="http://www.actinic.co.uk/" target="actinic">Actinic</a></li>
 </ul>
 <p>Pros and cons:</p>
 <ul>
@@ -179,7 +180,6 @@
 <ul>
 <li><a href="http://www.zen-cart.com/" target="zencart">Zen Cart</a></li>
 <li><a href="http://magento.com/UK" target="magento">Magento</a></li>
-<li><a href="http://www.actinic.co.uk" target="actinic">Actinic</a></li>
 <li><a href="http://www.opencart.com/" target="opencart">OpenCart</a></li>
 </ul>
 <p>Pros and cons:</p>
@@ -222,14 +222,14 @@
 <li>Internet Merchant Service - a service that allows you to accept cards  online by using a Payment Service Provider (PSP) that passes the details to the acquiring bank</li>
 </ol>
 
-<p>Example: <a href="http://www.rbsworldpay.com/products/index.php?page=ecom&amp;sub=businessplus&amp;c=UK" target="rbswp">RBS WorldPay Business Gateway Plus</a></p>
+<p>Example: <a href="https://www.barclaycard.co.uk/business/accepting-payments" target="barclays">Barclaycard</a></p>
 <ul>
 <li>Provides both a Merchant account with an Acquiring bank and an Internet Merchant Service</li>
-<li>Now need to contact them to get a quote. Previously the costs were:
+<li>Costs:
 <ul>
-<li>Setup fee = &pound;75</li>
-<li>Monthly fee = &pound;19.95 per month</li>
-<li>Transaction charge = 1.65% + 10p per transaction</li>
+<li>Setup fee = &pound;150</li>
+<li>Monthly fee = &pound;20 per month (+ VAT)</li>
+<li>Transaction charge = 10p per transaction (+ VAT)</li>
 </ul>
 </li>
 </ul>
@@ -244,8 +244,8 @@
 <p>Pros and cons of a Merchant account:</p>
 <ul>
 <li>If you already process card payments (e.g. you run a physical shop) it can be quick to set up</li>
-<li>Payment is often via a &quot;well known&quot; bank</li>
-<li>Starting from scratch can require credit checks and take up to two months for approval</li>
+<li>Payment is often via a &quot;well known&quot; bank/company</li>
+<li>Starting from scratch can require credit checks and take several months for approval</li>
 <li>May be refused if you have no trading history</li>
 <li>You usually need to pay for the Payment Service Provider</li>
 <li>Acquiring Bank also charge a percentage of each transaction</li>
@@ -267,7 +267,7 @@
 <div class="slide">
 <h1>Payment gateways - 1</h1>
 <p>Payment gateways use their own acquiring services so they act as the Acquiring bank <strong>and</strong> provide the Internet Merchant Service.</p>
-<p>Payment Gateways make money by taking a small top-slice from lots and lots of transactions.</p>
+<p>Payment Gateways make money by taking a very small amount from lots and lots of transactions.</p>
 
 <p>Pros and cons:</p>
 <ul>
@@ -290,9 +290,9 @@
 <li>Easy to issue refunds</li>
 <li>Charges are low:
 	<ul>
-	<li><a href="https://www.paypal.com/uk/cgi-bin/webscr?cmd=_display-fees-outside" target="paypalgateway">PayPal</a> - 1.9%-3.4% + &pound;0.20 per transaction</li>
-	<li><a href="http://www.sagepay.co.uk/our-payment-solutions/online-payments/pricing" target="sagepay">Sage Pay</a> - &pound;19.90 a month or 10p per transaction depending on number of transactions</li>
-	<li><a href="https://www.braintreepayments.com/" target="braintree">Braintree Payments</a> (now part of PayPal) - 2.4% + &pound;0.20 per transaction (after your first &pound;30,000)</li>
+	<li><a href="https://www.paypal.com/uk/webapps/mpp/paypal-fees" target="paypalgateway">PayPal</a> - 1.9%-3.4% + &pound;0.20 per transaction</li>
+	<li><a href="http://www.sagepay.co.uk/our-payment-solutions/online-payments/pricing" target="sagepay">Sage Pay</a> - &pound;19.90 a month</li>
+	<li><a href="https://www.braintreepayments.com/en-gb" target="braintree">Braintree Payments</a> (now part of PayPal) - 2.4% + &pound;0.20 per transaction (after your first &pound;30,000)</li>
 	</ul>
 </li>
 </ul>
@@ -319,7 +319,7 @@
 <li>Access control
 	<ul>
 	<li>Only those that need access to the admin areas of the shop should have access</li>
-	<li>Choose <a href="https://tech.dropbox.com/2012/04/zxcvbn-realistic-password-strength-estimation/" target="passwd">strong passwords</a></li>
+	<li>Choose <a href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/" target="passwd">strong passwords</a></li>
 <li>Don't re-use passwords!</li>
 	</ul>
 </li>
@@ -445,6 +445,7 @@
 	<li>Must display VAT number anyway</li>
 	</ul>
 </li>
+<li>also new rules mean you need to notify customers of <a href="http://www.out-law.com/en/articles/2016/january/european-commission-publicises-link-to-new-online-dispute-resolution-platform-/" target="odr">online dispute resolution platform</a> if you are an EU business selling online to EU customers</li>
 </ul>
 <div class="handout">
 </div>
@@ -510,9 +511,11 @@
 <li>Where does the host back up that data to?</li>
 </ul>
 
-<p>Companies within the US may sign up to the &quot;<a href="http://en.wikipedia.org/wiki/International_Safe_Harbor_Privacy_Principles" target="safeharbor">Safe Harbor</a>&quot; scheme or you may take out an individual contract with any supplier (irrespective of the country they reside in) to ensure analogous levels of protection.</p>
+<p>Until last year companies within the US could sign up to the &quot;<a href="http://en.wikipedia.org/wiki/International_Safe_Harbor_Privacy_Principles" target="safeharbor">Safe Harbor</a>&quot; scheme.</p>
 
-<p>See also: <a href="http://www.out-law.com/page-11060" target="shinsuff">Safe Harbor certification may not mean data protection compliance</a></p>
+<p>In October 2015, the Court of Justice of the EU ruled that data transfer under 'Safe Harbor' are <a href="http://www.out-law.com/en/articles/2015/october/eu-us-data-transfers-invalid-if-made-under-safe-harbour-regime-rules-eu-court/" target="nosafeharbor">invalid</a></p>
+
+<p>The replacement for 'Safe Harbor' is still <a href="http://www.out-law.com/en/articles/2016/april/businesses-should-not-rely-on-privacy-shield-in-light-of-watchdog-criticisms-warn-experts/" target="privacyshield">drawing criticism</a>. Companies may take out an individual contract with any supplier (irrespective of the country they reside in) to ensure analogous levels of protection.</p>
 
 <div class="handout">
 </div>
@@ -537,7 +540,6 @@
 
 <p>Law has wider implications than for eCommerce sites but was changed at the last moment (May 2012) to include '<a href="http://www.out-law.com/en/articles/2012/may/ico-publishes-new-guidance-on-implied-consent-to-cookies/" target="impcon">implied consent</a>' .</p>
 
-<p>However, even the ICO <a href="https://ico.org.uk/about-the-ico/news-and-events/current-topics/changes-to-cookies-on-our-website/" target="ico">doesn't ask for consent any more</a>. Although you should provide details of any cookies you set/use on your site.</p>
 <div class="handout">
 </div>
 </div>

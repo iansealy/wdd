@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>How the web works</title>
+<meta name="version" content="S5 1.0" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+</head><body>
+
+<div class="layout">
+
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web Design and Development</h1>
+<h2>How the web works</h2>
+<div id="controls"></div>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>How the web works</h1>
+<h2>Kieren Pitts</h2>
+</div>
+
+
+<div class="slide">
+
+<h1>Introduction</h1>
+<p>What happens when you visit a Web site?</p>
+
+<ol>
+<li>All machines on the Internet use an Internet Protocol (IP) address to refer to each other, e.g.: 69.163.184.47</li>
+
+<li>User types a URL into a browser address bar or follows a link, e.g.:<br />http://wdd1516.bbkweb.org/wdd14agenda.html</li>
+<li>Browser refers to Domain Name Servers to convert wdd1516.bbkweb.org into an IP address</li>
+<li>The IP address is for the server hosting the web site
+	<ul>
+	<li>What's a server? Hardware or software?</li>
+	</ul>
+</li>
+</ol>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Introduction continued</h1>
+<ol start="5">
+<li>Browser sends a request for /wdd14agenda.html to the server</li>
+<li>Web server receives the request for the page /wdd14agenda.html</li>
+<li>HTML file sent back to browser</li>
+<li>Browser reads the HTML and sends requests for any ancillary files to the server:
+	<ul>
+		<li>CSS</li>
+		<li>Images</li>
+		<li>JavaScript files</li>
+	</ul>
+        <p>Modern browsers can make 6-10 concurrent requests.</p>
+</li>
+
+</ol>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>Web servers</h1>
+
+<p>Lots of different Web servers, e.g:</p>
+
+<ul>
+<li><a href="http://httpd.apache.org/" target="apache">Apache</a> - most <a href="http://news.netcraft.com/archives/2015/11/16/november-2015-web-server-survey.html" target="popular">popular</a></li>
+<li><a href="https://www.iis.net/" target="iis">Microsoft Internet Information Services (IIS)</a></li>
+<li><a href="https://www.nginx.com/" target="nginx">Nginx</a></li>
+<li><a href="http://www.lighttpd.net/" target="lighttp">Lighttpd</a></li>
+</ul>
+
+<p>Choice of Web server depends on the operating system on the server, performance, functionality etc.</p>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Client-side and server-side technology</h1>
+
+<ul>
+<li>Client-side: runs within the browser.</li>
+<li>Server-side: runs on the server.</li>
+</ul>
+
+<ul>
+<li>JavaScript (client-side) - some example uses:
+<ul>
+<li>Date pickers</li>
+<li>Auto-completion</li>
+<li>Show/hide content</li>
+</ul>
+</li>
+<li>Server-side - example languages:
+<ul>
+<li>PHP</li>
+<li>Python</li>
+<li>C#</li>
+<li>Java</li>
+<li>JavaScript</li>
+</ul>
+Example uses:
+<ul>
+<li>Online shopping</li>
+<li>Search</li>
+<li>Ticket booking</li>
+</ul>
+</li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<div class="handout">
+</div>
+</div>
+
+
+
+<div class="slide">
+<h1></h1>
+</div>
+
+</div>
+
+</body>
+</html>

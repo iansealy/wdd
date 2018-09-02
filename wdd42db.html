@@ -6,10 +6,10 @@
 <head>
 <title>PHP &amp; database-backed web sites</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -81,9 +81,9 @@
 <li>All have pros and cons and most programmers will tell you their language of choice is the best</li>
 <li>Considerations for Web development:
 <ul>
-<li>Server operating system (e.g. Microsoft or UNIX/Linux)</li>
-<li>Web server software (e.g. Apache, IIS, Lighttpd etc)</li>
-<li>Database software</li>
+<li>Server operating system (e.g. Linux/UNIX or Microsoft)</li>
+<li>Web server software (e.g. Apache, IIS, Nginx etc)</li>
+<li>Database software (MySQL, PostgreSQL)</li>
 <li>Cost (hosting and licences)</li>
 <li>Ease of setup</li>
 <li>Preference</li>
@@ -102,7 +102,7 @@
 <li>PHP - PHP: Hypertext Preprocessor (was: Personal Home Page)</li>
 <li>It's really popular:
     <ul>
-    <li>Used by more than <a href="http://en.wikipedia.org/wiki/PHP" target="wiki">240,000,000 web sites</a></li>
+    <li>Used by <a href="http://w3techs.com/technologies/overview/programming_language/all" target="w3techs">82% of all web sites</a></li>
     </ul>
 </li>
 <li>Used for popular tools: WordPress, Drupal, Moodle, Joomla</li>
@@ -222,6 +222,7 @@ $colours[0]; // red</li>
 <li>Number of items in array: count($colours);</li>
 <li>Add items: array_push($colours, &quot;white&quot;, &quot;black&quot;);</li>
 <li>Delete 1 item at index position 2 in the array: array_splice($colours, 2, 1);</li>
+<li>For debugging you can print the whole array: print_r($colours);</li>
 <li>Many <a href="http://uk3.php.net/manual/en/ref.array.php" target="phparray">array functions</a></li>
 </ul>
 <div class="handout">
@@ -353,7 +354,8 @@ $_POST[&quot;your_name&quot;]
 
 <div class="slide">
 <h1>Database-backed sites</h1>
-<p>Time for a short break?</p>
+<h2>Database-backed sites...</h2>
+<p>Time for a short break first?</p>
 <div class="handout">
 </div>
 </div>
@@ -447,9 +449,9 @@ Add id column, int, make key, auto_increment and not null
 movie_id  	int(11)
 ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
 
-http://kierenpitts.wdd1415.bbkweb.org/
+http://kierenpitts.wdd1516.bbkweb.org/
 
-bbkdemo2015
+bbkdemo2016
 kierenpitts
 someotherpassword
 
@@ -467,7 +469,7 @@ movies|somepassword
 <ul>
 <li>Empty database already created on Dreamhost
 <ul>
-<li>Database: bbkdemo2015</li>
+<li>Database: bbkdemo2016</li>
 <li>Admin username: kierenpitts</li>
 <li>Script username: movies</li>
 </ul>
@@ -484,7 +486,7 @@ movies|somepassword
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1415-mysql.bbkweb.org" target="phpmy2">wdd1415-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1516-mysql.bbkweb.org" target="phpmy2">wdd1516-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
@@ -519,10 +521,10 @@ movies|somepassword
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1415-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1516-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2015&quot;;
+$database = &quot;bbkdemo2016&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -555,10 +557,10 @@ print &quot;&lt;/ul&gt;\n&quot;;
 &lt;?php
 
 // Connect to the database
-$hostname = &quot;wdd1415-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1516-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2015&quot;;
+$database = &quot;bbkdemo2016&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -611,10 +613,10 @@ while ($row = mysql_fetch_row($result)) {
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1415-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1516-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2015&quot;;
+$database = &quot;bbkdemo2016&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -695,7 +697,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	<li>controller - controls events that affect data or display of data</li>
         </ul>
 </li>
-<li>Examples: <a href="http://www.yiiframework.com/" target="yii">Yii</a> (PHP), <a href="http://framework.zend.com/" target="zend">Zend</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://flask.pocoo.org/" target="flask">Flask</a> (Python), <a href="http://www.perldancer.org/" target="dancer">Dancer</a> (Perl), <a href="http://mojolicio.us/" target="mojo">Mojolicious</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
+<li>Examples: <a href="http://www.yiiframework.com/" target="yii">Yii</a> (PHP), <a href="http://framework.zend.com/" target="zend">Zend</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://flask.pocoo.org/" target="flask">Flask</a> (Python), <a href="http://www.perldancer.org/" target="dancer">Dancer</a> (Perl), <a href="http://mojolicious.org/" target="mojo">Mojolicious</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
 <li>There are <a href="http://www.hotframeworks.com/" target="hotframe">lots of frameworks</a></li>
 </ul>
 <div class="handout">
@@ -717,7 +719,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 <li>Database managment tools
 	<ul>
 	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmyad">phpMyAdmin</a></li>
-	<li><a href="http://wb.mysql.com/" target="mysqlwb">MySQL Workbench</a></li>
+	<li><a href="http://www.mysql.com/products/workbench/" target="mysqlwb">MySQL Workbench</a></li>
 	<li><a href="https://dev.mysql.com/doc/refman/5.7/en/mysql.html" target="mysqlcli">MySQL Command line tool</a></li>
 	</ul>
 </li>

@@ -6,10 +6,10 @@
 <head>
 <title>SSIs</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -41,8 +41,8 @@
 <ol>
 <li>All machines on the Internet use an Internet Protocol (IP) address to refer to each other, e.g.: 69.163.184.47</li>
 
-<li>User types a URL into a browser address bar or follows a link, e.g.:<br />http://wdd1415.bbkweb.org/wdd41agenda.html</li>
-<li>Browser refers to Domain Name Servers to convert wdd1415.bbkweb.org into an IP address</li>
+<li>User types a URL into a browser address bar or follows a link, e.g.:<br />http://wdd1516.bbkweb.org/wdd41agenda.html</li>
+<li>Browser refers to Domain Name Servers to convert wdd1516.bbkweb.org into an IP address</li>
 <li>The IP address is for the server hosting the web site
 	<ul>
 	<li>What's a server? Hardware or software?</li>
@@ -83,7 +83,7 @@
 <li>Separate presentation from content by storing repetitive HTML fragments in a separate file. Each fragment can then be included in many pages using SSIs</li>
 <li>HTML fragments don't have to represent valid HTML (or complete pages) themselves. The web server combines all the SSIs and page code together <strong>before</strong> sending it to the browser. Only at this point does the code need to be valid HTML</li>
 <li>Most Web servers support SSIs</li>
-<li>Only covering <a href="http://httpd.apache.org/" target="apache">Apache</a> because it's the <a href="http://news.netcraft.com/archives/2015/04/20/april-2015-web-server-survey.html#more-18965" target="netcraft"> most popular Web server</a> and DreamHost uses it</li>
+<li>Only covering <a href="http://httpd.apache.org/" target="apache">Apache</a> because it's the <a href="http://news.netcraft.com/archives/2016/03/18/march-2016-web-server-survey.html#more-23062" target="netcraft"> most popular Web server</a> and DreamHost uses it</li>
 <li>You need a web server. <strong>SSIs won't be included if files are viewed offline</strong></li>
 </ul>
 <div class="handout">
@@ -129,18 +129,18 @@
 
 <p>Example file:</p>
 <tt>
-&lt;!--#include virtual=&quot;ssi/header.html&quot; --&gt;
+&lt;!--#include virtual=&quot;ssi/header.ssi&quot; --&gt;
 <br />
 &lt;p&gt;Content&lt;/p&gt;
 <br />
-&lt;!--#include virtual=&quot;/ssi/footer.html&quot; --&gt;
+&lt;!--#include virtual=&quot;/ssi/footer.ssi&quot; --&gt;
 
 </tt>
 
-<p>In this case <tt>header.html</tt> and <tt>footer.html</tt> are in an <tt>ssi</tt> subdirectory but where you put them in your htdocs is up to you.</p>
-<p>Can use either relative path (<tt>ssi/header.html</tt>) or absolute path (<tt>/ssi/footer.html</tt>)</p>
+<p>In this case <tt>header.ssi</tt> and <tt>footer.ssi</tt> are in an <tt>ssi</tt> subdirectory but where you put them in your htdocs is up to you.</p>
+<p>Can use either relative path (<tt>ssi/header.ssi</tt>) or absolute path (<tt>/ssi/footer.ssi</tt>)</p>
 
-<p>Now you only need to edit <tt>ssi/header.html</tt> and <tt>ssi/footer.html</tt> to change the look and feel</p>
+<p>Now you only need to edit <tt>ssi/header.ssi</tt> and <tt>ssi/footer.ssi</tt> to change the look and feel</p>
 
 <p>File extension is not important, common extensions are .html, .ssi or .txt</p>
 <div class="handout">
@@ -180,6 +180,7 @@
 </ul>
 </li>
 <li><em>Remember</em>, using SSIs means you <strong>must view your pages online</strong></li> 
+<li><em>Remember</em>, SSIs do not need to be complete HTML documents on their own</li> 
 </ul>
 <div class="handout">
 </div>

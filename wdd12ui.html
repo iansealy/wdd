@@ -6,10 +6,10 @@
 <head>
 <title>Consistent User Interfaces</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -39,7 +39,7 @@
 <li>A consistent user interface allows users to complete their task more quickly and easily</li>
 <li>An inconsistent or deficient user interface confuses users (&quot;Am I still on the same site?&quot;), looks unprofessional and may force them to leave
 <ul>
-<li><a href="http://www.bris.ac.uk/citybristol/" target="uob">University of Bristol</a></li>
+<li><a href="http://www.bath.ac.uk/" target="uob">University of Bath</a></li>
 </ul>
 </li>
 <li>Main difference between professional and amateur sites</li>
@@ -47,7 +47,132 @@
 </ul>
 <div class="handout">
 </div>
+
+
+
+<div class="slide">
+<h1>Creating a nav bar in CSS</h1>
+<ul>
+<li>Nav bars (and footers) are essentially unordered lists of links</li>
+<li>Default rendering is for list items to stack vertically. For example:</li>
+</ul>
+<pre>
+  
+&lt;ul id=&quot;nav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sport&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Shop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<div class="handout">
 </div>
+
+
+<div class="slide">
+<h1>Creating a nav bar in CSS - 2</h1>
+<ul>
+<li>Use: <code>display: inline</code> to get the list items on one line:</li>
+</ul>
+
+<pre>
+
+  
+ul#nav li {
+    display:inline;
+}
+
+</pre>
+
+<ul id="nav2">
+<li style="display:inline;"><a href="#">About</a></li>
+<li style="display:inline;"><a href="#">News</a></li>
+<li style="display:inline;"><a href="#">Sport</a></li>
+<li style="display:inline;"><a href="#">Shop</a></li>
+</ul>
+<div class="handout">
+</div>
+
+<div class="slide">
+<h1>Creating a nav bar in CSS - 3</h1>
+<ul>
+<li>Now we can add some colour and padding:</li>
+</ul>
+
+<pre>
+
+  ul#nav li {
+    display:inline;
+    list-style-type: none;
+    margin : 0;
+    padding:0;
+  }
+     
+  ul#nav li a {
+    float: left;
+    background-color : #BDDEFF;
+    text-decoration: none;
+    color: #000000;
+    margin:0;
+    padding : 6px 20px 6px 20px;
+  }
+      
+  ul#nav li a:hover {
+    background-color : #566B80;
+    text-decoration: underline;
+    color: #ffffff;
+  }
+</pre>
+
+<style>
+    
+   
+ul#nav {
+  padding : 0;
+}
+    
+ul#nav li {
+  display:inline; list-style-type: none; margin : 0; padding:0;
+}
+   
+ul#nav li a {
+  float: left;
+  background-color : #BDDEFF;
+  text-decoration: none;
+  color: #000000;
+  margin:0;
+  padding : 6px 20px 6px 20px;
+}
+    
+ul#nav li a:hover {
+  background-color : #566B80;
+  text-decoration: underline;
+  color: #ffffff;
+}
+    
+</style>
+
+<ul id="nav">
+<li><a href="#">About</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Sport</a></li>
+<li><a href="#">Shop</a></li>
+</ul>
+<div class="handout">
+</div>
+
+<div class="slide">
+<h1>Listamatic</h1>
+<ul>
+<li><a href="http://css.maxdesign.com.au/index.htm" target="lista">Listamatic</a> provides code examples for many different types/designs of navigation using lists.</li>
+<li>Remember to cite your sources in your assignment if you use Listamatic.</li>
+</ul>
+
+<div class="handout">
+</div>
+
+</div>
+
 <div class="slide">
 <h1></h1>
 </div>
