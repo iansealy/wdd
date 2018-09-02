@@ -6,10 +6,10 @@
 <head>
 <title>Image Replacement</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1617.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -48,27 +48,17 @@ A number of techniques have been developed for replacing text with images in a w
 
 
 <div class="slide">
-<h1>text-indent</h1>
+<h1>Image Replacement</h1>
 <p>
-Using a combination of background-image and text-indent properties it is possible to place text out of view leaving just the image as the background to the element.
+Using a combination the font, text-shadow and color properties it's possible to 'hide' text so that a background image beneath is visible.
 </p>
 <p>
 <a href="http://www.bbk.ac.uk/~ubzm174/image_replacement.htm">Example:<a/>
 </p>
 <p><code>
-&lt;h1&gt;NYPL Online Style Guide&lt;/h1&gt;
-</code>
-</p>
-<p>
-<code>
-h1 &#123;<br />
-height: 50px;<br />
-background-image: url(styleguidehead.gif);<br />
-background-repeat: no-repeat;<br />
-        text-indent: 100%;<br />
-white-space: nowrap;<br />
-overflow: hidden;<br />
-&#125;
+font: 0/0 a;<br />
+text-shadow: none; <br />
+color: transparent;
 </code>
 </p>
 
@@ -76,56 +66,24 @@ overflow: hidden;<br />
 <div class="handout">
 </div>
 </div>
-
 
 <div class="slide">
-<h1>Problems with text-indent</h1>
+<h1>Image Replacement</h1>
 <p>
-The disadvantage of this method is that if images are turned off in the browser but CSS is on then there will be no image and no text, just an empty space.
+In this example:
+<ul>
+<li>The shorthand font property values 0/0 set the size and line height of the text to zero</li>
+<li>The a is included to stand in for the mandatory font-family value (the presumption is that no one will have a font called a installed)</li>
+<li>The text-shadow property value none ensures that no shadow is applied to text</li>
+<li>The color property value transparent sets the text to transparent</li>
+</ul>
 </p>
+
 
 <div class="handout">
 </div>
 </div>
 
-
-<div class="slide">
-<h1>text-indent and span</h1>
-<p>
-This method hides the text behind the image so that when images are off and css is on the text is visible. The background image is on the empty span tags inside the h1.
-</p>
-<p>
-<a href="http://www.bbk.ac.uk/~ubzm174/image_replacement2.htm">Example:<a/>
-</p>
-<p><code>
-&lt;h1&gt;&lt;span&gt;&lt;/span&gt;NYPL Online Style Guide&lt;/h1&gt;
-</code>
-</p>
-<p>
-<code>
-h1 &#123;<br />
-position: relative;<br />
-width: 425px;<br />
-height: 50px;<br />
-overflow: hidden;<br />
-&#125;
-</code>
-</p>
-<p>
-<code>
-h1 span &#123;<br />
-position: absolute;<br />
-left: 0;<br />
-top: 0;<br />
-width: 100%;<br />
-height: 100%;<br />
-background-image: url(styleguidehead.gif);<br />
-background-repeat: no-repeat;<br />
-</code>
-</p>
-<div class="handout">
-</div>
-</div>
 <div class="slide">
 <h1></h1>
 </div>

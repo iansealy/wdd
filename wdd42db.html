@@ -6,10 +6,10 @@
 <head>
 <title>PHP &amp; database-backed web sites</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1617.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -110,6 +110,7 @@
 <li><a href="http://blog.samuellevy.com/post/41-php-is-the-right-tool-for-the-job-for-all-the-wrong-reasons.html" target="setup">Easy to set up</a></li>
 <li>Integrated database support</li>
 <li>Not without its <a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/" target="bad-hammer">detractors</a></li>
+<li>Lots of jobs</li>
 </ul>
 <div class="handout">
 </div>
@@ -126,7 +127,7 @@
     <li>Web server sends output to browser</li>
     </ol>
 </li>
-<li>Unlike CGI scripts, you can mix HTML and PHP code in the same file... although many developers don't and prefer to keep them separate</li>
+<li>Unlike CGI scripts, you can mix HTML and PHP code in the same file... although most developers don't and prefer to keep them separate</li>
 </ul>
 <div class="handout">
 </div>
@@ -172,6 +173,9 @@ echo 'Hello World';
 		<li>Start with a $ and then a letter or underscore (not a number)</li>
 		<li>Variable names can only contain A-Za-z0-9_</li>
 		<li>Case sensitive</li>
+</ul></li>
+<li>Examples:
+    <ul>
 		<li>Integer<br />$n = 5;</li>
 		<li>Float<br />$pi = 3.1415;</li>
 		<li>String<br />$my_name = &quot;Kieren&quot;;</li>
@@ -449,7 +453,7 @@ Add id column, int, make key, auto_increment and not null
 movie_id  	int(11)
 ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
 
-http://kierenpitts.wdd1516.bbkweb.org/
+http://kierenpitts.wdd1617.bbkweb.org/
 
 bbkdemo2016
 kierenpitts
@@ -469,7 +473,7 @@ movies|somepassword
 <ul>
 <li>Empty database already created on Dreamhost
 <ul>
-<li>Database: bbkdemo2016</li>
+<li>Database: bbkdemo2017</li>
 <li>Admin username: kierenpitts</li>
 <li>Script username: movies</li>
 </ul>
@@ -486,7 +490,7 @@ movies|somepassword
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1516-mysql.bbkweb.org" target="phpmy2">wdd1516-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1617-mysql.bbkweb.org" target="phpmy2">wdd1617-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
@@ -521,10 +525,10 @@ movies|somepassword
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1516-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1617-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2016&quot;;
+$database = &quot;bbkdemo2017&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -557,10 +561,10 @@ print &quot;&lt;/ul&gt;\n&quot;;
 &lt;?php
 
 // Connect to the database
-$hostname = &quot;wdd1516-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1617-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2016&quot;;
+$database = &quot;bbkdemo2017&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -613,10 +617,10 @@ while ($row = mysql_fetch_row($result)) {
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1516-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1617-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2016&quot;;
+$database = &quot;bbkdemo2017&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -697,7 +701,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	<li>controller - controls events that affect data or display of data</li>
         </ul>
 </li>
-<li>Examples: <a href="http://www.yiiframework.com/" target="yii">Yii</a> (PHP), <a href="http://framework.zend.com/" target="zend">Zend</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://flask.pocoo.org/" target="flask">Flask</a> (Python), <a href="http://www.perldancer.org/" target="dancer">Dancer</a> (Perl), <a href="http://mojolicious.org/" target="mojo">Mojolicious</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
+<li>Examples: <a href="https://laravel.com/" target="laravel">Laravel</a> (PHP), <a href="https://symfony.com/" target="symfony">Symfony</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://flask.pocoo.org/" target="flask">Flask</a> (Python), <a href="http://www.perldancer.org/" target="dancer">Dancer</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
 <li>There are <a href="http://www.hotframeworks.com/" target="hotframe">lots of frameworks</a></li>
 </ul>
 <div class="handout">
@@ -715,7 +719,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	<li>source control</li>
 	</ul>
 </li>
-<li>Example IDEs: <a href="http://www.eclipse.org/" target="eclipse">Eclipse</a>, <a href="http://www.activestate.com/komodo-edit" target="komodo">Komodo Edit</a></li>
+<li>Example IDEs: <a href="http://www.eclipse.org/" target="eclipse">Eclipse</a>, <a href="https://www.jetbrains.com/phpstorm/" target="phpstorm">Phpstorm</a></li>
 <li>Database managment tools
 	<ul>
 	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmyad">phpMyAdmin</a></li>
@@ -726,8 +730,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 <li>Source control
 	<ul>
 	<li><a href="http://git-scm.com/" target="git">Git</a></li>
-        <li><a href="http://mercurial.selenic.com/" target="alesi">Mercurial</a></li>
-	<li><a href="http://subversion.apache.org/" target="svn">Subversion</a></li>
+        <li><a href="https://www.mercurial-scm.org/" target="alesi">Mercurial</a></li>
         <li><a href="https://github.com/" target="gh">GitHub</a> - hosted service</li>
         <li><a href="https://bitbucket.org/" target="bb">BitBucket</a> - hosted service</li>
 	</ul>

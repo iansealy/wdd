@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1617.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -133,6 +133,8 @@
 
 <p><em>relative</em>, <em>absolute</em> and <em>fixed</em> are rarely used because they create designs that don't scale well.</p>
 
+<p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="gridinfo">CSS Grid Layout</a> (Grid) is an exciting new layout system in CSS but is <a href="http://caniuse.com/#search=grid" target="gridcani">not widely supported yet</a>.</p>
+
 <div class="slide">
 <h1>CSS positioning offsets</h1>
 
@@ -211,7 +213,7 @@
 <p>The level of support for CSS positioning in browsers varies.</p>
 <ul>
 <li>Current versions of Chrome, Firefox, Safari, Mozilla, Opera are all very good.</li>
-<li>IE6 is poor. IE7 is OK, IE8 onwards are good.</li>
+<li>IE7 is OK, IE8 onwards are good.</li>
 </ul>
 <div class="handout">
 </div>
@@ -274,7 +276,7 @@
 <li>Don't develop in any version of IE</li>
 </ul>
 </li>
-<li>Then test in IE7, 8, 9 and 10 (6 if you know your audience will use it)</li>
+<li>Then test in IE</li>
 <li>Edit your CSS and retest</li>
 <li>Avoid mixing positioning types as much as possible. I almost always work with static (browser default) positioned elements and then use floats. I rarely use other positioning types and avoid 'fixed' as the resulting site is usually inflexible and degrades badly on different screen sizes.</li>
 <li>Avoid the temptation to set a height on any element that contains content that will vary in length - let the browser do the work.</li>

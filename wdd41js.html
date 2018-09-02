@@ -6,10 +6,10 @@
 <head>
 <title>JavaScript</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1617.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 <script language="JavaScript" type="text/javascript">
 <!--
 function MM_swapImgRestore() { //v2.0
@@ -150,10 +150,10 @@ window.alert('Hi');<br />
 
 <div class="slide">
 <h1>Simple Example</h1>
-<form name="nameform">
+<form name="greeter">
 <p>What is your first name? <input type="text" name="firstname" /></p>
 <p>What is your surname? <input type="text" name="surname" /></p>
-<p><a href="#" onclick="window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)">Greet</a></p>
+<p><a href="#" onclick="window.alert('Hello ' + document.greeter.firstname.value + ' ' + document.greeter.surname.value)">Greet</a></p>
 </form>
 <div class="handout">
 </div>
@@ -162,11 +162,11 @@ window.alert('Hi');<br />
 
 <div class="slide">
 <h1>Simple Example</h1>
-<p><tt>&lt;form <b>name=&quot;nameform&quot;</b>&gt;<br />
+<p><tt>&lt;form <b>name=&quot;greeter&quot;</b>&gt;<br />
 &lt;p&gt;What is your first name? &lt;input type=&quot;text&quot; <b>name=&quot;firstname&quot;</b> value=&quot;Ian&quot;&gt;&lt;/p&gt;<br />
 &lt;p&gt;What is your surname? &lt;input type=&quot;text&quot; <b>name=&quot;surname&quot;</b> value=&quot;Sealy&quot;&gt;&lt;/p&gt;<br />
 &lt;p&gt;&lt;a href=&quot;#&quot;
-<b>onclick=&quot;window.alert('Hello ' + document.nameform.firstname.value + ' ' + document.nameform.surname.value)&quot;</b>&gt;Greet&lt;/a&gt;&lt;/p&gt;<br />
+<b>onclick=&quot;window.alert('Hello ' + document.greeter.firstname.value + ' ' + document.greeter.surname.value)&quot;</b>&gt;Greet&lt;/a&gt;&lt;/p&gt;<br />
 &lt;/form&gt;</tt></p>
 <p>In the JavaScript Document Object Model (DOM) each part of a page can be referred to.</p>
 <div class="handout">
@@ -176,8 +176,8 @@ window.alert('Hi');<br />
 
 <div class="slide">
 <h1>Popup Window</h1>
-<p><a href="#" onclick="window.open('wdd41jswindow.html', 'popup', 'width=400,height=300'); return false;">Popup</a></p>
-<p><tt>&lt;a href=&quot;#&quot; onclick=&quot;window.open('wdd41jswindow.html', 'popup', 'width=400,height=300'); return false;&quot;&gt;Popup&lt;/a&gt;</tt></p>
+<p><a href="#" onclick="window.open('wdd41jswindow.html', 'popup', 'width=400,height=300');">Popup</a></p>
+<p><tt>&lt;a href=&quot;#&quot; onclick=&quot;window.open('wdd41jswindow.html', 'popup', 'width=400,height=300');&quot;&gt;Popup&lt;/a&gt;</tt></p>
 <p>But doesn't work with JavaScript switched off, so not graceful degradation</p>
 <div class="handout">
 </div>
@@ -294,7 +294,7 @@ $(document).ready(function() {
 <li>Tutorials:
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript" target="mdn">MDN Tutorials</a></li>
-<li><a href="http://docs.jquery.com/Tutorials" target="jquerytutorials">jQuery Tutorials</a></li>
+<li><a href="http://learn.jquery.com/" target="jquerytutorials">jQuery Tutorials</a></li>
 <li><a href="http://www.webteacher.com/javascript/" target="nonprog">JavaScript for the Total Non-Programmer</a></li>
 <li><a href="http://www.w3schools.com/js/" target="w3schools">W3Schools JavaScript Tutorial</a></li>
 </ul>
@@ -308,8 +308,6 @@ $(document).ready(function() {
 <ul>
 <li><a href="https://www.npmjs.com/browse/keyword/jquery-plugin" target="jqueryplugins">jQuery Plugins on npm</a></li>
 <li><a href="http://developer.yahoo.com/yui/" target="yui">Yahoo! User Interface Library</a></li>
-<li><a href="http://wsabstract.com/cutpastejava.shtml" target="kit">JavaScript Kit</a></li>
-<li><a href="http://www.dynamicdrive.com/" target="dynamic">Dynamic Drive</a></li>
 </ul>
 </li>
 </ul>

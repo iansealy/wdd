@@ -6,10 +6,10 @@
 <head>
 <title>XHTML and HTML5</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1516.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1516.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1617.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1617.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -41,7 +41,7 @@
 <li>but now there is also HTML5 (more later...)</li>
 </ul>
 </li>
-<li>XHTML 1.0 drafted in 1998 and finalised in 2002 and is still relatively widely used (<a href="http://try.powermapper.com/Stats/HtmlVersions" target="_blank">HTML version statistics</a>)</li>
+<li>XHTML 1.0 drafted in 1998 and finalised in 2002 and is still used (<a href="http://try.powermapper.com/Stats/HtmlVersions" target="_blank">HTML version statistics</a>)</li>
 <li>Offers advantages of XML (extensible, machine-readable, etc...), but is backwards compatible with HTML (will work on old browsers)</li>
 </ul>
 <div class="handout">
@@ -147,7 +147,7 @@
 <li>Pages aren't valid without a DOCTYPE</li>
 <li>Without a DOCTYPE (or with an invalid DOCTYPE) browsers enter quirks mode, which is slower and displays pages differently</li>
 <li><a href="http://www.alistapart.com/articles/doctype/" target="alistapart">More Information</a> and <a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="dtds">List of DOCTYPEs</a></li>
-<li>Ideally <a href="http://www.456bereastreet.com/archive/200609/no_more_transitional_doctypes_please/" target="strict">use a Strict DOCTYPE</a>, but sometimes have to use Transitional (e.g. for iframes)</li>
+<li>Ideally <a href="http://www.456bereastreet.com/archive/200609/no_more_transitional_doctypes_please/" target="strict">use a Strict DOCTYPE</a> (if you have to use XHTML rather than HTML5), but sometimes have to use Transitional (e.g. for iframes)</li>
 </ul>
 <div class="handout">
 </div>
@@ -213,7 +213,26 @@
 
 <div class="slide">
 <h1>Differences in HTML5</h1>
-<p>Some highlights:</p>
+<p>Some differences trivial, for example:</p>
+<ul>
+<li><tt>&lt;a&gt;</tt> tag (an inline tag) can wrap block elements</li>
+</ul>
+<p>In HTML 4 and XHTML, have to do:</p>
+<p><tt>&lt;h3&gt;&lt;a href=&quot;article.html&quot;&gt;Headline&lt;/a&gt;&lt;/h3&gt;</tt><br/>
+<tt>&lt;p&gt;&lt;a href=&quot;article.html&quot;&gt;Enticing introductory paragraph.&lt;/a&gt;&lt;/p&gt;</tt><br/>
+<tt>&lt;p&gt;&lt;a href=&quot;article.html&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;</tt></p>
+<p>But in HTML5, can reduce repetition:<p>
+<p><tt>&lt;a href=&quot;article.html&quot;&gt;<br/>&lt;h3&gt;Headline&lt;/h3&gt;</tt><br/>
+<tt>&lt;p&gt;Enticing introductory paragraph.&lt;/p&gt;</tt><br/>
+<tt>&lt;p&gt;Read more...&lt;/p&gt;<br/>&lt;/a&gt;</tt></p>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Differences in HTML5</h1>
+<p>Some more involved highlights:</p>
 <ul>
 <li>New elements, e.g. <tt>header</tt>, <tt>footer</tt>, <tt>nav</tt>, <tt>audio</tt>, <tt>video</tt></li>
 <li>Canvas - use JavaScript to draw graphics on the fly (<a href="http://html5demos.com/canvas" target="demos2">Example 1</a> and <a href="http://html5demos.com/canvas-grad" target="demos3">Example 2</a>)</li>
