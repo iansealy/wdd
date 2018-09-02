@@ -6,10 +6,10 @@
 <head>
 <title>Accessibility</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -29,7 +29,7 @@
 
 <div class="slide">
 <h1>Accessibility</h1>
-<h2>Kieren Pitts</h2>
+<h2>Ian Sealy</h2>
 </div>
 
 
@@ -85,12 +85,11 @@
 <ul>
 <li>Best work done by World Wide Web Consortium's Web Accessibility Initiative (WAI):<br />
 <a href="http://www.w3.org/WAI/" target="wait">http://www.w3.org/WAI/</a></li>
-<li><a href="http://www.w3.org/WAI/gettingstarted/" target="started">Getting Started: Making a Web Site Accessible</a></li>
-<li><a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist">Checklist of Checkpoints for Web Content Accessibility Guidelines</a></li>
+<li><a href="http://www.w3.org/WAI/gettingstarted/" target="started">WAI Resources on Introducing Web Accessibility</a></li>
 <li><a href="http://www.w3.org/TR/WCAG10/" target="guidelines">Web Content Accessibility Guidelines (WCAG)</a></li>
-
 <li><a href="http://www.w3.org/TR/WCAG10-TECHS/" target="techniques">Techniques for Web Content Accessibility Guidelines</a></li>
-<li><a href="http://www.w3.org/TR/WCAG10/" target="wcag1">WCAG 1.0</a> or <a href="http://www.w3.org/TR/WCAG20/" target="wcag2">WCAG 2</a>?</li>
+<li><a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist">Checklist of Checkpoints for Web Content Accessibility Guidelines</a></li>
+<li><a href="http://www.w3.org/TR/WCAG10/" target="wcag1">WCAG 1.0</a> or <a href="http://www.w3.org/TR/WCAG20/" target="wcag2">WCAG 2.0</a>?</li>
 <li><a href="http://wcagsamurai.org/" target="samurai">WCAG Samurai</a></li>
 </ul>
 <div class="handout">
@@ -129,7 +128,7 @@
 <li>Use text equivalent for all non-text content (e.g. by using alt attribute for images), including images, audio, video, animations, etc...<br />
 (Use <tt>alt=&quot;&quot;</tt> if image isn't important)</li>
 
-<li>Ensure documents can be read without stylesheet (won't look the same, but will be readable) (<a href="http://www.squarefree.com/bookmarklets/webdevel.html" target="zap">zap style sheets bookmarklet</a> or Web developer toolbar)</li>
+<li>Ensure documents can be read without stylesheet (won't look the same, but will be readable) (<a href="http://www.squarefree.com/bookmarklets/webdevel.html" target="zap">zap style sheets bookmarklet</a> or <a href="http://chrispederick.com/work/web-developer/" target="firefox">Firefox Web Developer extension</a>)</li>
 <li>Ensure information conveyed with colour is available without colour</li>
 </ul>
 <div class="handout">
@@ -155,10 +154,10 @@
 <th>Female</th>
 
 <td>8</td>
-<td style="background-color : #cccccc">37</td>
+<td style="color : #ff0000;">37</td>
 </tr>
 </table>
-<p>Significant results are shown in grey</p>
+<p>Significant results are shown in red</p>
 <div class="handout">
 </div>
 </div>
@@ -182,10 +181,10 @@
 <th>Female</th>
 
 <td>8</td>
-<td style="background-color : #cccccc">37 *</td>
+<td style="color : #ff0000;">37 *</td>
 </tr>
 </table>
-<p>Significant results are shown in grey and marked with an asterisk</p>
+<p>Significant results are shown in red and marked with an asterisk</p>
 <div class="handout">
 </div>
 </div>
@@ -193,7 +192,7 @@
 <div class="slide">
 <h1>More Priority 1</h1>
 <ul>
-<li>Avoid causing screen to flicker</li>
+<li>Avoid causing screen to <a href="http://www.dokimos.org/ajff/" target="flicker">flicker</a></li>
 
 <li>Use clearest and simplest language appropriate for site's content (mainly because of users with cognitive problems, but also because users tend to skim read Web pages)</li>
 <li>Use <tt>&lt;th&gt;</tt> to identify header cells (not <tt>&lt;td&gt;&lt;b&gt;</tt>)</li>
@@ -209,7 +208,7 @@
 <div class="slide">
 <h1>Priority 2</h1>
 <ul>
-<li>Ensure foreground and background colour provide sufficient <a href="http://www.dkenterprise.com/" target="contrast">contrast</a> (important in bright environments, not just for users with poor vision)
+<li>Ensure foreground and background colour provide sufficient <a href="http://www.corinnebaileyrae.net/" target="contrast">contrast</a> (important in bright environments, not just for users with poor vision)
 
 <table border="1" cellspacing="0" cellpadding="4">
 <tr>
@@ -294,15 +293,12 @@
 
 <li>Assess &quot;automatically&quot;
 <ul>
-<li>Use <a href="http://webxact.watchfire.com/" target="webxact">WebXACT</a> (free online)</li>
-<li>Use <a href="http://checker.atrc.utoronto.ca/" target="checker">Checker</a> (free online)</li>
-
-<li>Use <a href="http://www.cynthiasays.com/">Cynthia Says</a> (free online)</li>
+<li>Use <a href="http://checker.atrc.utoronto.ca/" target="checker">ATRC Checker</a> (free online)</li>
+<li>Use <a href="http://www.cynthiasays.com/" target="cynthia">Cynthia Says</a> (free online)</li>
 <li>Use <a href="http://aprompt.snow.utoronto.ca/" target="aprompt">A-Prompt</a> (free offline)</li>
 <li>Only semi-automatic so <strong>still</strong> need manual checks</li>
 </ul>
 </li>
-
 </ul>
 <div class="handout">
 </div>
@@ -311,16 +307,13 @@
 <div class="slide">
 <h1>Example Legal Cases</h1>
 <ul>
-<li><a href="http://www.contenu.nu/socog.html" target="socog">http://www.contenu.nu/socog.html</a></li>
-<li><a href="http://www.webstandards.org/2007/10/05/will-target-get-schooled/" target="target">http://www.webstandards.org/2007/10/05/will-target-get-schooled/</a></li>
+<li><a href="http://www.contenu.nu/socog.html" target="socog">Sydney Olympics</a></li>
+<li><a href="http://www.out-law.com/page-9389" target="target">Target</a></li>
 </ul>
 <div class="handout">
 </div>
 </div>
 
-<div class="slide">
-<h1></h1>
-</div>
 <div class="slide">
 <h1></h1>
 </div>

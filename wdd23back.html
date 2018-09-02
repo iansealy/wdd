@@ -6,10 +6,10 @@
 <head>
 <title>Background Images</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -32,52 +32,24 @@
 <h2>Jonathan Fox</h2>
 </div>
 
-
 <div class="slide">
-<h1>Background Images</h1>
-<p>It is possible in HTML to put in an image as the background of a Web page. To do this
-add the attribute <tt>background=&quot;<i>url</i>&quot;</tt> to the <tt>body</tt> tag.</p>
-<p>Example:</p>
-<p><tt>&lt;body background=&quot;backimage.gif&quot;&gt;</tt></p>
+<h1>CSS and Background Images</h1>
+<p>It is possible to add a background image to an element with CSS using the <code>background-image: url(<i>url</i>)</code> property.</p>
 <div class="handout">
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Background Images</h1>
-<p>If the image is large enough it will fill the whole of the background of the browser window. If it is smaller
-than the size of the browser window it will be tiled. Therefore, it is best to:</p>
+<h1>background-repeat</h1>
 <ul>
-<li><a href="http://csszengarden.com/?cssfile=/198/198.css&page=0" target="big background">Create an image that will fill the background window of the largest monitor</a></li>
-</ul>
-<p>or</p>
-<ul>
-<li><a href="http://csszengarden.com/?cssfile=/176/176.css&page=2" target="repeat background">Create an image that will repeat succesfully</a></li>
-</ul>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>CSS</h1>
-<p>It is also possible to insert a background image with CSS using the <tt>background-image: url(<i>url</i>)</tt> property. The background properties also give more control over the image placement.</p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>CSS</h1>
-<ul>
-<li>body { background-image: url(image.gif);}<br />
+<li><code>body { background-image: url(image.gif);}</code><br />
 Repeats image to fill the background</li>
-<li>body { background-image: url(image.gif); background-repeat: repeat-x }<br />
+<li><code>body { background-image: url(image.gif); background-repeat: repeat-x }</code><br />
 <a href="wdd23repeatx.html" target="repeatx">Repeats image horizontally in a single row</a></li>
-<li>body { background-image: url(image.gif); background-repeat: repeat-y }<br />
+<li><code>body { background-image: url(image.gif); background-repeat: repeat-y }</code><br />
 <a href="wdd23repeaty.html" target="repeaty">Repeats image vertically in a single column</a></li>
-<li>body { background-image: url(image.gif); background-repeat: no-repeat }<br />
+<li><code>body { background-image: url(image.gif); background-repeat: no-repeat }</code><br />
 <a href="wdd23norepeat.html" target="norepeat">Does not repeat image</a></li>
 </ul>
 <div class="handout">
@@ -86,11 +58,11 @@ Repeats image to fill the background</li>
 
 
 <div class="slide">
-<h1>CSS</h1>
+<h1>background-attachment</h1>
 <ul>
-<li>body { background-image: url(image.gif); background-attachment: fixed }<br />
+<li><code>body { background-image: url(image.gif); background-attachment: fixed }</code><br />
 <a href="wdd23attachment.html" target="attachment">Background image does not scroll with the page's content</a></li>
-<li>body { background-image: url(image.gif); background-attachment: scroll }<br />
+<li><code>body { background-image: url(image.gif); background-attachment: scroll }</code><br />
 <a href="wdd23scroll.html" target="scroll">Background image scrolls with the page's content</a></li>
 </ul>
 <div class="handout">
@@ -99,15 +71,15 @@ Repeats image to fill the background</li>
 
 
 <div class="slide">
-<h1>CSS</h1>
+<h1>background-position</h1>
 <p>To position a background image use the <tt>background-position</tt> property. Values for this property come in pairs and specify the distance from the left and top edges of the browser window. This distance can be specified as:</p>
 <ul>
 <li><a href="wdd23position1.html" target="position1">A percentage of the browser window</a><br />
-body { background-image: url(image.gif); background-position: 50% 50% }</li>
+<code>body { background-image: url(image.gif); background-position: 50% 50% }</code></li>
 <li><a href="wdd23position2.html" target="position2">A pixel measurement</a><br />
-body { background-image: url(image.gif); background-position: 100px 100px }</li>
+<code>body { background-image: url(image.gif); background-position: 100px 100px }</code></li>
 <li><a href="wdd23position3.html" target="position3">A keyword (top, bottom, left, right, center)</a><br />
-body { background-image: url(image.gif); background-position: center center }</li>
+<code>body { background-image: url(image.gif); background-position: center center }</code></li>
 </ul>
 <div class="handout">
 </div>

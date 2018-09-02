@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -36,7 +36,7 @@
 <div class="slide">
 <h1>CSS Positioning - setting the scene</h1>
 <p>Most Web sites use HTML tables for layout and the text formatting is achieved through the use of Cascading Style Sheets (CSS).</p>
-<p>This approach isn't really 'wrong' (assuming you check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>). However there are good reasons why you might decide against it:</p>
+<p>This approach isn't really 'wrong' (assuming you check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>). However, there are good reasons why it's less common for tables to be used for layout in modern Web development:</p>
 
 <ul>
 <li>Doesn't separate <em>presentation from content</em></li>
@@ -51,8 +51,8 @@
 
 <div class="slide">
 <h1>CSS Positioning - setting the scene</h1>
-<p>Instead of using HTML tables CSS can be used for positioning.</p>
-<p>In this session I'm going to introduce you to the basic concepts underlying CSS positioning (CSS-P) and some of the code that makes it possible. This session will not give you definitive answers/solutions to producing particular page layouts. However, it will explain how page elements 'interact' and provide code examples in addition to links to further resources.</p>
+<p>Instead of using HTML tables, CSS can be used for positioning.</p>
+<p>In this session we'll look at the basic concepts underlying CSS positioning (CSS-P) and some of the code that makes it possible.</p><p>This session will not give you definitive answers/solutions to producing particular page layouts. However, it will explain how page elements 'interact' and provide code examples in addition to links to further resources.</p>
 <div class="handout">
 </div>
 </div>
@@ -63,7 +63,7 @@
 <ul>
 <li>'Cleaner' Web pages</li>
 <li>Easy to restructure/re-skin</li>
-<li>Tables do present significant interoperability problems. For example, browsing using a mobile phone (or other device with a small screen):
+<li>Tables can present significant interoperability problems. For example, browsing using a mobile phone (or other device with a small screen):
 <br /><a href="http://www.squarefree.com/bookmarklets/validation.html#PDAize" target="pdaize">PDA-ize</a> your site.</li>
 <li>It's the future...</li>
 </ul>
@@ -195,7 +195,7 @@ them.</p>
 <li>Mozilla 1.6+, Netscape 7, Opera 6+, FireFox etc. are all very good.</li>
 <li>IE 6 is generally ok but see below. IE7 much better.</li>
 <li>Netscape 4 has very limited support. It will ignore styles rather than attempt to implement them in a lot of cases.</li>
-<li>IE 5 poses more problems than NN4 due to errors in the way IE 5 interprets the box model.</li>
+<li>IE 5 poses more problems than Netscape 4 due to errors in the way IE 5 interprets the box model. IE5 on the Mac is better than IE 5 for Windows.</li>
 </ul>
 <div class="handout">
 </div>
@@ -231,6 +231,7 @@ them.</p>
 <h1>Browser support continued</h1>
 <p>Often you see:</p>
 <p>
+
 &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/nonstandardstyles.css&quot;&gt;<br />
 
 &lt;style type=&quot;text/css&quot;&gt; <br />
@@ -309,7 +310,7 @@ them.</p>
 <p>This has also led to CSS design competitions:</p>
 <ul>
 <li><a href="http://www.cssbeauty.com/shuffle/" target="cssb">http://www.cssbeauty.com/shuffle/</a></li>
-<li><a href="http://www.westciv.com/style_master/templates/index.html" target="westciv">http://www.westciv.com/style_master/templates/index.html</a></li>
+<li><a href="http://archive.visitmix.com/2008/restyle/Default.aspx" target="visitmix">http://archive.visitmix.com/2008/restyle/Default.aspx</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -317,7 +318,14 @@ them.</p>
 
 
 <div class="slide">
-<h1>Further Reading</h1>
+<h1>Tools and Further Reading</h1>
+
+<p>If you're creating/debugging CSS-P then two invaluable tools are:</p>
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/60" target="wdt">Web Developer Toolbar</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/1843" target="firebug">Firebug</a></li>
+</ul>
+
 <p>CSS Positioning is a huge topic and this has been a very brief introduction, there are plenty of online resources available if you want to learn more. Here are a few Web sites you might find useful:</p>
 <div class="handout">
 </div>
@@ -328,10 +336,8 @@ them.</p>
 <h1>Further Reading</h1>
 <ul>
 <li><a href="http://www.brainjar.com/css/positioning/" target="brainjar">CSS Positioning [Brainjar]</a></li>
-<li><a href="http://glish.com/css/" target="glsih">CSS Layout Techniques: for Fun and Profit</a></li>
-
 <li><a href="http://www.w3.org/TR/REC-CSS2/box.html" target="boxmodel">The Box Model</a></li>
-<li><a href="http://www.w3.org/TR/REC-CSS2/" target="spec">CSS2 spec.</a></li>
+<li><a href="http://www.w3.org/TR/CSS21/" target="spec">CSS2.1 spec.</a></li>
 <li><a href="http://alistapart.com/stories/fear/" target="fear">Fear of Style Sheets</a></li>
 <li><a href="http://www.webreference.com/html/tutorial18/" target="webref">CSS Positioning - Webreference.com</a></li>
 <li><a href="http://www.w3.org/TR/REC-CSS2/media.html" target="media">CSS Media types</a></li>

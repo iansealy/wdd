@@ -6,10 +6,10 @@
 <head>
 <title>SSIs</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -39,9 +39,8 @@
 <h2>What happens when you visit a Web site</h2>
 
 <ul>
-<li>User types a URL into a browser window eg:<br />http://wdd0708.bbkweb.org/wdd41agenda.html</li>
-
-<li>Address resolved to an Internet Protocol (IP) address of server, eg: 208.97.179.65</li>
+<li>User types a URL into a browser window eg:<br />http://wdd0809.bbkweb.org/wdd41agenda.html</li>
+<li>Address resolved to an Internet Protocol (IP) address of server, eg: 208.97.174.109</li>
 <li>Web server receives the request for the page /wdd41agenda.html</li>
 <li>File sent back to browser</li>
 <li>Browser reads the file and requests subsequent ancillary files (e.g. CSS, images etc)</li>
@@ -58,9 +57,9 @@
 <ul>
 <li>Server Side Includes (SSIs) are directives/instructions that are parsed by the Web server <strong>before</strong> the page is returned to the user's Web browser.</li>
 
-<li>Main use is to separate presentation from content by storing repetitive HTML into a separate file</li>
-<li>Many Web servers support SSIs</li>
-<li>Only covering Apache, because it's the <a href="http://news.netcraft.com/archives/web_server_survey.html" target="netcraft"> most popular server</a> and DreamHost uses it</li>
+<li>Main use is to separate presentation from content by storing repetitive HTML fragments in a separate file. Each fragment can then be reused in many pages.</li>
+<li>Many Web servers support SSIs.</li>
+<li>Only covering Apache, because it's the <a href="http://news.netcraft.com/archives/web_server_survey.html" target="netcraft"> most popular server</a> and DreamHost uses it.</li>
 
 </ul>
 <div class="handout">
@@ -92,7 +91,7 @@
 <ul>
 <li>Usually you'd be able to set the format of the time using:</li>
 <li><tt>&lt;!--#config timefmt=&quot;%B %d, %Y&quot; --&gt;</tt></li>
-<li><a href="http://eis.bris.ac.uk/~cckhrb/webdev/code/ssi/ssi_syntax.htm">Time formatting codes</a></li>
+<li><a href="http://eis.bris.ac.uk/~cckhrb/webdev/code/ssi/ssi_syntax.htm"  target="timecode">Time formatting codes</a></li>
 <li>Unfortunately the above formatting doesn't work on Dreamhost so we use a .htaccess file to do the same</li>
 <li>.htaccess is just a configuration file that you put in a directory. It allows a custom configuration to be applied to a directory and any sub-directories within it.</li>
 <li>SSITimeFormat &quot;%B %d, %Y&quot;</li>
@@ -124,6 +123,28 @@
 <p>Can use either relative path (<tt>ssi/header.html</tt>) or absolute path (<tt>/ssi/footer.html</tt>)</p>
 
 <p>Only need to edit <tt>ssi/header.html</tt> and <tt>ssi/footer.html</tt> to change look and feel</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Allowing other files to include SSIs</h1>
+<ul>
+<li>Dreamhost's default setup is to only parse .shtml files for SSIs</li>
+<li>To allow other files to be parsed, create a .htaccess file which contains:
+<ul>
+<li>AddHandler server-parsed .filenametobeparsed</li>
+</ul>
+</li>
+<li>For example, to parse .html, .htm and .ssi files your .htaccess file would contain:
+<ul>
+<li>AddHandler server-parsed .html</li>
+<li>AddHandler server-parsed .htm</li>
+<li>AddHandler server-parsed .ssi</li>
+</ul>
+</li>
+</ul>
 <div class="handout">
 </div>
 </div>

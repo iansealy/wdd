@@ -4,12 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<title>Image Maps</title>
+<title>Image Replacement</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -18,7 +18,7 @@
 <div id="header"></div>
 <div id="footer">
 <h1>Web Design and Development</h1>
-<h2>Image Maps</h2>
+<h2>Image Replacement</h2>
 <div id="controls"></div>
 </div>
 
@@ -28,98 +28,99 @@
 <div class="presentation">
 
 <div class="slide">
-<h1>Image Maps</h1>
+<h1>Image Replacement</h1>
 <h2>Jonathan Fox</h2>
 </div>
 
 
 <div class="slide">
-<h1>Image Maps</h1>
-<p>An image map is an HTML feature which allows you to specify areas of an image as 'hotspots' that link to
-other pages or sites. The advantage of an image map is that you can design a <a href="http://www.amazon.co.uk" target="amazon">navigation toolbar</a> or <a href="http://cit.nih.gov/home.asp" target="cit">menu</a> as one image and use an image map to create 'hotspots'. You can also add a map to an <a href="http://ws1.richersounds.co.uk/information.php?cda=storefinder" target="richer">existing scanned image</a>.</p>
+<h1>Image Replacement</h1>
+<p>
+A number of techniques have been developed for replacing text with images in a way that separates the presentational or decorative from the content of the document using CSS.
+</p>
+
+<p>
+<a href="http://www.csszengarden.com">Example</a>
+</p>
 <div class="handout">
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Image Maps</h1>
-<p>To create an image map you need to give it a name (using the <tt>map</tt> tag and the <tt>name</tt> attribute) and specify the shape of the hotspot, its pixel coordinates and the destination of the link.</p>
-<p>Example:</p>
-<p><tt>
-&lt;map name=&quot;worldmap&quot;&gt;<br />
-&lt;area shape=&quot;rect&quot; coords=&quot;180,130,250,280&quot; href=&quot;samerica.html&quot;&gt;<br />
-&lt;area shape=&quot;rect&quot; coords=&quot;290,80,410,180&quot; href=&quot;africa.html&quot;&gt;<br />
-&lt;area shape=&quot;rect&quot; coords=&quot;500,180,580,250&quot; href=&quot;australia.htm&quot;&gt;<br />
-&lt;&#47;map&gt;
-</tt></p>
+<h1>text-indent</h1>
+<p>
+Using a combination of background-image and text-indent properties it is possible to place text out of view leaving the just the image place in the background of the element.
+</p>
+<p>
+<a href="http://www.bbk.ac.uk/~ubzm174/image_replacement.htm">Example:<a/>
+</p>
+<p><code>
+&lt;h1&gt;NYPL Online Style Guide&lt;/h1&gt;
+</code>
+</p>
+<p>
+<code>
+h1 &#123;<br />
+height: 45px;<br />
+background-image: url(styleguidehead.gif);<br />
+background-repeat: no-repeat;<br />
+text-indent:-1000em;<br />
+&#125;
+</code>
+</p>
+
+
 <div class="handout">
 </div>
 </div>
 
 
 <div class="slide">
-<h1>Image Maps</h1>
-<p>There are a number of shape options for 'hotspots'. These are:</p>
-<ul>
-<li>rect</li>
-<li>circ</li>
-<li>poly</li>
-</ul>
+<h1>Problems with text-indent</h1>
+<p>
+The disadvantage of this method is that if images are turned off in the browser but CSS is on then there will be no image and no text, just an empty space.
+</p>
+
 <div class="handout">
 </div>
 </div>
 
 
 <div class="slide">
-<h1>RECT</h1>
-<p>For rectangular shapes. The order for coordinates is: top left x and y followed by bottom right x and y.</p>
-<p>Example:</p>
-<p><tt>shape=&quot;rect&quot; coords=&quot;180,130,250,280&quot;</tt></p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>CIRC</h1>
-<p>For circular shapes. The order for coordinates is: centre x and y, radius.</p>
-<p>Example:</p>
-<p><tt>shape=&quot;circ&quot; coords=&quot;180,130,100&quot;</tt></p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>POLY</h1>
-<p>For polygon shapes. The order for coordinates is: x and y for each point/corner.</p>
-<p>Example:</p>
-<p><tt>shape=&quot;poly&quot; coords=&quot;100,120,200,220,320,400&quot;</tt></p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>USEMAP</h1>
-<p>To apply the map you have created to the image add the <tt>usemap=&quot;#<i>mapname</i>&quot;</tt> attribute to the <tt>img</tt> tag.</p>
-<p>Example:</p>
-<p><tt>&lt;img src=&quot;world.gif&quot; usemap=&quot;#worldmap&quot;&gt;</tt></p>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Problems with images maps</h1>
-<ul>
-<li>They are invisible to text-only browsers and to graphic browsers with graphics disabled</li>
-<li>Unlike HTML lists, tables or menus they are not scalable; an image map 700 pixels wide will not be
-visible on a 640 pixels wide screen</li>
-<li>The colours and text fonts are fixed, so they cannot be configured by sight-impaired users</li>
-<li>The graphics files are large</li>
-</ul>
+<h1>text-indent and span</h1>
+<p>
+This method hides the text behind the image so that when images are off and css is on the text is visible. The background image is on the empty span tags inside the h1.
+</p>
+<p>
+<a href="http://www.bbk.ac.uk/~ubzm174/image_replacement2.htm">Example:<a/>
+</p>
+<p><code>
+&lt;h1&gt;&lt;span&gt;&lt;/span&gt;NYPL Online Style Guide&lt;/h1&gt;
+</code>
+</p>
+<p>
+<code>
+h1 &#123;<br />
+position: relative;<br />
+width: 425px;<br />
+height: 50px;<br />
+overflow: hidden;<br />
+&#125;
+</code>
+</p>
+<p>
+<code>
+h1 span &#123;<br />
+position: absolute;<br />
+left: 0;<br />
+top: 0;<br />
+width: 100%;<br />
+height: 100%;<br />
+background-image: url(styleguidehead.gif);<br />
+background-repeat: no-repeat;<br />
+</code>
+</p>
 <div class="handout">
 </div>
 </div>

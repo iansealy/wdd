@@ -6,10 +6,10 @@
 <head>
 <title>Sound and Video</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -38,9 +38,9 @@
 <p>Sound and video can be effective, however they must be used with care.</p>
 <ul>
 <li>Primary purpose/visitor</li>
-<li>Attraction or Detraction</li>
+<li>Attraction or detraction</li>
 <li>Accessibility</li>
-<li>Bandwidth/filesize vs Quality</li>
+<li>Bandwidth/file size vs Quality</li>
 </ul>
 <p>There is <strong>no single solution</strong> that will suit all.</p>
 <div class="handout">
@@ -53,10 +53,10 @@
 <p>Recordings will be copyright waived or you/client hold the copyright for.</p>
 <p>Sound clips will (almost certainly) have come from:</p>
 <ul>
-<li>Live input using a Mic</li>
+<li>Live input using a Mic (e.g. podcasting)</li>
 <li>CD/DVD/DAT/MiniDisc etc</li>
 </ul>
-<p>Sound clips are usually captured onto a PC through the &quot;line in&quot; on the sound card, straight from a CD using the CD-ROM drive (or DVD using a DVD-ROM drive) or another digital input.</p>
+<p>Sound clips are usually captured onto a PC through the &quot;line in&quot; on the sound card, straight from a CD/DVD using the CD/DVD drive or another digital input.</p>
 <div class="handout">
 
 </div>
@@ -71,16 +71,18 @@ Video footage is likely to have come from one of the following sources:
 <ul>
 <li>Digital Video Camera</li>
 <li>WebCam or Digital stills camera</li>
+<li>Mobile phone</li>
 <li>TV Capture</li>
 </ul>
-<p>Video capture is usually performed using a Video capture card or FireWire and associated software (WebCams and digital cameras often use USB instead).</p>
+<p>High quality video capture is usually performed using a dedicated video capture card (or FireWire) and associated software. Lower quality video can be captured via USB or internal cameras in laptops/phones etc.</p>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
 <h1>Compression</h1>
-<p>However video or sound files are captured on to your computer one of the key things to consider is compression.<br />Further info:</p>
+<p>However video or sound files are captured on to your computer one of the key things to consider is compression.</p>
+<p>Further info:</p>
 <ul>
 <li><a href="http://web.oreilly.com/news/webaudio_1200.html" target="oreilly">Sound compression</a></li>
 <li><a href="http://www.wave-report.com/tutorials/VC.htm" target="vidcomp">Video compression</a> - quite technical</li>
@@ -98,9 +100,14 @@ Video footage is likely to have come from one of the following sources:
 <li>Wav</li>
 <li>Real Audio</li>
 <li>Midi - uses built in &quot;voices&quot; from your sound card</li>
-<li>MP3 - CD quality. Filesize (very) roughly 1Mb per minute</li>
+<li>MP3 - CD quality. File size (very) roughly 1Mb per minute</li>
 <li>WMA - Windows Media Audio</li>
 <li>Ogg Vorbis - free, open, and unpatented</li>
+</ul>
+<p>See:</p>
+<ul>
+<li><a href="http://techgage.com/article/audio_archiving_guide_part_1_-_music_formats/">Audio Archiving Guide: Part 1 - Music Formats</a></li>
+<li><a href="http://www.jiscdigitalmedia.ac.uk/audio/advice/basic-audio-editing/" target="jdm1">Basic audio editing</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -114,8 +121,8 @@ How to add sound to your pages:
 </p>
 <ol>
 <li>Downloadable sound clips</li>
-<li>Embedded sound clips</li>
-<li>Streaming Audio [<a href="http://www.webmonkey.com/00/45/index3a.html" target="stream">Further info</a>]</li>
+<li>Embedded sound clips (using an HTML tag or Flash player)</li>
+<li>Streaming Audio (covered in streaming video)</li>
 </ol>
 <p>The visitor will need relevant software or a plug-in to be able to view the file and you should provide a link to the relevant software/plug-in.</p>
 <div class="handout">
@@ -156,6 +163,7 @@ How to add sound to your pages:
 <div class="slide">
 <h1>Embedded Sound Clips</h1>
 
+<p>Embedding using the &lt;embed&gt; tag.</p>
 <p>Advantages:</p>
 <ul>
 <li>Potentially all visitors (with compatible software) will hear the sound</li>
@@ -173,7 +181,7 @@ How to add sound to your pages:
 <li>Visitors don't have a choice/may not work</li>
 <li>Uses non-standard code - your pages won't validate</li>
 <li>Bandwidth</li>
-<li>Intrusive/annoying - the music may not be to your taste</li>
+<li>Intrusive/annoying - the music may not be to your taste or the user might be listening to something else already</li>
 </ul>
 <div class="handout">
 </div>
@@ -197,17 +205,38 @@ loop=&quot;true&quot; - loops the sound</p>
 
 </div>
 
+<div class="slide">
+<h1>Using a Flash audio player</h1>
+
+<p>It's increasingly common for people to use Flash audio players in their Web pages. For example: <a href="http://www.jisc.ac.uk" target="jisc">JISC</a></p>
+
+<p>Example players</p>
+
+<ul>
+<li><a href="http://www.macloo.com/examples/audio_player/" target="audioplayer">Embedded MP3 audio player</a></li>
+<li><a href="http://flash-mp3-player.net/" target="mp3player">MP3 audio player</a></li>
+<li><a href="http://www.labnol.org/internet/design/html-embed-mp3-songs-podcasts-music-in-blogs-websites/2232/" target="goohoo">Google or Yahoo! audio player</a></li>
+<li><a href="http://ncam.wgbh.org/webaccess/ccforflash/ccmp3playermain.html" target="ccmp3player">NCAM/ccMP3Player</a></li>
+</ul>
+
+<p>Flash has its disadvantages.</p>
+
+<div class="handout">
+</div>
+
+</div>
+
 
 <div class="slide">
 <h1>Adding Video</h1>
-<p>To work with a 56K modem it will need to lose most of its original information and must be highly compressed - it will always be lower than TV footage in quality.</p>
+<p>To work with low bandwidth connections the video will lose most of its clarity and be highly compressed.</p>
 <p><a href="http://radio-canada.ca/sports/formule_un/asx/gp_GrandeBretagne.asx" target="f1">F1 footage</a></p>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>Adding Video</h1>
+<h1>Video delivery</h1>
 
 <p>
 You have two choices for making video available on the web:
@@ -220,13 +249,15 @@ You have two choices for making video available on the web:
 </div>
 </div>
 
-
 <div class="slide">
 <h1>Progressive Streaming</h1>
 
-<p>Not true streaming. The video is downloaded to the viewer's machine but the clip may begin playing before download is complete. User cannot skip ahead.</p>
+<p>Not true streaming. The video is downloaded to the viewer's computer but the clip may begin playing before download is complete. User cannot skip ahead unless that part of the movie has already downloaded.</p>
+
+<p>For example: <a href="http://thehuntforgollum.s3.amazonaws.com/trailers.htm" target="gollum">The hunt for Gollum trailer</a></p>
+
 <p>It is preferable where bandwidth is likely to be low but this can be problematic for long clips due to their file size.</p>
-<p>Common formats used for downloadable video are:-</p>
+<p>Common formats are:-</p>
 <ul>
 <li>AVI</li>
 <li>QT</li>
@@ -241,20 +272,19 @@ You have two choices for making video available on the web:
 <h1>Progressive Streaming</h1>
 <p>Two choices:</p>
 <ol>
-<li>Embedded</li>
+<li>Embedded (using an HTML tag or Flash player)</li>
 <li>Downloadable</li>
 </ol>
-<p>Whichever you choose the visitor will need relevant software or a plug-in to be able to view the file and you should also provide a link to a source of the relevant software/plug-in.</p>
+<p>The visitor will need relevant software or a plug-in to be able to view the file and you should also provide a link to a source of the relevant software/plug-in.</p>
 <div class="handout">
 </div>
 </div>
 
 
-
-
-
 <div class="slide">
 <h1>Embedded Video</h1>
+<p>Embedding using the &lt;embed&gt; tag.</p>
+
 <p>
 &lt;embed src=&quot;/video/example.mov&quot; height=&quot;100&quot; width=&quot;50&quot; controller=&quot;false&quot; autoplay=&quot;true&quot; pluginspage=&quot;http://www.apple.com/&quot; loop=&quot;true&quot;&gt;
 </p>
@@ -312,7 +342,7 @@ Issues:</p>
 <p>Real Time Streaming Protocol (RTSP) better for long clips and on LAN or broadband/high speed environments.</p>
 <p>Always requires a streaming server (additional expense/expertise).</p> 
 <p>Some ISPs offer a streaming server with their Web space.</p> 
-<p>Real Networks offers a free version of its new <a href="https://www.helixcommunity.org/" target="helix">Helix server</a>.</p> 
+<p>Real Networks offers a free version of its <a href="https://helix-server.helixcommunity.org/" target="helix">Helix server</a>.</p> 
 <p><a href="http://blog.dreamhosters.com/kbase/index.cgi?area=2128" target="dhkb">DreamHost</a> offers the <a href="http://developer.apple.com/darwin/projects/streaming/" target="darwin">Darwin streaming server</a> as part of their standard hosting package.</p> 
 
 <div class="handout">
@@ -323,12 +353,12 @@ Issues:</p>
 <div class="slide">
 <h1>Real Time Streaming 2</h1>
 <p>
-The benefits:- </p>
+The benefits:-</p>
 <ul>
 <li>Plays automatically</li>
 <li>Don't need to download whole clip before playing</li>
 <li>The clip always resides on the server (can't be downloaded easily)</li>
-<li>The visitor can jump to any part of the video without having to download the preceeding footage</li>
+<li>The visitor can jump to any part of the video without having to download the preceding footage</li>
 <li>Tries to keep pace with user's connection speed, server tries to maintain a constant connection</li>
 <li>Video for streaming does need careful preparation</li>
 <li>Video streaming can require greater processing power on the client machine</li>
@@ -356,17 +386,7 @@ Common formats are:-</p>
 </div>
 
 
-<div class="slide">
-<h1>Flash Video</h1>
-<p>Popular user generated video resources (such as <a href="http://www.youtube.com/" target="yt">YouTube</a> and <a href="http://video.google.co.uk/" target="gv">Google Video</a>) use Flash Video.</p>
 
-<p>Both services originally used progressive streaming but now appear to use real time streaming for most videos.</p>
-
-<p>Between 2005 and 2006 the amount of Flash Video (FLV) available online almost doubled to <a href="http://www.researchandmarkets.com/reports/c47246" target="research">22%</a>. The report also stated that 97% of User Generated Video (UGV) is in Flash Video format, suggesting that the growth in FLV is likely to continue.</p>
-
-<div class="handout">
-</div>
-</div>
 
 
 <div class="slide">
@@ -384,9 +404,63 @@ This causes an external player to open and connect to the streaming server, the 
 <li>Flash Player</li>
 </ul>
 
-<p>Can also embed streamed video, e.g. <a href="http://www.bized.co.uk/learn/tourism/attractions/surfing/visitor_main_stream.htm" target="bizstream">Biz/ed</a></p>
+<p>Can also embed streamed video, e.g. <a href="http://www.bized.co.uk/learn/tourism/attractions/surfing/visitor_main_stream.htm" target="bizstream">Biz/ed</a> or the <a href="http://news.bbc.co.uk/sport1/hi/motorsport/formula_one/7817881.stm" target="senna">BBC</a></p>
 <div class="handout">
 </div>
+</div>
+
+
+<div class="slide">
+<h1>Flash Video</h1>
+<p>Popular user generated video resources (such as <a href="http://www.youtube.com/" target="yt">YouTube</a> and <a href="http://www.vimeo.com/" target="vimeo">Vimeo</a>) use Flash Video.</p>
+
+<p>Both services originally used progressive streaming but now appear to use real time streaming for many videos.</p>
+
+<p>Between 2005 and 2006 the amount of Flash Video (FLV) available online almost doubled to <a href="http://www.researchandmarkets.com/reports/c47246" target="research">22%</a>. The report also stated that 97% of User Generated Video (UGV) is in Flash Video format, suggesting that the growth in FLV is likely to continue.</p>
+
+<p>Both services have HTML code you can use to embed videos but it's not always standards compliant.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Using a Flash video player</h1>
+
+<p>Again, many sites now use Flash video players: <a href="http://www.bbc.co.uk" target="bbc">BBC</a></p>
+
+<p>Example players</p>
+
+<ul>
+<li><a href="http://flowplayer.org/" target="flowplayer">Flow player</a></li>
+<li><a href="http://www.longtailvideo.com/players/jw-flv-player/" target="jw">JW FLV Media Player</a></li>
+<li><a href="http://ncam.wgbh.org/webaccess/ccforflash/ccplayermain.html" target="ccplayer">NCAM/ccPlayer</a></li>
+</ul>
+
+<p>Flash has its disadvantages.</p>
+
+<div class="handout">
+</div>
+
+</div>
+
+<div class="slide">
+<h1>Accessibility</h1>
+
+<p>There are many accessibility issues associated with providing audio and video online. Some of the issues to consider include:</p>
+
+<ul>
+<li>Which assistive technologies support the player you've chosen?</li>
+<li>Does the player have keyboard controls or is it mouse only?</li>
+<li>Providing transcripts</li>
+<li>Providing captions (subtitles for video)</li>
+</ul>
+
+<p>In general, no single solution will be accessible so providing the same information is a variety of forms is recommended. For example: <a href="http://www.bized.co.uk/learn/tourism/attractions/surfing/visitor.htm" target="bizvariety">Biz/ed</a></p>
+
+<div class="handout">
+</div>
+
 </div>
 
 
@@ -395,7 +469,9 @@ This causes an external player to open and connect to the streaming server, the 
 
 <ul>
 <li><a href="http://realdev1.realise.com/rossa/rendertest/quicktime.html" target="standardembed">A standards compliant way of embedding video</a></li>
-<li><a href="http://www.webstandards.org/2006/08/15/valid-flash-video-and-audio-embed-object-markup/" target="stanflv">Valid Flash, video, and audio embed (object) markup</a></li>
+<li><a href="http://www.webstandards.org/2006/08/15/valid-flash-video-and-audio-embed-object-markup/" target="stanflv">Valid Flash, video, and audio embed (object) mark-up</a></li>
+<li><a href="http://www.longtailvideo.com/support/tutorials/Making-Video-Accessible" target="accessvid">Making video accessible</a></li>
+<li><a href="http://www.rnib.org.uk/xpedio/groups/public/documents/PublicWebsite/public_audioandvideo.hcsp" target="rnib">Accessibility of audio and video</a></li>
 <li><a href="http://www.soundscreen.com/streaming/compress_hint.html" target="hint">Compressing and hinting media</a></li>
 <li><a href="http://www.adobe.com/devnet/flash/video.html" target="flashvid">Flash Video Technology Centre</a></li>
 <li><a href="http://www.mediacollege.com/video/streaming/overview.html" target="mediacoll">How to create streaming video</a></li>

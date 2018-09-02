@@ -6,10 +6,10 @@
 <head>
 <title>Server Log Analysis</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -29,7 +29,7 @@
 
 <div class="slide">
 <h1>Server Log Analysis</h1>
-<h2>Kieren Pitts</h2>
+<h2>Ian Sealy</h2>
 </div>
 
 <div class="slide">
@@ -40,10 +40,10 @@
 <li>Example:</li>
 </ul>
 <tt><small>
-82.12.247.237 - - [22/Jun/2008:12:57:04 -0700] &quot;GET / HTTP/1.1&quot; 200 1585 &quot;-&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;<br /><br />
-82.12.247.237 - - [22/Jun/2008:12:57:05 -0700] &quot;GET /style.css HTTP/1.1&quot; 200 574 &quot;http://wdd0708.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;<br /><br />
-82.12.247.237 - - [22/Jun/2008:12:57:03 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 200 2811 &quot;http://wdd0708.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;<br /><br />
-82.12.247.237 - - [22/Jun/2008:12:57:10 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1884 &quot;http://wdd0708.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4) Gecko/20061201 Firefox/2.0.0.4 (Ubuntu-feisty)&quot;
+87.194.170.167 - - [05/Jun/2009:10:30:32 -0700] &quot;GET / HTTP/1.1&quot; 200 1564 &quot;-&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042513 Ubuntu/8.04 (hardy) Firefox/3.0.10&quot;<br /><br />
+87.194.170.167 - - [05/Jun/2009:10:30:32 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 278 &quot;http://wdd0809.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042513 Ubuntu/8.04 (hardy) Firefox/3.0.10&quot;<br /><br />
+87.194.170.167 - - [05/Jun/2009:10:30:33 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 280 &quot;http://wdd0809.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042513 Ubuntu/8.04 (hardy) Firefox/3.0.10&quot;<br /><br />
+87.194.170.167 - - [05/Jun/2009:10:30:38 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1827 &quot;http://wdd0809.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.10) Gecko/2009042513 Ubuntu/8.04 (hardy) Firefox/3.0.10&quot;
 </small></tt>
 <div class="handout">
 </div>
@@ -52,8 +52,8 @@
 <div class="slide">
 <h1>Example Logs</h1>
 <ul>
-<li>www.survey.bris.ac.uk log</li>
-<li><a href="http://www.amentsoc.org/" target="aes">Amateur Entomologists' Society</a> log</li>
+<li>http://wdd0809.bbkweb.org/ log</li>
+<li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li
 <li>Too much information, so must use a log analysis tool</li>
 </ul>
 <div class="handout">
@@ -190,7 +190,7 @@
 <ul>
 <li><a href="http://www.goldmark.org/netrants/webstats/" target="goldmark">Why web usage statistics are (worse than) meaningless</a></li>
 <li><a href="http://www.ario.ch/etc/webstats.html" target="interpret">Interpreting WWW statistics</a></li>
-<li><a href="http://www.seomoz.org/blog/how-reliable-is-google-analytics" target="garel">How reliable is google analytics</a></li>
+<li><a href="http://www.seomoz.org/blog/how-reliable-is-google-analytics" target="garel">How reliable is Google Analytics</a></li>
 <li>In general, ignore the individual figures and <strong>focus on the trends</strong>.</li>
 </ul>
 <div class="handout">

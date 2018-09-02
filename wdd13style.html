@@ -6,10 +6,10 @@
 <head>
 <title>Cascading Stylesheets</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0708.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0708.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd0809.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd0809.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -29,7 +29,7 @@
 
 <div class="slide">
 <h1>Cascading Stylesheets</h1>
-<h2>Kieren Pitts</h2>
+<h2>Ian Sealy</h2>
 </div>
 
 
@@ -46,6 +46,9 @@
 <ul>
 <li>Tables</li>
 <li>Content as image (e.g. <a href="http://www.star-tracking.com/" target="image">http://www.star-tracking.com/</a>)</li>
+<li>blockquote</li>
+<li>&lt;p&gt;&amp;nbsp;&lt;/p&gt;</li>
+<li>&lt;br&gt;&lt;br&gt;</li>
 <li>Spacers (transparent single pixel image)</li>
 </ul>
 </li>
@@ -253,9 +256,39 @@ p { text-transform : capitalize; }</tt></li>
 <tt>p { text-decoration : underline; }<br />
 p { text-decoration : overline; }<br />
 p { text-decoration : none; }<br />
-p { text-decoration : line-through; }<br />
-p { text-decoration : blink; }<br /></tt></li>
+p { text-decoration : line-through; }</tt></li>
 </ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Box Model</h1>
+<p>Every element on a page is a rectangular <a href="http://www.w3.org/TR/CSS21/box.html" target="box">box</a> with the content surrounded by padding, then a border and then a margin.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Border Properties</h1>
+<p><tt>p { border-top-width : 3px; }<br />
+p { border-width : 1px; }<br />
+p { border-right-color : red; }<br />
+p { border-color : blue; }<br />
+p { border-bottom-style : solid; }<br />
+p { border-style : dashed; }<br />
+p { border : 1px solid red; }</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Padding Properties</h1>
+<p><tt>p { padding-left : 50px; }<br />
+p { padding-right : 20%; }<br />
+p { padding-top : 50px; }<br />
+p { padding-bottom : 3em; }<br />
+p { padding : <i>top right bottom left</i>; }</tt></p>
 <div class="handout">
 </div>
 </div>
@@ -265,7 +298,7 @@ p { text-decoration : blink; }<br /></tt></li>
 <p><tt>p { margin-left : 50px; }<br />
 p { margin-right : 20%; }<br />
 p { margin-top : 50px; }<br />
-p { margin-bottom : 3cm; }<br />
+p { margin-bottom : 3em; }<br />
 p { margin : <i>top right bottom left</i>; }</tt></p>
 <div class="handout">
 </div>
@@ -304,8 +337,20 @@ p { margin : <i>top right bottom left</i>; }</tt></p>
 </div>
 
 <div class="slide">
+<h1>Descendant Selectors</h1>
+<p>Descendant selectors are a great way to avoid repetition.</p>
+<p><tt>li.nav { font-weight : bold }</tt></p>
+<p><tt>&lt;ul&gt;<br />&lt;li class=&quot;nav&quot;&gt;Home&lt;/li&gt;<br />&lt;li class=&quot;nav&quot;&gt;About Us&lt;/li&gt;<br />&lt;/ul&gt;</tt></p>
+<p>could instead be:</p>
+<p><tt>ul.nav li { font-weight : bold }</tt></p>
+<p><tt>&lt;ul class=&quot;nav&quot;&gt;<br />&lt;li&gt;Home&lt;/li&gt;<br />&lt;li&gt;About Us&lt;/li&gt;<br />&lt;/ul&gt;</tt></p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
 <h1>CSS Support</h1>
-<p>New Web browsers (IE6&amp;7, Netscape 7+, Opera 7+, Mozilla, Firefox) have good CSS support, but older browsers don't.</p>
+<p>New Web browsers (IE6&amp;7, Netscape 7+, Opera 7+, Mozilla, Firefox, Safari, Google Chrome) have good CSS support, but older browsers don't.</p>
 <p>Sites that use CSS should always be <strong>thoroughly</strong> tested on a range of browsers (i.e. different types of browser and different versions of each type of browser).</p>
 <div class="handout">
 </div>
