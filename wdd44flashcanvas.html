@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Canvas example 1</title>
+</head><body>
+
+<canvas id="mypicture" width="150" height="150"></canvas>
+
+<script type="text/javascript">
+var c=document.getElementById("mypicture");
+var cxt=c.getContext("2d");
+cxt.fillStyle="#0D8DAD";
+cxt.beginPath();
+cxt.arc(75,75,30,0,Math.PI*2,true);
+cxt.closePath();
+cxt.fill();
+</script> 
+</body>
+</html>

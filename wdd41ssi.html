@@ -6,10 +6,10 @@
 <head>
 <title>SSIs</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,8 +40,9 @@
 
 <ol>
 <li>All machines on the Internet use an Internet Protocol (IP) address to refer to each other eg: 69.163.195.90</li>
-<li>User types a URL in to a browser address bar or follows a link eg:<br />http://wdd0910.bbkweb.org/wdd41agenda.html</li>
-<li>Browser refers to Domain Name Servers to convert wdd0910.bbkweb.org in to an IP address</li>
+
+<li>User types a URL in to a browser address bar or follows a link eg:<br />http://wdd1011.bbkweb.org/wdd41agenda.html</li>
+<li>Browser refers to Domain Name Servers to convert wdd1011.bbkweb.org in to an IP address</li>
 <li>The IP address is for the server hosting the web site
 	<ul>
 	<li>What's a server? Hardware or software?</li>
@@ -62,6 +63,7 @@
 	<ul>
 		<li>CSS</li>
 		<li>Images</li>
+
 		<li>JavaScript files</li>
 	</ul>
 </li>
@@ -80,9 +82,11 @@
 <li>Server Side Includes (SSIs) are directives/instructions within a web page that are <em>parsed</em> by the Web server <strong>before</strong> the page is returned to the browser.</li>
 
 <li>Used to separate presentation from content by storing repetitive HTML fragments in a separate file. Each fragment can then be used in many pages.</li>
+<li>HTML fragments don't have to represent valid HTML themselves - when combined with the rest of the page the page will be valid HTML.</li>
 <li>Many Web servers support SSIs.</li>
 <li>Only covering <a href="http://httpd.apache.org/" target="apache">Apache</a> because it's the <a href="http://news.netcraft.com/archives/web_server_survey.html" target="netcraft"> most popular Web server</a> and DreamHost uses it.</li>
-<li>You need a web server, SSIs won't be included if files are viewed offline.</li>
+
+<li>You need a web server, SSIs won't be included if files are viewed <strong>offline</strong>.</li>
 </ul>
 <div class="handout">
 </div>
@@ -94,11 +98,13 @@
 <h1>Parsed Files and Syntax</h1>
 <ul>
 <li>Many file types can parsed for SSIs</li>
-<li>Since parsing a file is more work for the server, files to be parsed are often identified by file extension with .shtml being common (e.g. <a target="dreamhost" href="http://wiki.dreamhost.com/index.php/KB_/_Web_Programming_/_CGI%2C_PHP_%26_Databases_/_SSI:_Server-Side_Includes">DreamHost</a>)</li>
+<li>Since parsing a file is more work for the server, files to be parsed are often identified by file extension with .shtml being common (e.g. <a target="dreamhost" href="http://blog.dreamhosters.com/kbase/index.cgi?area=174">DreamHost</a>)</li>
+
 <li>Basic syntax:<br /><tt>&lt;!--#element attribute=value --&gt;</tt></li>
 <li>Example:<br /><tt>&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</tt></li>
 <li><tt>&lt;!--#echo var=&quot;LAST_MODIFIED&quot; --&gt;</tt></li>
 <li><tt>&lt;!--#echo var=&quot;DATE_GMT&quot; --&gt;</tt></li>
+
 </ul>
 <div class="handout">
 </div>
@@ -111,7 +117,8 @@
 <ul>
 <li>Usually you'd be able to set the format of the time using:</li>
 <li><tt>&lt;!--#config timefmt=&quot;%B %d, %Y&quot; --&gt;</tt></li>
-<li><a href="http://eis.bris.ac.uk/~cckhrb/webdev/code/ssi/ssi_syntax.htm" target="timecode">Time formatting codes</a></li>
+
+<li><a href="http://www.comptechdoc.org/independent/web/cgi/ssimanual/ssitime.html" target="timecode">Time formatting codes</a></li>
 <li>Unfortunately the above formatting doesn't work on Dreamhost so we use a .htaccess file to do the same</li>
 </ul>
 <div class="handout">
@@ -124,9 +131,10 @@
 <ul>
 <li>.htaccess is just a configuration file that you put in a directory. It allows a custom configuration to be applied to a directory and any sub-directories within it.</li>
 <li>SSITimeFormat &quot;%B %d, %Y&quot;</li>
+
 <li>Files beginning with a . may be hidden in your FTP client so you may need to configure it to display hidden files. You may also have to upload the file as htaccess.txt (for example) and then rename it to .htaccess</li>
 <li>.htaccess files are very powerful, we'll meet them again later in the course</li>
-<li>Word of warning - if you get the syntax of a directive within an .htaccess file wrong you'll probably receive a server error. Web servers are very fault intolerant.</li>
+<li>Word of warning - if you get the syntax of a directive within an .htaccess file wrong you'll probably receive a server error. Web servers are <strong>very</strong> fault intolerant.</li>
 </ul>
 <div class="handout">
 </div>
@@ -137,6 +145,7 @@
 <div class="slide">
 <h1>Separation of Content and Presentation</h1>
 <p>Most common use for SSIs</p>
+
 <p>Example file:</p>
 <tt>
 &lt;!--#include virtual=&quot;ssi/header.html&quot; --&gt;
@@ -144,12 +153,15 @@
 &lt;p&gt;Content&lt;/p&gt;
 <br />
 &lt;!--#include virtual=&quot;/ssi/footer.html&quot; --&gt;
+
 </tt>
 
 <p>Need to create <tt>header.html</tt> and <tt>footer.html</tt> in <tt>ssi</tt> subdirectory</p>
 <p>Can use either relative path (<tt>ssi/header.html</tt>) or absolute path (<tt>/ssi/footer.html</tt>)</p>
 
 <p>Only need to edit <tt>ssi/header.html</tt> and <tt>ssi/footer.html</tt> to change look and feel</p>
+
+<p>File extension is not important, common extensions are .html, .ssi or .txt</p>
 <div class="handout">
 </div>
 </div>
@@ -157,6 +169,7 @@
 <div class="slide">
 
 <h1>Allowing other files to include SSIs</h1>
+
 <ul>
 <li>Dreamhost's default setup is to only parse .shtml files for SSIs</li>
 <li>To allow other files to be parsed, create a .htaccess file which contains:
@@ -169,9 +182,10 @@
 <li>AddHandler server-parsed .html</li>
 <li>AddHandler server-parsed .htm</li>
 <li>AddHandler server-parsed .ssi</li>
+
 </ul>
 </li>
-<li><em>Remember</em>, using SSIs means you have to view your pages online.</li> 
+<li><em>Remember</em>, using SSIs means you have to <strong>view your pages online</strong>.</li> 
 </ul>
 <div class="handout">
 </div>
@@ -182,6 +196,7 @@
 <h1>PHP</h1>
 <ul>
 <li>PHP: Hypertext preprocessor - covered in greater detail later in WDD4.</li>
+
 <li>PHP is a scripting language used to create dynamic web pages.</li>
 <li>User accesses: http://www.example.com/foo.php
 <ul>
@@ -191,6 +206,7 @@
 </ul>
 </li>
 </ul>
+
 <div class="handout">
 </div>
 </div>
@@ -203,9 +219,11 @@
 <li>Syntax:
 <ul>
 	<li>&lt;?php include(&quot;example.php&quot;); ?&gt;</li>
+
 	<li>Included file can contain HTML or PHP code</li>
 	<li>If PHP code, use &lt;?php and ?&gt; in include file</li>
 	<li><tt>require</tt> is almost identical to <tt>include</tt> but <tt>require</tt> generates a fatal error if there's an error and the script will stop. <tt>include</tt> generates a warning and the script still runs.</li>
+
 </ul>
 </li>
 </ul>
@@ -216,11 +234,9 @@
 <div class="slide">
 <h1>PHP include example</h1>
 
-
-
-
 <ul>
 <li>PHP includes are very similar to SSIs but used in PHP files.</li>
+
 <li>Syntax:
 <ul>
 	<li>&lt;?php include(&quot;example.php&quot;); ?&gt;</li>
@@ -230,6 +246,34 @@
 </li>
 </ul>
 <div class="handout">
+
+</div>
+</div>
+
+<div class="slide">
+<h1>PHP include example 2</h1>
+
+<p>example.php</p>
+
+<tt>
+&lt;h1&gt;Hi there!&lt;/h1&gt;<br />
+&lt;?php<br />
+$name = &quot;Kieren&quot;;<br />
+echo (&quot;&lt;p&gt;Hi $name&lt;/p&gt;&quot;);<br />
+include(&quot;var.php&quot;);<br />
+echo (&quot;&lt;p&gt;Hi $name&lt;/p&gt;&quot;);<br />
+?&gt;<br />
+&lt;?php include(&quot;footer.ssi&quot;); ?&gt;
+</tt>
+
+<p>var.php</p>
+
+<tt>
+$name = &quot;Ian&quot;;
+</tt>
+
+<div class="handout">
+
 </div>
 </div>
 

@@ -6,10 +6,10 @@
 <head>
 <title>Database-Backed Web Sites</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -42,6 +42,7 @@
 <li>Data processed ready to be displayed</li>
 <li>No matter how many records you have, processed in the same way</li>
 </ul>
+</li>
 <li>Easier to repurpose/reuse data in different forms [<a href="http://www.amentsoc.org/events/" target="aesevents">AES events example</a>]</li>
 <li>Greater functionality [<a href="http://www.bized.co.uk/dataserv/penndata/pennhome.htm" target="bizeddata">Biz/ed Penn data example</a>]</li>
 </ul>
@@ -120,7 +121,7 @@ Add id column, int, make key, auto_increment and not null
 movie_id  	int(11)
 ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
 
-http://kierenpitts.wdd0910.bbkweb.org/
+http://kierenpitts.wdd1011.bbkweb.org/
 
 WP stuff
 
@@ -140,7 +141,7 @@ bbkwptest
 <ul>
 <li>Empty database already created on Dreamhost
 <ul>
-<li>Database: bbkdemo2010</li>
+<li>Database: bbkdemo2011</li>
 <li>Admin user: kierenpitts</li>
 <li>Script user: movies</li>
 </ul>
@@ -157,7 +158,7 @@ bbkwptest
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd0910-mysql.bbkweb.org" target="phpmy2">wdd0910-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1011-mysql.bbkweb.org" target="phpmy2">wdd1011-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
@@ -178,8 +179,8 @@ bbkwptest
 set_include_path('/home/kierenpitts/.pear/home/kierenpitts/pear/php');
 require_once 'MDB2.php';
 
-$dbh = 'mysql://movies:movies@wdd0910-mysql.bbkweb.org/bbkdemo2010';
-$mdb2 =& MDB2::factory($dbh);
+$dbh = 'mysql://movies:movies@wdd1011-mysql.bbkweb.org/bbkdemo2011';
+$mdb2 =&amp; MDB2::factory($dbh);
 
 if (PEAR::isError($mdb2)) {
     echo ($mdb2-&gt;getMessage().' - '.$mdb2-&gt;getUserinfo());
@@ -215,8 +216,8 @@ print &quot;&lt;/ul&gt;\n&quot;;
 set_include_path('/home/kierenpitts/.pear/home/kierenpitts/pear/php');
 require_once 'MDB2.php';
 
-$dbh = 'mysql://movies:movies@wdd0910-mysql.bbkweb.org/bbkdemo2010';
-$mdb2 =& MDB2::factory($dbh);
+$dbh = 'mysql://movies:movies@wdd1011-mysql.bbkweb.org/bbkdemo2011';
+$mdb2 =&amp; MDB2::factory($dbh);
 
 if (PEAR::isError($mdb2)) {
     echo ($mdb2-&gt;getMessage().' - '.$mdb2-&gt;getUserinfo());
@@ -263,6 +264,60 @@ while ($row = $result-&gt;fetchRow()) {
 </div>
 </div>
 
+<div class="slide">
+<h1>Web application frameworks</h1>
+<ul>
+<li>Common/modern way to do Web development</li>
+<li>Rapid application development - provide libraries for common tasks. For example:
+	<ul>
+	<li>Database access</li>
+	<li>Templating</li>
+	<li>Data validation</li>
+	<li>Authentication/session management</li>
+	</ul>
+</li>
+<li>Most frameworks use the model-view-controller (MVC) pattern
+	<ul>
+	<li>model - maintaining the data</li>
+	<li>view - displaying the data</li>
+	<li>controller - controls events that affect data or display of data</li>
+        </ul>
+</li>
+<li>Examples: <a href="http://framework.zend.com/" target="zend">Zend</a> (PHP), <a href="http://symfony.com/" target="symfony">Symfony</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://www.catalystframework.org/" target="catalyst">Catalyst</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Useful tools</h1>
+<ul>
+<li>Integrated Development Environment
+	<ul>
+	<li>code editor</li>
+	<li>debugger</li>
+	<li>compiler/interpreter</li>
+	<li>source control</li>
+	</ul>
+</li>
+<li>Example IDEs: <a href="http://www.eclipse.org/" target="eclipse">Eclipse</a>, <a href="http://www.activestate.com/komodo-edit" target="komodo">Komodo Edit</a></li>
+<li>Database managment tools
+	<ul>
+	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmyad">phpMyAdmin</a></li>
+	<li><a href="http://wb.mysql.com/" target="mysqlwb">MySQL Workbench</a></li>
+	<li>Command line tool</li>
+	</ul>
+</li>
+<li>Source control
+	<ul>
+	<li><a href="http://subversion.tigris.org/" target="svn">Subversion</a></li>
+	<li><a href="http://git-scm.com/" target="git">Git</a></li>
+	</ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
 
 <div class="slide">
 <h1>Reading</h1>
@@ -275,44 +330,6 @@ while ($row = $result-&gt;fetchRow()) {
 <div class="handout">
 </div>
 </div>
-
-<div class="slide">
-<h1>Demo install of WordPress</h1>
-<ul>
-<li>Popular blogging software</li>
-<li>Current version is <a href="http://wordpress.org/download/" target="wp3">WordPress 3.0</a></li>
-<li>Using MySQL database
-<ul>
-<li>Database: bbkdemo2010wp</li>
-<li>MySQL hostname: wdd0910-mysql.bbkweb.org</li>
-<li>User: bbkwptest</li>
-</ul>
-</li>
-<li>Famous <a href="http://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Install" target="5min">5 min install</a></li>
-</ul>
-<div class="handout">
-</div>
-</div>
-
-
-<div class="slide">
-<h1>Demo install of Drupal</h1>
-<ul>
-<li>Popular Content Management Software</li>
-<li>Current version is <a href="http://drupal.org/project/drupal" target="dp6">Drupal 6.17</a></li>
-<li>Using MySQL database
-<ul>
-<li>Database: bbkotherdemo2010</li>
-<li>MySQL hostname: wdd0910-mysql.bbkweb.org</li>
-<li>User: bbkothertest</li>
-</ul>
-</li>
-<li>Read INSTALL.txt for installation instructions.</li>
-</ul>
-<div class="handout">
-</div>
-</div>
-
 
 
 <div class="slide">

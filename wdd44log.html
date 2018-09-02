@@ -6,10 +6,10 @@
 <head>
 <title>Server Log Analysis</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,11 +40,10 @@
 <li>Example:</li>
 </ul>
 <tt><small>
-87.194.170.167 - - [09/Jul/2010:06:05:30 -0700] &quot;GET / HTTP/1.1&quot; 200 1512 &quot;-&quot; &quot;Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4&quot;<br /><br />
-87.194.170.167 - - [09/Jul/2010:06:05:30 -0700] &quot;GET /style.css HTTP/1.1&quot; 200 490 &quot;http://wdd0910.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4&quot;<br /><br />
-87.194.170.167 - - [09/Jul/2010:06:05:30 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 200 2727 &quot;http://wdd0910.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4&quot;<br /><br />
-87.194.170.167 - - [09/Jul/2010:06:05:31 -0700] &quot;GET /favicon.ico HTTP/1.1&quot; 200 1686 &quot;-&quot; &quot;Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4&quot;<br /><br />
-87.194.170.167 - - [09/Jul/2010:06:05:46 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1670 &quot;http://wdd0910.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4&quot; 
+87.194.170.167 - - [01/Jul/2011:13:33:50 -0700] &quot;GET / HTTP/1.1&quot; 200 1474 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;<br /><br />
+87.194.170.167 - - [01/Jul/2011:13:33:50 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 171 &quot;http://wdd1011.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;<br /><br />
+87.194.170.167 - - [01/Jul/2011:13:33:50 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 173 &quot;http://wdd1011.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;<br /><br />
+87.194.170.167 - - [01/Jul/2011:13:33:55 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1737 &quot;http://wdd1011.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.60 Safari/534.30&quot;
 </small></tt>
 <div class="handout">
 </div>
@@ -53,8 +52,8 @@
 <div class="slide">
 <h1>Example Logs</h1>
 <ul>
-<li>http://wdd0910.bbkweb.org/ log</li>
-<li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li
+<li>http://wdd1011.bbkweb.org/ log</li>
+<li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li>
 <li>Too much information, so must use a log analysis tool</li>
 </ul>
 <div class="handout">
@@ -161,9 +160,19 @@
 </div>
 
 <div class="slide">
+<h1>Therefore</h1>
+<ul>
+<li>In general, ignore the individual figures and focus on the trends</li>
+<li>Set goals and measure performance against those goals</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
 <h1>Remote Logging</h1>
 <ul>
-<li>If can't access server logs then often use remote logging</li>
+<li>If can't access server logs (or want something easier) then often use remote logging</li>
 <li>Involves embedding HTML for an inline image hosted by a third party</li>
 <li>Third party counts accesses to this image and presents graphical report</li>
 <li><a href="http://www.exploit-lib.org/issue5/software-used/" target="exploit">Article and example reports</a></li>
@@ -184,17 +193,6 @@
 </div>
 </div>
 
-<div class="slide">
-<h1>Further Info</h1>
-<ul>
-<li><a href="http://www.goldmark.org/netrants/webstats/" target="goldmark">Why web usage statistics are (worse than) meaningless</a></li>
-<li><a href="http://www.ario.ch/etc/webstats.html" target="interpret">Interpreting WWW statistics</a></li>
-<li><a href="http://www.seomoz.org/blog/how-reliable-is-google-analytics" target="garel">How reliable is Google Analytics</a></li>
-<li>In general, ignore the individual figures and <strong>focus on the trends</strong>.</li>
-</ul>
-<div class="handout">
-</div>
-</div>
 <div class="slide">
 <h1></h1>
 </div>

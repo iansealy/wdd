@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -58,7 +58,8 @@
 <ul>
 <li>Instead of using HTML tables, CSS can be used for positioning.</li>
 <li>In this session we'll look at the basic concepts underlying CSS positioning (CSS-P) and some of the code that makes it possible.</li>
-<li>This session will not give you definitive answers/solutions to producing particular page layouts. However, it will explain how page elements 'interact' and provide code examples in addition to links to further resources.</li>
+<li>This session will not give you definitive answers/solutions to producing particular page layouts. It will provide code examples and explain how page elements 'interact'.</li>
+<li>CSS-P can be complex, confusing and frustrating to start with. Don't lose heart but keep practising.</li>
 </ul>
 <div class="handout">
 </div>
@@ -69,14 +70,14 @@
 <h1>Why use CSS positioning?</h1>
 <ul>
 <li>'Cleaner' Web pages</li>
-<li>Easier to work with</li>
+<li>Easier to work with as presentation and content are separate</li>
 <li>Easier to restructure/re-skin</li>
 <li>Tables can present significant interoperability problems. For example, browsing using a mobile phone (or other device with a small screen):
 <ul>
 <li><a href="http://www.squarefree.com/bookmarklets/validation.html#PDAize" target="pdaize">PDA-ize</a> your site.</li>
 </ul>
 </li>
-<li>It's the future...</li>
+<li>It's the <em>Web standards way</em>...</li>
 </ul>
 <div class="handout">
 </div>
@@ -191,20 +192,27 @@ them.</p>
 <h1>More complex CSS positioning 3</h1>
 <p>Most of the examples so far have demonstrated how elements can be arranged using <em>static</em> positioning and floats.</p>
 
-<p>There are four positioning methods:</p>
+<p>However, there are four positioning schemes (elements can only have one):</p>
 
 <ul>
 <li>Static - normal page layout rules</li>
-<li>Relative - position relative to self</li>
-<li>Absolute - position relative to the parent box/container</li>
-<li>Fixed</li>
+<li>Relative - positioned relative to where the box would normally appear</li>
+<li>Absolute - positioned relative to the parent box/container</li>
+<li>Fixed - the same as absolute except positioned relative to the browser window</li>
 </ul>
 
-<p>In this example Box 2 has an additional attribute of <em>margin-left : 250px</em> and Box 2 has attributes of <em>width : 100px; margin-top : 40px</em> and both boxes have been positioned absolutely (<em>position : absolute;</em>).</p>
+<p>When using relative, absolute or fixed schemes boxes can have four offsets: top, right, bottom and left.</p>
 
-<p><a href="wdd14cssps4.html" target="cssps4">Example and source code</a></p>
+<div class="handout">
+</div>
+</div>
 
-<p>Absolute positioning can lead to overlapping of elements.</p>
+
+<div class="slide">
+<h1>Absolute positioning</h1>
+
+<p>In <a href="wdd14cssps4.html" target="cssps4">this example</a> Box 2 has an additional attribute of <em>left : 250px</em> and Box 2 has attributes of <em>width : 100px; top : 40px</em> and both boxes have been positioned absolutely (<em>position : absolute;</em>).</p>
+<p>Positioning can lead to overlapping of elements.</p>
 
 <div class="handout">
 </div>
@@ -217,7 +225,7 @@ them.</p>
 <ul>
 <li>Current versions of Firefox, Safari, Chrome, Mozilla, Opera are all very good.</li>
 <li>IE6 is poor. IE7 and IE8 are good.</li>
-<li>IE5 poses problems due to errors in the way IE5 interprets the box model. IE5 on the Mac is better than IE5 for Windows in this respect but is still poor.</li>
+<li>If you know your audience still use it... IE5 poses problems due to errors in the way IE5 interprets the box model. IE5 on the Mac is better than IE5 for Windows but is still poor.</li>
 </ul>
 <div class="handout">
 </div>
@@ -298,9 +306,9 @@ them.</p>
 
 <div class="slide">
 <h1>Simplifying mark-up</h1>
-<p>If CSS is being used to control positioning and the design of the page then the content is usually very simple mark-up.</p>
+<p>If CSS is being used to control presentation then the content is usually very simple mark-up.</p>
 
-<p>In the previous slides you saw how sections could be moved around the Web page using CSS. If you move the CSS out into an external style sheet then your page will have uncomplicated mark-up.</p>
+<p>In the previous slides you saw how sections could be moved around the Web page using (inline) CSS. If you move the CSS out into an external style sheet then your page will have uncomplicated mark-up.</p>
 
 <p>Let's compare the two versions of the course Web site:</p>
 <p><a href="/" target="tablecomp">Tables-based design</a>: 50 lines, 2.67Kb, 70 tags.<br />
@@ -347,26 +355,37 @@ them.</p>
 <li>Develop in a browser with good support for Web standards:
 <ul>
 <li>Firefox, Safari, Chrome</li>
+<li>Don't develop in any version of IE</li>
 </ul>
 </li>
 <li>Then test in IE7 and 8 (6 if you know your audience will use it)</li>
 <li>Edit your CSS and retest</li>
+<li>Avoid mixing positioning types as much as possible. I tend to work with static (browser default) positioned elements and then use floats. I avoid absolute positioning.</li>
 </ul>
 </li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Trouble shooting</h1>
+<ul>
 <li>What to do when something goes awry:
 <ul>
-<li>Validate... validate... validate
+<li>The <em>Golden Rule</em>: Validate... validate... validate
 <ul>
 <li>HTML &amp; CSS</li>
 </ul>
 </li>
+<li>Remember the box model</li>
 <li>Two invaluable tools:
 <ul>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/60" target="wdt">Web Developer Toolbar</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/1843" target="firebug">Firebug</a></li>
 </ul>
 </li>
-<li>Remember the box model</li>
 <li>Use CSS hacks as a <strong>last</strong> resort</li>
 </ul>
 </li>
@@ -382,14 +401,16 @@ them.</p>
 <h1>Further Reading</h1>
 <p>CSS Positioning is a huge topic and this has been a very brief introduction.</p>
 <ul>
+<li><a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/" target="tensteps">Learn CSS Positioning in ten steps</a></li>
 <li><a href="http://www.brainjar.com/css/positioning/" target="brainjar">CSS Positioning [Brainjar]</a></li>
 <li><a href="http://www.w3.org/TR/REC-CSS2/box.html" target="boxmodel">The Box Model</a></li>
 <li><a href="http://www.w3schools.com/css/css_positioning.asp" target="w3school">CSS Positioning - W3Schools</a></li>
+<li><a href="http://www.alistapart.com/articles/css-positioning-101/" target="alist">CSS Positioning 101 - A List Apart</a></li>
 <li><a href="http://www.elated.com/articles/css-positioning/" target="elated">CSS Positioning - Elated.com</a></li>
 <li><a href="http://www.w3.org/TR/CSS21/" target="spec">CSS2.1 spec.</a></li>
 <li><a href="http://www.w3.org/TR/REC-CSS2/media.html" target="media">CSS Media types</a></li>
 <li><a href="http://www.digital-web.com/articles/web_design_101_positioning/" target="posother">Web design 101: Positioning</a></li>
-<li><a href="http://www.alistapart.com/articles/goingtoprint/" target="print">CSS Design - Going to Print</a></li>
+<li><a href="http://css-tricks.com/all-about-floats/" target="floats">All about floats</a></li>
 </ul>
 <div class="handout">
 </div>

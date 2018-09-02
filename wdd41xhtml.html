@@ -6,10 +6,10 @@
 <head>
 <title>XHTML and HTML5</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -87,7 +87,7 @@
 <p>In HTML 4<br /><b><tt>&lt;p&gt;1st&nbsp;para&lt;p&gt;2nd&nbsp;para</tt></b><br /> is valid. In XHTML it must be<br /><b><tt>&lt;p&gt;1st&nbsp;para&lt;/p&gt;&lt;p&gt;2nd&nbsp;para&lt;/p&gt;</tt></b></p>
 <p>This means that <b><tt>&lt;hr&gt;</tt></b>, <b><tt>&lt;br&gt;</tt></b> and <b><tt>&lt;img&gt;</tt></b> are all invalid.</p>
 <p>So <b><tt>&lt;hr&gt;</tt></b> must be <b><tt>&lt;hr&gt;&lt;/hr&gt;</tt></b> or <b><tt>&lt;hr/&gt;</tt></b>.</p>
-<p>Neither of these work well in some older browsers, so have to use <b><tt>&lt;hr&nbsp;/&gt;</tt></b> instead.</p>
+<p>Neither of these work well in some really old browsers, so use <b><tt>&lt;hr&nbsp;/&gt;</tt></b> instead.</p>
 <div class="handout">
 </div>
 </div>
@@ -147,7 +147,7 @@
 <li>Pages aren't valid without a DOCTYPE</li>
 <li>Without a DOCTYPE (or with an invalid DOCTYPE) browsers enter quirks mode, which is slower and displays pages differently</li>
 <li><a href="http://www.alistapart.com/articles/doctype/" target="alistapart">More Information</a> and <a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="dtds">List of DOCTYPEs</a></li>
-<li>Ideally <a href="http://www.456bereastreet.com/archive/200609/no_more_transitional_doctypes_please/">use a Strict DOCTYPE</a>, but sometimes have to use Transitional (e.g. for iframes)</li>
+<li>Ideally <a href="http://www.456bereastreet.com/archive/200609/no_more_transitional_doctypes_please/" target="strict">use a Strict DOCTYPE</a>, but sometimes have to use Transitional (e.g. for iframes)</li>
 </ul>
 <div class="handout">
 </div>
@@ -156,8 +156,7 @@
 <div class="slide">
 <h1>Why Use XHTML?</h1>
 <ul>
-<li>For the time being XHTML is the future of HTML 4, so you're bound to start using it sooner or later (almost all standards-aware developers do)</li>
-<li>Unlike HTML, XHTML is readable by machines, so new user agents (e.g. mobile phones or Web-aware appliances) will be able to read it</li>
+<li>XHTML DOCTYPEs are currently the most widely used, so you're bound to start using XHTML sooner or later (almost all standards-aware developers do)</li>
 <li>XHTML is extensible - new tags can be added</li>
 <li>XHTML works with older browsers as well as current browsers</li>
 <li>XHTML is less complex than HTML, so browsers can be simpler and smaller and so will run on a wider range of devices</li>
@@ -222,7 +221,7 @@
 <li>New form controls, e.g. for dates, times, email addresses and URLs</li>
 <li>Local storage</li>
 </ul>
-<p>Support is not universal (e.g. canvas is not supported by IE). Can use libraries like <a href="http://www.modernizr.com/" target="modernizr">Modernizr</a> to detect support for new features. (Also are JavaScript libraries to add canvas support to IE.)</p>
+<p>Support is not universal (e.g. canvas was only added in IE9). Can use libraries like <a href="http://www.modernizr.com/" target="modernizr">Modernizr</a> to detect support for new features. (Also are JavaScript libraries to add canvas support to earlier versions of IE.)</p>
 
 <div class="handout">
 </div>

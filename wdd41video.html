@@ -6,10 +6,10 @@
 <head>
 <title>Sound and Video</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd0910.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd0910.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1011.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1011.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -39,6 +39,7 @@
 <p>Site owners need to consider:</p>
 <ul>
 <li>Primary purpose/visitor</li>
+
 <li>Attraction or detraction?</li>
 <li>Accessibility</li>
 <li>Copyright</li>
@@ -57,12 +58,13 @@
 <li>Real Audio</li>
 <li>Midi - uses built in &quot;voices&quot; from your sound card</li>
 <li>MP3 - arguably the most common audio format</li>
+
 <li>WMA - Windows Media Audio</li>
 <li>Ogg Vorbis - free, open, and unpatented</li>
 </ul>
 <p>See:</p>
 <ul>
-<li><a href="http://techgage.com/article/audio_archiving_guide_part_1_-_music_formats/">Audio Archiving Guide: Part 1 - Music Formats</a></li>
+<li><a href="http://techgage.com/article/audio_archiving_guide_part_1_-_music_formats/" target="techgage">Audio Archiving Guide: Part 1 - Music Formats</a></li>
 <li><a href="http://www.jiscdigitalmedia.ac.uk/audio/advice/basic-audio-editing/" target="jdm1">Basic audio editing</a></li>
 </ul>
 <div class="handout">
@@ -81,6 +83,7 @@ How to add sound to your pages:
 <li>Streaming Audio (covered in streaming video)</li>
 </ol>
 <p>The visitor will need relevant software or a plug-in to be able to listen to the file and you should provide a link to the relevant software/plug-in.</p>
+
 <div class="handout">
 </div>
 </div>
@@ -115,6 +118,7 @@ How to add sound to your pages:
 </ul>
 <div class="handout">
 </div>
+
 </div>
 
 
@@ -125,6 +129,7 @@ How to add sound to your pages:
 <p>Advantages:</p>
 <ul>
 <li>Potentially all visitors (with compatible software) will hear the sound</li>
+
 <li>Can give an &quot;ambience&quot; to different areas of your site</li>
 </ul>
 <div class="handout">
@@ -136,8 +141,8 @@ How to add sound to your pages:
 
 <p>Disadvantages:</p>
 <ul>
-<li>Visitors don't have a choice/may not work</li>
 <li>Uses non-standard code - your pages won't validate</li>
+<li>Visitors don't have a choice/may not work</li>
 <li>Bandwidth</li>
 <li>Intrusive/annoying - the music may not be to your taste or the user might be listening to something else already</li>
 </ul>
@@ -148,6 +153,7 @@ How to add sound to your pages:
 
 <div class="slide">
 <h1>Syntax for Embedding Sound</h1>
+
 <p>
 For completeness the HTML code to embed sound is as follows:
 </p>
@@ -156,6 +162,7 @@ For completeness the HTML code to embed sound is as follows:
 </p>
 <p>Height and width are the dimensions of a toolbar allowing people to control playback.</p>
 <p>It is possible to use hidden=&quot;true&quot; - this hides the toolbar and means visitors have no control over the music - please don't do this!</p>
+
 <p>Autostart=&quot;true&quot; - starts the sound automatically</p>
 <p>loop=&quot;true&quot; - loops the sound</p>
 <p><a href="http://www.w3schools.com/media/tryit.asp?filename=trymedia_soundmidiembed" target="embedaudio">Example</a></p>
@@ -175,7 +182,8 @@ For completeness the HTML code to embed sound is as follows:
 <li><a href="http://www.macloo.com/examples/audio_player/" target="audioplayer">Embedded MP3 audio player</a></li>
 <li><a href="http://flash-mp3-player.net/" target="mp3player">MP3 audio player</a></li>
 <li><a href="http://www.labnol.org/internet/design/html-embed-mp3-songs-podcasts-music-in-blogs-websites/2232/" target="goohoo">Google or Yahoo! audio player</a></li>
-<li><a href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines/ccforflash" target="ccmp3player">NCAM/ccMP3Player</a></li>
+
+<li><a href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines/ccmp3player-home" target="ccmp3player">NCAM/ccMP3Player</a></li>
 </ul>
 
 <p>Flash is well supported but has its disadvantages which we'll cover later in WDD4.</p>
@@ -210,6 +218,7 @@ You have two choices for making video available on the web:
 <li>Progressive Streaming  (HTTP - Hyper Text Transfer Protocol)</li>
 <li>Real Time Streaming (RTSP - Real Time Streaming Protocol)</li>
 </ol>
+
 <p>To work with low bandwidth connections the video will lose most of its clarity and be highly compressed.</p>
 <div class="handout">
 </div>
@@ -253,6 +262,7 @@ You have two choices for making video available on the web:
 
 <p>
 &lt;embed src=&quot;/video/example.mov&quot; height=&quot;100&quot; width=&quot;50&quot; controller=&quot;false&quot; autoplay=&quot;true&quot; pluginspage=&quot;http://www.apple.com/&quot; loop=&quot;true&quot;&gt;
+
 </p>
 <p>
 <strong>height/width</strong> - set the size of your movie (pixels or percent)<br />
@@ -260,11 +270,13 @@ You have two choices for making video available on the web:
 <strong>controller</strong> - adds controls for the movie (true/false)
 <br />
 <strong>autoplay</strong> - If &quot;true&quot; your movie will play as soon as it starts to download, if &quot;false&quot; the user must click to play it.
+
 <br />
 <strong>pluginspage</strong> - location of the required plug-in.
 
 <br />
 <strong>loop</strong> - If &quot;true&quot; movie loops, if &quot;false&quot; movie plays once and stops, if &quot;palindrome&quot; movie plays to the end, plays back in reverse, plays to end again etc.
+
 </p>
 <div class="handout">
 </div>
@@ -278,6 +290,7 @@ Issues:</p>
 <ul>
 <li>Requires correct plug-in</li>
 <li>Clip loads as soon as the viewer enters the page</li>
+
 <li>Not valid HTML but there is a <a href="http://realdev1.realise.com/rossa/rendertest/quicktime.html" target="standardembed">standards compliant alternative</a></li>
 
 </ul>
@@ -289,6 +302,7 @@ Issues:</p>
 <div class="slide">
 <h1>Downloadable Video</h1>
 <p>&lt;a href=&quot;example.mpg&quot;&gt;Ian dancing - 50K MPEG 4 file&lt;/a&gt;</p>
+
 <p>What happens depends on the browser configuration</p>
 <p>You should provide the following information:</p>
 <ul>
@@ -306,11 +320,12 @@ Issues:</p>
 
 <h1>Real Time Streaming</h1>
 <p>Real Time Streaming Protocol (RTSP) better for long clips and on LAN or broadband/high speed environments.</p>
-<p>Requires a streaming server (additional expense/expertise).</p> 
-<p>Some ISPs offer a streaming server with their Web space.</p> 
+<p>Requires a streaming server (additional expense/expertise).</p>
+<p>Some ISPs offer a streaming server with their Web space.</p>
 <ul>
 <li>Real Networks offers a free version of its <a href="https://helix-server.helixcommunity.org/" target="helix">Helix server</a>.</li>
-<li><a href="http://wiki.dreamhost.com/Streaming_(QuickTime)" target="dhkb">DreamHost</a> offers the <a href="http://developer.apple.com/darwin/projects/streaming/" target="darwin">Darwin streaming server</a> as part of their standard hosting package.</li> 
+
+<li><a href="http://wiki.dreamhost.com/Streaming_(QuickTime)" target="dhkb">DreamHost</a> offers the <a href="http://dss.macosforge.org/" target="darwin">Darwin streaming server</a> as part of their standard hosting package.</li>
 <li>Use a service like <a href="http://www.youtube.com/" target="yt">YouTube</a> or <a href="http://vimeo.com/" target="vim">Vimeo</a></li>
 </ul>
 <div class="handout">
@@ -326,6 +341,7 @@ The benefits:-</p>
 <li>Don't need to download whole clip before playing</li>
 <li>The video resides on the server (can't be downloaded <em>easily</em>)</li>
 <li>The visitor can jump to any part of the video without having to download the preceding footage</li>
+
 <li>Tries to keep pace with user's connection speed, server tries to maintain a constant connection</li>
 <li>Video for streaming does need careful preparation</li>
 <li>Video streaming can require greater processing power on the client machine and a good broadband connection</li>
@@ -338,6 +354,7 @@ The benefits:-</p>
 <h1>Real Time Streaming 3</h1>
 <p>
 Common formats are:-</p>
+
 <ul>
 <li>Apple MOV</li>
 <li>Microsoft WMV (was ASF)</li>
@@ -346,7 +363,8 @@ Common formats are:-</p>
 <li>Ogg Theora - free, open, and unpatented</li>
 </ul>
 
-<p>Video streaming using the Flash player is becoming increasingly common. This does require video to be correctly encoded and access to a Flash Media Server or equivalent (e.g. <a href="http://osflash.org/red5" target="red5">Red5</a>).</p>
+<p>Video streaming using the Flash player is becoming increasingly common. This does require video to be correctly encoded and access to a Flash Media Server or equivalent (e.g. <a href="http://www.red5.org/" target="red5">Red5</a>).</p>
+
 <div class="handout">
 </div>
 
@@ -360,6 +378,7 @@ Common formats are:-</p>
 <h1>Linking to Streaming Media</h1>
 <p>
 &lt;a href=&quot;example.avi&quot;&gt;Streaming lecture example&lt;/a&gt;
+
 </p>
 <p>
 This causes an external player to open and connect to the streaming server, the player will depend on the format of the video. Common players include:
@@ -371,7 +390,8 @@ This causes an external player to open and connect to the streaming server, the 
 <li>Flash Player</li>
 </ul>
 
-<p>Can also embed streamed video, e.g. <a href="http://www.bized.co.uk/learn/tourism/attractions/surfing/visitor_main_stream.htm" target="bizstream">Biz/ed</a> or the <a href="http://news.bbc.co.uk/sport1/hi/motorsport/formula_one/7817881.stm" target="senna">BBC</a></p>
+<p>Can also embed streamed video, e.g.  the <a href="http://news.bbc.co.uk/sport1/hi/motorsport/formula_one/7817881.stm" target="brundle">BBC</a></p>
+
 <div class="handout">
 </div>
 </div>
@@ -383,9 +403,7 @@ This causes an external player to open and connect to the streaming server, the 
 
 <p>Both services originally used progressive streaming but now use real time streaming for many videos.</p>
 
-<p><a href="http://www.researchandmarkets.com/reportinfo.asp?report_id=362930&amp;t=e&amp;cat_id=" target="research">97% of User Generated Video (UGV) is in Flash Video format</a>, suggesting that the growth in FLV is likely to continue.</p>
-
-<p>Both services have HTML code you can use to embed videos but it's not always standards compliant.</p>
+<p>Both have HTML code you can use to embed videos but it's not always standards compliant.</p>
 <div class="handout">
 </div>
 </div>
@@ -394,7 +412,7 @@ This causes an external player to open and connect to the streaming server, the 
 <div class="slide">
 <h1>Using a Flash video player</h1>
 
-<p>Again, many sites now use Flash video players: <a href="http://www.bbc.co.uk" target="bbc">BBC</a></p>
+<p>Again, many sites now use Flash video players: <a href="http://news.bbc.co.uk/sport1/hi/formula_one/13492528.stm" target="bbc">BBC</a></p>
 
 <p>Example players</p>
 
@@ -407,6 +425,7 @@ This causes an external player to open and connect to the streaming server, the 
 <p>Flash has its disadvantages.</p>
 
 <div class="handout">
+
 </div>
 </div>
 
@@ -420,18 +439,20 @@ This causes an external player to open and connect to the streaming server, the 
 <li>Must provide a text alternative for all non-text content</li>
 <li>Providing captions (subtitles for video)
 <ul>
-	<li><a href="http://www.youtube.com/t/captions_about" target="caption">YouTube captions</a></li>
-	<li><a href="http://googleblog.blogspot.com/2009/11/automatic-captions-in-youtube.html" target="autocaption">YouTube automatic captions</a></li>
+    <li><a href="http://www.youtube.com/t/captions_about" target="caption">YouTube captions</a></li>
+
+    <li><a href="http://googleblog.blogspot.com/2009/11/automatic-captions-in-youtube.html" target="autocaption">YouTube automatic captions</a></li>
 </ul>
 </li>
 <li>Which assistive technologies support the player you've chosen?</li>
 <li>Does the player have keyboard controls or is it mouse only?</li>
 </ul>
 
-<p>In general, no single solution will be completely accessible so providing the same information in a variety of forms is recommended. For example: <a href="http://www.bized.co.uk/learn/tourism/attractions/surfing/visitor.htm" target="bizvariety">Biz/ed</a></p>
+<p>In general, no single solution will be completely accessible so providing the same information in a variety of forms is recommended. For example: <a href="http://www.bristol.ac.uk/university/vc/vc_speeches.html" target="uobvariety">UoB VC speeches</a></p>
 
 <div class="handout">
 </div>
+
 </div>
 
 
@@ -441,23 +462,26 @@ This causes an external player to open and connect to the streaming server, the 
 <ul>
 <li>As we've seen, HTML4/XHTML has no standards compliant way of embedding video. Virtually all video uses a plugin.</li>
 <li>HTML5 provides the &lt;video&gt; element as a standard way to embed video.</li>
+
 <li>No restrictions on file format or audio/video codecs:
     <ul>
-	<li>video - H.264, Ogg Theora, VP8</li>
-	<li>audio - MP3, AAC, Ogg Vorbis</li>
-	</ul>
+    <li>video - H.264, Ogg Theora, VP8</li>
+    <li>audio - MP3, AAC, Ogg Vorbis</li>
+    </ul>
 </li>
 <li>One &lt;video&gt; element links to multiple file formats.</li>
 <li>Browsers play the first file they can.</li>
+
 <li>No single format/codec combination will be played by all browsers.</li>
 <li>Browser support:
-	<ul>
-	<li>IE9</li>
-	<li>Firefox 3.5</li>
-	<li>Safari 3 &amp; 4</li>
-	<li>Chrome</li>
-	<li>Opera</li>
-	</ul>
+    <ul>
+    <li>IE9</li>
+    <li>Firefox 3.5</li>
+    <li>Safari 3 &amp; 4</li>
+    <li>Chrome</li>
+
+    <li>Opera</li>
+    </ul>
 </li>
 </ul>
 
@@ -475,6 +499,7 @@ This causes an external player to open and connect to the streaming server, the 
 <p>
 &lt;video width=&quot;640&quot; height=&quot;480&quot; controls&gt;<br />
   &lt;source src=&quot;example.mp4&quot;  type='video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;'&gt;<br />
+
   &lt;source src=&quot;example.ogg&quot;  type='video/ogg; codecs=&quot;theora, vorbis&quot;'&gt;<br />
 &lt;/video&gt;
 </p>
@@ -493,6 +518,7 @@ This causes an external player to open and connect to the streaming server, the 
 <li><a href="http://realdev1.realise.com/rossa/rendertest/quicktime.html" target="standardembed">A standards compliant way of embedding video</a></li>
 <li><a href="http://www.webstandards.org/2006/08/15/valid-flash-video-and-audio-embed-object-markup/" target="stanflv">Valid Flash, video, and audio embed (object) mark-up</a></li>
 <li><a href="http://www.longtailvideo.com/support/tutorials/Making-Video-Accessible" target="accessvid">Making video accessible</a></li>
+
 <li><a href="http://www.soundscreen.com/streaming/compress_hint.html" target="hint">Compressing and hinting media</a></li>
 <li><a href="http://www.adobe.com/devnet/video/" target="flashvid">Flash Video Technology Centre</a></li>
 <li><a href="http://www.mediacollege.com/video/streaming/overview.html" target="mediacoll">How to create streaming video</a></li>
@@ -503,7 +529,13 @@ This causes an external player to open and connect to the streaming server, the 
 </ul>
 <div class="handout">
 </div>
+
 </div>
+
+<div class="slide">
+<h1></h1>
+</div>
+
 
 <div class="slide">
 <h1></h1>
