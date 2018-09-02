@@ -6,10 +6,10 @@
 <head>
 <title>CSS Positioning</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,7 +40,7 @@
 <li>Historically Web sites use HTML tables for layout and Cascading Style Sheets (CSS) for the text formatting.</li>
 <li>There are good reasons why tables shouldn't be used for layout:
 <ul>
-<li>Strictly speaking HTML tables should be used for <a href="http://www.bized.co.uk/cgi-bin/penndatadb/pennchart.pl?datarequest=fromform&amp;format=html&amp;yrstart=1950&amp;yrend=2000&amp;isocode=AUS&amp;variables=pop&amp;variables=xrat&amp;go=Submit+data+request" target="tabular">tabular data</a> only</li>
+<li>Strictly speaking HTML tables should be used for <a href="http://www.bized.co.uk/virtual/dc/resource/data/realgdp.htm" target="tabular">tabular data</a> only</li>
 <li>Doesn't separate <em>presentation from content</em> (you need to check your tables <a href="http://www.webaim.org/techniques/tables/" target="accessit">linearise properly</a>)</li>
 <li>Tabular layouts are complicated to maintain</li>
 <li>Larger file size for your HTML file</li>
@@ -146,7 +146,7 @@
 <li><em>position: fixed;</em> - the same as absolute except positioned with respect to the browser window.</li>
 </ul>
 
-<p><em>relative</em>, <em>absolute</em> and <em>fixed</em> are rarely used.</p>
+<p><em>relative</em>, <em>absolute</em> and <em>fixed</em> are rarely used because they create designs that don't scale well.</p>
 
 <div class="slide">
 <h1>CSS positioning offsets</h1>
@@ -248,7 +248,7 @@
 <div class="slide">
 
 <h1>CSS media types</h1>
-<p>CSS isn't only used to control how a Web page appears on a PC screen. Different stylesheets can be used to make sure your pages print correctly or display differently on the small screen of a mobile phone or a PDA.</p>
+<p>CSS isn't only used to control how a Web page appears on a PC screen. Different stylesheets can be used to make sure your pages print correctly or display differently on the small screens.</p>
 <p>Different types of stylesheet are identified using the 'media' attribute. e.g.:</p>
 <p>
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;mystyles.css&quot;&gt;<br />
@@ -256,23 +256,12 @@
 &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;handheld&quot; href=&quot;handheld.css&quot;&gt;
 </p>
 
+<p>Further info: <a href="http://www.w3.org/TR/REC-CSS2/media.html" target="media">CSS Media types</a> and <a href="http://www.w3.org/TR/css3-mediaqueries/" target="mediaq">Media Queries</a> (more on media queries in WDD4).</p>
+
 <div class="handout">
 </div>
 </div>
 
-
-<div class="slide">
-<h1>CSS media types</h1>
-<p>or if you're importing the CSS:</p>
-<p>
-@import url(&quot;mystyles.css&quot;);<br />
-@import url(&quot;print.css&quot;) print;<br />
-@import url(&quot;handheld.css&quot;) handheld;
-</p>
-<p>Further info: <a href="http://www.w3.org/TR/REC-CSS2/media.html" target="media">CSS Media types</a> and <a href="http://www.w3.org/TR/css3-mediaqueries/" target="mediaq">Media Queries</a>.</p>
-<div class="handout">
-</div>
-</div>
 
 <div class="slide">
 <h1>Simplifying mark-up</h1>
@@ -282,7 +271,7 @@
 
 <p>Let's compare the two versions of the course Web site:</p>
 <p><a href="/" target="tablecomp">Tables-based design</a>: 76 tags.<br />
-<a href="wdd14csspsbbkexample.html" target="csspcomp">CSS-P version</a>: 52 tags.</p>
+<a href="wdd14csspsbbkexample.html" target="csspcomp">CSS-P version</a>: 51 tags.</p>
 
 <div class="handout">
 </div>
@@ -335,8 +324,8 @@
 <li>Remember the box model</li>
 <li>Two invaluable tools:
 <ul>
-<li>Firefox - <a href="https://addons.mozilla.org/en-US/firefox/addon/60" target="wdt">Web Developer Toolbar</a></li>
-<li>Firefox - <a href="https://addons.mozilla.org/en-US/firefox/addon/1843" target="firebug">Firebug</a></li>
+<li>Firefox - <a href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/" target="wdt">Web Developer Toolbar</a></li>
+<li>Firefox - <a href="https://addons.mozilla.org/en-US/firefox/addon/firebug/" target="firebug">Firebug</a></li>
 <li>Chrome - <a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm" target="chwdt">Web Developer Toolbar</a></li>
 </ul>
 </li>

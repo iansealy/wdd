@@ -6,10 +6,10 @@
 <head>
 <title>PHP &amp; database-backed web sites</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -56,14 +56,17 @@
 <div class="slide">
 <h1>Why learn to program?</h1>
 <ul>
-<li>Fundamentally, it's a useful skill that you can apply in many places</li>
+<li>Fundamentally, it's a useful skill that you can apply in many places (not just web development)</li>
 <li>Promotes 'computational thinking' - how to break down problems into manageable chunks</li>
-<li><a href="http://www.computingatschool.org.uk/" target="cas">Computing curriculum</a> to be introduced in Sept 2014
+<li>Learning new things makes you more employable</li>
+<li><a href="http://www.computingatschool.org.uk/" target="cas">Computing curriculum</a> was introduced in Sept 2014
 <ul>
 <li>Primary</li>
 <li>Secondary</li>
 </ul>
 </li>
+<li><a href="https://www.codeclub.org.uk/" target="codeclub">Code Club</a></li>
+<li><a href="http://www.bbc.co.uk/cbeebies/games/nina-go-digital-game" target="nina">BBC CBeebies</a></li>
 <li>It's fun</li>
 <li>This session provides a very brief intro only, I can't teach you to program in one session ;-)</li>
 </ul>
@@ -75,7 +78,7 @@
 <h1>What language is best?</h1>
 <ul>
 <li><em>It doesn't matter</em>... sort of</li>
-<li>All have pros and cons</li>
+<li>All have pros and cons and most programmers will tell you their language of choice is the best</li>
 <li>Considerations for Web development:
 <ul>
 <li>Server operating system (e.g. Microsoft or UNIX/Linux)</li>
@@ -86,8 +89,7 @@
 <li>Preference</li>
 </ul>
 </li>
-<li>If you can program, learning a new language isn't hard</li>
-<li>Learning new things makes you more employable</li>
+<li>Once you've learned to program in one language, learning a new language isn't hard</li>
 <li>Pick the best solution for a problem, don't feel like you have to use the same tool each time</li>
 </ul>
 <div class="handout">
@@ -192,8 +194,13 @@ echo &quot;&lt;p&gt;Hi there!&lt;/p&gt;&quot;;</li>
 <li>+, -, /, *</li>
 <li>assignment =</li>
 <li>equal ==</li>
-<li>identical ===</li>
+<li>identical ===
+<ul>
+<li>Use === if you want to check if two things are identical. If you use == then, for example, 0 and false are considered equal.</li>
+</ul>
+</li>
 <li>not equal !=</li>
+<li>not identical !==</li>
 <li>increment += or ++</li>
 <li>decrement -= or --</li>
 </ul>
@@ -224,7 +231,8 @@ $colours[0]; // red</li>
 <div class="slide">
 <h1>Associative array/hash/dictionary</h1>
 <ul>
-<li>Use strings as keys</li>
+<li>In PHP there's just one array type and you can use it as an integer indexed array or use other data types (e.g. strings) for the indices</li>
+<li>In other languages arrays/lists are different from dictionaries/associative arrays</li>
 <li>
 <pre>
 $price = array(
@@ -345,7 +353,7 @@ $_POST[&quot;your_name&quot;]
 
 <div class="slide">
 <h1>Database-backed sites</h1>
-<p>Database-backed sites - time for a short break?</p>
+<p>Time for a short break?</p>
 <div class="handout">
 </div>
 </div>
@@ -361,9 +369,6 @@ $_POST[&quot;your_name&quot;]
 </ul>
 </li>
 <li>Easier to repurpose/reuse data in different forms [<a href="http://www.amentsoc.org/events/" target="aesevents">AES events example</a>]</li>
-<!--
-<li>Greater functionality [<a href="http://www.bized.co.uk/dataserv/penndata/pennhome.htm" target="bizeddata">Biz/ed Penn data example</a>]</li>
--->
 </ul>
 <div class="handout">
 </div>
@@ -379,7 +384,7 @@ $_POST[&quot;your_name&quot;]
 <li>CSS</li>
 <li>Programming language - e.g. PHP, Python, Perl, C#</li>
 <li>Structured Query Language (SQL)</li>
-<li>(Possibly) Database maintenance tools</li>
+<li>Database maintenance tools</li>
 </ul>
 </li>
 <li>Reduced performance</li>
@@ -442,9 +447,9 @@ Add id column, int, make key, auto_increment and not null
 movie_id  	int(11)
 ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
 
-http://kierenpitts.wdd1314.bbkweb.org/
+http://kierenpitts.wdd1415.bbkweb.org/
 
-bbkdemo2014
+bbkdemo2015
 kierenpitts
 someotherpassword
 
@@ -462,7 +467,7 @@ movies|somepassword
 <ul>
 <li>Empty database already created on Dreamhost
 <ul>
-<li>Database: bbkdemo2014</li>
+<li>Database: bbkdemo2015</li>
 <li>Admin username: kierenpitts</li>
 <li>Script username: movies</li>
 </ul>
@@ -479,13 +484,28 @@ movies|somepassword
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1314-mysql.bbkweb.org" target="phpmy2">wdd1314-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1415-mysql.bbkweb.org" target="phpmy2">wdd1415-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
-<li>Add a numeric ID to each movie record = movie_id</li>
+<li>Add a numeric ID to each movie record = movie_id
+<ul>
+<li>int</li>
+<li>Auto-increment</li>
+<li>Primary key</li>
+</ul>
+</li>
 </ol>
 </li>
+<li>movies table structure is now four fields/columns:
+<ul>
+<li>movie_id = int, auto-increment</li>
+<li>title - varchar(200)</li>
+<li>description - text</li>
+<li>year - integer</li>
+</ul>
+</li>
+<li>11 rows of data</li>
 </ul>
 <div class="handout">
 </div>
@@ -499,10 +519,10 @@ movies|somepassword
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1314-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1415-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2014&quot;;
+$database = &quot;bbkdemo2015&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -535,10 +555,10 @@ print &quot;&lt;/ul&gt;\n&quot;;
 &lt;?php
 
 // Connect to the database
-$hostname = &quot;wdd1314-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1415-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2014&quot;;
+$database = &quot;bbkdemo2015&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -591,10 +611,10 @@ while ($row = mysql_fetch_row($result)) {
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1314-mysql.bbkweb.org&quot;;
+$hostname = &quot;wdd1415-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2014&quot;;
+$database = &quot;bbkdemo2015&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -704,8 +724,8 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 <li>Source control
 	<ul>
 	<li><a href="http://git-scm.com/" target="git">Git</a></li>
-	<li><a href="http://subversion.apache.org/" target="svn">Subversion</a></li>
         <li><a href="http://mercurial.selenic.com/" target="alesi">Mercurial</a></li>
+	<li><a href="http://subversion.apache.org/" target="svn">Subversion</a></li>
         <li><a href="https://github.com/" target="gh">GitHub</a> - hosted service</li>
         <li><a href="https://bitbucket.org/" target="bb">BitBucket</a> - hosted service</li>
 	</ul>
@@ -718,7 +738,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 <div class="slide">
 <h1>Reading</h1>
 <ul>
-<li><a href="http://writecodeonline.com/php/" target="writecode">Write code online</a></li>
+<li><a href="http://sandbox.onlinephpfunctions.com/" target="phpsandbox">PHP Sandbox</a></li>
 <li><a href="http://www.w3schools.com/sql/" target="w3schoolssql">W3Schools SQL Tutorial</a></li>
 <li><a href="http://sqlzoo.net/" target="sqlzoo">SQLzoo - Interactive SQL Tutorial</a></li>
 <li><a href="http://php.net/" target="phpnet">PHP</a></li>

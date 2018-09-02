@@ -6,10 +6,10 @@
 <head>
 <title>SSIs</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -41,8 +41,8 @@
 <ol>
 <li>All machines on the Internet use an Internet Protocol (IP) address to refer to each other, e.g.: 69.163.184.47</li>
 
-<li>User types a URL into a browser address bar or follows a link, e.g.:<br />http://wdd1314.bbkweb.org/wdd41agenda.html</li>
-<li>Browser refers to Domain Name Servers to convert wdd1314.bbkweb.org into an IP address</li>
+<li>User types a URL into a browser address bar or follows a link, e.g.:<br />http://wdd1415.bbkweb.org/wdd41agenda.html</li>
+<li>Browser refers to Domain Name Servers to convert wdd1415.bbkweb.org into an IP address</li>
 <li>The IP address is for the server hosting the web site
 	<ul>
 	<li>What's a server? Hardware or software?</li>
@@ -81,9 +81,9 @@
 <li>Server Side Includes (SSIs) are directives/instructions within a web page that are <em>parsed</em> by the Web server <strong>before</strong> the page is returned to the browser</li>
 <li>These instructions can be used to include other files or show extra information</li>
 <li>Separate presentation from content by storing repetitive HTML fragments in a separate file. Each fragment can then be included in many pages using SSIs</li>
-<li>HTML fragments don't have to represent valid HTML (or complete pages) themselves. The web server combines all the SSIs and page code together before sending it to the browser. Only at this point does the code need to be valid HTML</li>
+<li>HTML fragments don't have to represent valid HTML (or complete pages) themselves. The web server combines all the SSIs and page code together <strong>before</strong> sending it to the browser. Only at this point does the code need to be valid HTML</li>
 <li>Most Web servers support SSIs</li>
-<li>Only covering <a href="http://httpd.apache.org/" target="apache">Apache</a> because it's the <a href="http://news.netcraft.com/archives/web_server_survey.html" target="netcraft"> most popular Web server</a> and DreamHost uses it</li>
+<li>Only covering <a href="http://httpd.apache.org/" target="apache">Apache</a> because it's the <a href="http://news.netcraft.com/archives/2015/04/20/april-2015-web-server-survey.html#more-18965" target="netcraft"> most popular Web server</a> and DreamHost uses it</li>
 <li>You need a web server. <strong>SSIs won't be included if files are viewed offline</strong></li>
 </ul>
 <div class="handout">

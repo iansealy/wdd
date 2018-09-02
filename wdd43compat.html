@@ -6,10 +6,10 @@
 <head>
 <title>Cross-Browser Compatibility</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -48,8 +48,9 @@
 <h1>Tools</h1>
 <p>Browser add-ons to aid Web development:</p>
 <ul>
-<li><a href="http://chrispederick.com/work/web-developer/" target="_blank">Web Developer</a> (Firefox extension and now Chrome)</li>
+<li><a href="http://chrispederick.com/work/web-developer/" target="_blank">Web Developer</a> (Firefox extension and now Chrome and Opera)</li>
 <li><a href="http://getfirebug.com/" target="_blank">Firebug</a> (Firefox extension)</li>
+<li><a href="http://getfirebug.com/firebuglite" target="_blank">Firebug Lite</a></li>
 <li>Opera Dragonfly</li>
 <li>Web Inspector (Safari and Google Chrome)</li>
 <li>IE Developer Toolbar (IE6/7) / Tools (IE8+)</li>
@@ -63,10 +64,11 @@
 <h1>More Tools</h1>
 <p>Testing in other browsers:</p>
 <ul>
-<li><a href="http://ipinfo.info/netrenderer/" target="_blank">IE NetRenderer</a> (free)</li>
+<li><a href="http://netrenderer.com/" target="_blank">IE NetRenderer</a> (free)</li>
 <li><a href="http://browsershots.org/" target="_blank">Browsershots</a> (free)</li>
 <li><a href="http://www.browserstack.com/" target="_blank">BrowserStack</a> (not free)</li>
 <li><a href="http://www.my-debugbar.com/wiki/IETester/HomePage" target="_blank">IETester</a></li>
+<li><a href="https://www.modern.ie/en-gb/virtualization-tools" target="_blank">IE Virtual Machines</a> (free)</li>
 <li><a href="http://litmusapp.com/" target="_blank">Litmus</a> (not free; email testing)</li>
 </ul>
 <div class="handout">
@@ -87,7 +89,7 @@
 <h1>Reset CSS</h1>
 <ul>
 <li>Different browsers have different default CSS</li>
-<li>Solution: Use <a href="http://www.cssreset.com/" target="_blank">Reset CSS</a></li>
+<li>Solution: Use <a href="http://www.cssreset.com/" target="_blank">Reset CSS</a> or <a href="http://necolas.github.io/normalize.css/" target="_blank">normalize.css</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -99,9 +101,9 @@
 <li><a href="http://www.quirksmode.org/css/quirksmode.html" target="_blank">Quirks mode</a> emulates behaviour of old browsers for backwards compatibility</li>
 <li>Many differences between quirks mode and standards mode</li>
 <li>Most commonly noticed difference is due to different <a href="http://www.quirksmode.org/css/box.html" target="_blank">box models</a></li>
-<li><a href="/uploads/wdd4/wdd42/compat/quirks.htm" target="_blank">Example</a></li>
+<li><a href="/uploads/wdd4/wdd43/compat/quirks.htm" target="_blank">Example</a></li>
 <li>Solution: Always use a DOCTYPE that forces standards mode</li>
-<li><a href="/uploads/wdd4/wdd42/compat/final.htm" target="_blank">Fixed example</a></li>
+<li><a href="/uploads/wdd4/wdd43/compat/final.htm" target="_blank">Fixed example</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -112,31 +114,33 @@
 <ul>
 <li>Most DOCTYPEs actually force almost standards mode rather than standards mode</li>
 <li>In standards mode, default for images is <tt>display: inline;</tt>, so small space appears below</li>
-<li><a href="/uploads/wdd4/wdd42/compat/inlineimg.htm" target="_blank">Example</a></li>
+<li><a href="/uploads/wdd4/wdd43/compat/inlineimg.htm" target="_blank">Example</a></li>
 <li>Solution: <tt>display: block;</tt></li>
-<li><a href="/uploads/wdd4/wdd42/compat/final.htm" target="_blank">Fixed example</a></li>
+<li><a href="/uploads/wdd4/wdd43/compat/final.htm" target="_blank">Fixed example</a></li>
 </ul>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>IE6 Double Margin</h1>
+<h1>Modernizr</h1>
 <ul>
-<li>In IE6, floated boxes have a double margin</li>
-<li><a href="/uploads/wdd4/wdd42/compat/doublemargin.htm" target="_blank">Example</a> (<a href="/uploads/wdd4/wdd42/compat/doublemargin2.htm" target="_blank">alternative</a>)</li>
-<li>Solution: <tt>display: inline;</tt></li>
-<li><a href="/uploads/wdd4/wdd42/compat/final.htm" target="_blank">Fixed example</a> (<a href="/uploads/wdd4/wdd42/compat/final2.htm" target="_blank">alternative</a>)</li>
+<li>Gradual implementation of HTML5 and CSS3 by browsers means not all features implemented in all browsers</li>
+<li>Solution: Use <a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
+<li>Tests for features and creates a JavaScript object and adds classes to <tt>html</tt> tag indicating which features are supported</li>
+<li>Can write different JavaScript and CSS depending on whether features are available</li>
+<li><a href="https://en.wikipedia.org/wiki/Polyfill" target="_blank">Polyfills</a></li>
 </ul>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>Other Bugs</h1>
+<h1>Bugs</h1>
 <ul>
 <li><a href="http://www.positioniseverything.net/explorer.html" target="_blank">Position Is Everything</a></li>
 <li><a href="http://www.quirksmode.org/compatibility.html" target="_blank">QuirksMode.org</a></li>
+<li><a href="http://caniuse.com/" target="_blank">Can I use</a></li>
 </ul>
 <div class="handout">
 </div>

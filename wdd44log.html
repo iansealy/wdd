@@ -6,10 +6,10 @@
 <head>
 <title>Server Log Analysis</title>
 <meta name="version" content="S5 1.0" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
-<link rel="stylesheet" href="http://wdd1314.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
-<script src="http://wdd1314.bbkweb.org/s5/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+<link rel="stylesheet" href="http://wdd1415.bbkweb.org/s5/print.css" type="text/css" media="print" id="slidePrint" />
+<script src="http://wdd1415.bbkweb.org/s5/slides.js" type="text/javascript"></script>
 </head><body>
 
 <div class="layout">
@@ -40,20 +40,20 @@
 <li>Example:</li>
 </ul>
 <tt><small>
-151.228.164.245 - - [20/Jun/2014:12:57:31 -0700] &quot;GET / HTTP/1.1&quot; 200 1477 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&quot;<br/><br/>
-151.228.164.245 - - [20/Jun/2014:12:57:32 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 163 &quot;http://wdd1314.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&quot;<br/><br/>
-151.228.164.245 - - [20/Jun/2014:12:57:32 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 165 &quot;http://wdd1314.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&quot;<br/><br/>
-151.228.164.245 - - [20/Jun/2014:12:57:42 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1727 &quot;http://wdd1314.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36&quot;
+193.63.222.130 - - [19/Jun/2015:08:36:04 -0700] &quot;GET / HTTP/1.1&quot; 200 1478 &quot;-&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36&quot; <br/><br/>
+193.63.222.130 - - [19/Jun/2015:08:36:04 -0700] &quot;GET /birkbeck.gif HTTP/1.1&quot; 304 165 &quot;http://wdd1415.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36&quot; <br/><br/>
+193.63.222.130 - - [19/Jun/2015:08:36:04 -0700] &quot;GET /style.css HTTP/1.1&quot; 304 186 &quot;http://wdd1415.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36&quot; <br/><br/>
+193.63.222.130 - - [19/Jun/2015:08:36:05 -0700] &quot;GET /favicon.ico HTTP/1.1&quot; 200 1678 &quot;http://wdd1415.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36&quot; <br/><br/>
+193.63.222.130 - - [19/Jun/2015:08:36:24 -0700] &quot;GET /timetable.html HTTP/1.1&quot; 200 1713 &quot;http://wdd1415.bbkweb.org/&quot; &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36&quot;
 </small></tt>
 <div class="handout">
 </div>
 </div>
 
 <div class="slide">
-<h1>Example Logs</h1>
+<h1>Example Log</h1>
 <ul>
-<li>http://wdd1314.bbkweb.org/ log</li>
-<li><a href="http://www.thelocal.se/" target="local">The Local</a> log</li>
+<li>http://wdd1415.bbkweb.org/ log</li>
 <li>Too much information, so must use a log analysis tool</li>
 </ul>
 <div class="handout">
@@ -63,7 +63,7 @@
 <div class="slide">
 <h1>Old School Example Reports</h1>
 <ul>
-<li><a href="uploads/wdd4/wdd44/ucisa/" target="ucisa">UCISA report</a> (compiled using <a href="http://www.analog.cx/" target="analog">Analog</a> - free software)</li>
+<li><a href="uploads/wdd4/wdd44/ucisa/" target="ucisa">UCISA report</a> (compiled using <a href="http://www.c-amie.co.uk/analog/" target="analog">Analog</a> - free software)</li>
 <li><a href="uploads/wdd4/wdd44/port/" target="port">PORT report</a> (compiled using <a href="http://www.webtrends.com/" target="webtrends">WebTrends</a> - commercial software)</li>
 </ul>
 <div class="handout">
@@ -87,7 +87,7 @@
 <li>Can't estimate number of visitors</li>
 <li>Assumes 1 IP address = 1 visitor</li>
 <li>But many users may appear to connect from the same IP address (because they're using the same proxy server)</li>
-<li>Each request from an AOL user comes from a different IP address (multiple proxy servers)</li>
+<li>Or if multiple proxy servers then each request from a single user may come from a different IP address</li>
 </ul>
 <div class="handout">
 </div>
